@@ -1,28 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400");
-@font-face {
-    font-family: "LatoWeb";
-    src: url("../fonts/Lato-Regular.eot");
-    src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
-@font-face {
-    font-family: "LatoWebHeavy";
-    src: url("../fonts/Lato-Heavy.eot");
-    src: url("../fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato-Heavy.woff") format("woff"), url("../fonts/Lato-Heavy.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
-@font-face {
-    font-family: "LatoWebLight";
-    src: url("fonts/Lato-Light.eot");
-    src: url("fonts/Lato-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Lato-Light.woff2") format("woff2"), url("fonts/Lato-Light.woff") format("woff"), url("fonts/Lato-Light.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,600&display=swap');
 .clearfix:after {
     content: "";
     display: table;
@@ -32,12 +8,17 @@
     margin: 0 auto;
 }
 body {
-    font-family: "Fira Sans", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    color: #222;
 }
 a {
     text-decoration: none;
-    color: #191919;
+    color: #222;
+}
+a:hover{
+    color: #2078C8;
+    text-decoration: none;
 }
 ul {
     padding: 0;
@@ -68,17 +49,20 @@ li {
     font-size: 12px;
 }
 .link {
-    -webkit-transition: color 0.3s ease-out 0s;
-    -moz-transition: color 0.3s ease-out 0s;
-    -o-transition: color 0.3s ease-out 0s;
-    transition: color 0.3s ease-out 0s;
+    -webkit-transition: color 0.1s ease-out 0s;
+    -moz-transition: color 0.1s ease-out 0s;
+    -o-transition: color 0.1s ease-out 0s;
+    transition: color 0.1s ease-out 0s;
 }
 .link:hover {
-    text-decoration: underline;
-    color: #ababab;
+    color: #2078C8;
+    text-decoration: none;
 }
 .link--color {
-    color: #0067ff;
+    color: #2078C8;
+}
+.link--color:hover{
+    color: #999;
 }
 .link--inline {
     text-decoration: underline;
@@ -124,20 +108,20 @@ li {
     padding: 8px 16px;
     margin-top: 16px;
     text-decoration: none;
-    border: 1px solid #0067ff;
-    color: #0067ff;
+    border: 1px solid #2078C8;
+    color: #2078C8;
     font-weight: normal;
     border-radius: 5px;
-    -webkit-transition: background 0.2s ease-out 0s;
-    -moz-transition: background 0.2s ease-out 0s;
-    -o-transition: background 0.2s ease-out 0s;
-    transition: background 0.2s ease-out 0s;
+    -webkit-transition: background 0.1s ease-out 0s;
+    -moz-transition: background 0.1s ease-out 0s;
+    -o-transition: background 0.1s ease-out 0s;
+    transition: background 0.1s ease-out 0s;
 }
 .btn:active,
 .btn:hover,
 .btnfocus {
-    border: 1px solid #0067ff;
-    background: #0067ff;
+    border: 1px solid #2078C8;
+    background: #2078C8;
     color: #fff;
 }
 .btn--disalbed {
@@ -302,7 +286,7 @@ li {
 }
 .screen {
     min-height: 200px;
-    height: 70vh;
+    height: 60vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -431,6 +415,9 @@ li {
 .content__h3 {
     font-size: 21px;
 }
+.content__pic {
+    display: inline-block;
+}
 .content__pic .img {
     max-width: 780px;
     margin: 0 auto;
@@ -488,12 +475,13 @@ li {
     font-weight: bold;
 }
 .project__subtitle {
-    margin: 0;
+    margin: 8px 0 0 0;
     padding: 0;
     margin-top: 4px;
     font-size: 16px;
     line-height: 1.4;
-    font-weight: bold;
+    font-weight: 400;
+    color: #888888;
 }
 .project p {
     font-size: 16px;
@@ -528,7 +516,6 @@ li {
         float: left;
         width: 320px;
         height: 220px;
-        background: #0067ff;
         margin-right: 56px;
     }
 }

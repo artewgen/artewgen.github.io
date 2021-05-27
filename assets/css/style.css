@@ -25,8 +25,8 @@ ul {
     margin: 0;
 }
 li {
-    list-style: none;
-    display: inline-block;
+    margin-left: 30px;
+    list-style-type: square;
 }
 .text--grey {
     color: #ababab;
@@ -147,7 +147,7 @@ li {
 }
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        max-width: 800px;
     }
 }
 @media (min-width: 1200px) {
@@ -233,6 +233,7 @@ li {
 .header__nav ul > li {
     display: block;
     float: left;
+    margin: 0;
 }
 .header__nav .link--icon {
     padding: 10px;
@@ -326,7 +327,7 @@ li {
         height: 30vh;
     }
     .screen__title {
-        font-size: 28px;
+        font-size: 30px;
         max-width: 410px;
     }
     .screen p {
@@ -340,7 +341,7 @@ li {
 }
 @media (min-width: 1200px) {
     .screen__title {
-        font-size: 45px;
+        font-size: 52px;
         max-width: 670px;
     }
 }
@@ -360,21 +361,23 @@ li {
     margin-bottom: 20px;
 }
 .content__title {
-    font-size: 36px;
+    font-size: 42px;
     margin: 0;
     padding: 0;
     margin: 0 auto;
     margin-bottom: 48px;
-    max-width: 680px;
+    max-width: 800px;
 }
 .content__title .comment {
-    margin-top: 15px;
+    font-size: 18px;;
+    margin-top: 5px;
+    margin-bottom: 70px;
     text-align: left;
     font-weight: normal;
 }
 .content__text {
     position: relative;
-    max-width: 680px;
+    max-width: 800px;
     margin: 0 auto;
     margin-bottom: 48px;
 }
@@ -382,7 +385,6 @@ li {
 .content__text p {
     font-size: 18px;
     line-height: 1.6;
-    margin: 0;
 }
 .content__text p {
     margin: 20px 0;
@@ -392,8 +394,8 @@ li {
 }
 .content__text img,
 .content__text video {
-    margin-top: 20px;
-    margin-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 35px;
 }
 .content__text video {
     -webkit-box-shadow: 0 1px 20px 0 rgba(0, 31, 68, 0.1);
@@ -401,10 +403,13 @@ li {
 }
 .content__h2,
 .content__h3 {
-    font-size: 28px;
+    font-size: 30px;
     margin: 0;
     padding: 0;
-    margin: 60px 0 20px;
+    margin: 70px 0 20px;
+}
+.content__h3 {
+    margin-top: 30px;
 }
 .content__h2 .comment,
 .content__h3 .comment {
@@ -470,7 +475,7 @@ li {
 .project__title {
     margin: 0;
     padding: 0;
-    font-size: 28px;
+    font-size: 30px;
     line-height: 1.4;
     font-weight: bold;
 }
@@ -559,4 +564,7 @@ li {
     margin: 0;
     font-size: 14px;
     color: #ababab;
+}
+.relative-projects{
+    margin-top: 140px;
 }

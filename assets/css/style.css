@@ -236,6 +236,13 @@ li {
     float: left;
     margin: 0;
 }
+.footer__nav ul > li{
+    float: none;
+}
+.footer__nav a{
+    float: none;
+    text-align: center;
+}
 .header__nav .link--icon, .footer__nav .link--icon{
     padding: 10px;
 }
@@ -351,7 +358,7 @@ li {
     }
 }
 .content {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 .content img,
 .content video {

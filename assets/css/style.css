@@ -550,6 +550,7 @@ li {
         align-items: self-start;
         padding-top: 200;
         box-sizing: border-box;
+    }
 }
 .project {
     display: flex;

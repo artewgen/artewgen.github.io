@@ -539,6 +539,10 @@ li {
     .content__title {
         min-width: 800px;
     }
+    .screen.container{
+        align-items: self-start;
+        padding-top: 200;
+        box-sizing: border-box;
 }
 .project {
     display: flex;

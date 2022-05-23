@@ -145,12 +145,17 @@ li {
 h1,h2,h3,h4{
     font-family: 'Lab Grotesque', sans-serif;
 }
+.bottom-margin{
+    margin-bottom: 40px;
+}
+.points-header{
+    margin-bottom: 10px;
+}
 
 /*----Header nav----*/
 .header-nav{
     display: flex;
     justify-content: space-between;
-    max-width: 860px;
     margin: 0 auto;
 
 }
@@ -225,7 +230,7 @@ h1,h2,h3,h4{
 
 /*----Project----*/
 .project-me{
-    background: #2e2455;
+    background: #356548;
 }
 .project-tinkoff{
     background: #F2D332;
@@ -344,9 +349,6 @@ a.btn{
 .project-on-light a.btn:hover{
     opacity: 0.8;
 }
-.project__description .links{
-    
-}
 .project__short{
     margin-top: 10px;
 }
@@ -374,10 +376,10 @@ a.btn{
     position: relative;
 }
 .content__text ul {
-    margin-bottom: 32px;
+    margin-bottom: 40px;
 }
 .content__text p {
-    margin: 20px 0;
+    margin: 28px 0;
 }   
 .content__text li{
     list-style: disc;
@@ -385,7 +387,10 @@ a.btn{
 }
 .content__text li, 
 .content__text p {
-    line-height: 1.75;
+    line-height: 1.65;
+}
+.content__text p.points-header{
+    margin-bottom: 10px;
 }
 .link--inline {
     text-decoration: underline;
@@ -414,9 +419,6 @@ a.btn{
 }
 
 /*----Relative projects----*/
-.relative-projects{
-
-}
 .relative-projects .wrap{
     display: flex;
     margin-top: 60px;
@@ -538,9 +540,15 @@ a.btn{
         line-height: 1.6;
     }
     .header-nav{
+        width: 100%;
+        box-sizing: border-box;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        padding: 0 32px;
+    }
+    .project{
+        position: relative;
     }
     .project-info-wrap{
         flex-direction: row;
@@ -551,15 +559,21 @@ a.btn{
     .project__preview{
         width: 50%;
     }
+    .project__preview *{
+        margin-right: -15%;
+    }
     .project__info{
         width: 50%; 
         padding-right: 40px;
         box-sizing: border-box;       
     }
     .project__wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         min-height: 100vh;
         padding: 120px 0 100px;
-        margin-bottom: 100px;
+        margin-bottom: 120px;
         font-size: 26px;
         font-weight: 400;
     }
@@ -570,7 +584,7 @@ a.btn{
         line-height: 1.75;
     }
     .project__description {
-        margin: 24px 0 24px;
+        margin: 24px 0 70px;
     }
     .project__logo img{
         width: 280px;
@@ -594,6 +608,7 @@ a.btn{
     }
     .project-me .project__title{
         font-size: 56px;
+        margin-bottom: 32px;
     }
     
     .project__quote{

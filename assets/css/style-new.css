@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-MediumItalic.eot');
+    src: local('Lab Grotesque Medium Italic'), local('fonts/LabGrotesque-MediumItalic'),
+        url('fonts/LabGrotesque-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-MediumItalic.woff2') format('woff2'),
+        url('fonts/LabGrotesque-MediumItalic.woff') format('woff'),
+        url('fonts/LabGrotesque-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-Regular.eot');
+    src: local('Lab Grotesque Regular'), local('fonts/LabGrotesque-Regular'),
+        url('fonts/LabGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-Regular.woff2') format('woff2'),
+        url('fonts/LabGrotesque-Regular.woff') format('woff'),
+        url('fonts/LabGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-LightItalic.eot');
+    src: local('Lab Grotesque Light Italic'), local('fonts/LabGrotesque-LightItalic'),
+        url('fonts/LabGrotesque-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-LightItalic.woff2') format('woff2'),
+        url('fonts/LabGrotesque-LightItalic.woff') format('woff'),
+        url('fonts/LabGrotesque-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-Medium.eot');
+    src: local('Lab Grotesque Medium'), local('fonts/LabGrotesque-Medium'),
+        url('fonts/LabGrotesque-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-Medium.woff2') format('woff2'),
+        url('fonts/LabGrotesque-Medium.woff') format('woff'),
+        url('fonts/LabGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-Bold.eot');
+    src: local('Lab Grotesque Bold'), local('fonts/LabGrotesque-Bold'),
+        url('fonts/LabGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-Bold.woff2') format('woff2'),
+        url('fonts/LabGrotesque-Bold.woff') format('woff'),
+        url('fonts/LabGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-Italic.eot');
+    src: local('Lab Grotesque Italic'), local('fonts/LabGrotesque-Italic'),
+        url('fonts/LabGrotesque-Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-Italic.woff2') format('woff2'),
+        url('fonts/LabGrotesque-Italic.woff') format('woff'),
+        url('fonts/LabGrotesque-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque Mono';
+    src: url('fonts/LabGrotesqueMono.eot');
+    src: local('Lab Grotesque Mono'), local('fonts/LabGrotesqueMono'),
+        url('fonts/LabGrotesqueMono.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesqueMono.woff2') format('woff2'),
+        url('fonts/LabGrotesqueMono.woff') format('woff'),
+        url('fonts/LabGrotesqueMono.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-BoldItalic.eot');
+    src: local('Lab Grotesque Bold Italic'), local('fonts/LabGrotesque-BoldItalic'),
+        url('fonts/LabGrotesque-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-BoldItalic.woff2') format('woff2'),
+        url('fonts/LabGrotesque-BoldItalic.woff') format('woff'),
+        url('fonts/LabGrotesque-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lab Grotesque';
+    src: url('fonts/LabGrotesque-Light.eot');
+    src: local('Lab Grotesque Light'), local('fonts/LabGrotesque-Light'),
+        url('fonts/LabGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/LabGrotesque-Light.woff2') format('woff2'),
+        url('fonts/LabGrotesque-Light.woff') format('woff'),
+        url('fonts/LabGrotesque-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+    margin: 0 auto;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: #111;
+    font-weight: 400;
+}
+a {
+    text-decoration: underline;
+}
+a:hover{
+    text-decoration: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    margin-left: 30px;
+    list-style-type: square;
+}
+.container{
+    max-width: 860px;
+}
+h1,h2,h3,h4{
+    font-family: 'Lab Grotesque', sans-serif;
+}
+
+/*----Header nav----*/
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 860px;
+    margin: 0 auto;
+
+}
+.header-nav .header-nav__back{
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+}
+.header-nav__back .icon-back {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 5px;
+    width: 7px;
+    height: 10px;
+    margin-top: -5px;
+    background-image: url(../icons/icon-back.svg);
+    background-position: center;
+    background-size: auto 10px;
+}
+.project-on-light .icon-back{
+    background-image: url(../icons/icon-back-black.svg);
+}
+.header-nav ul > li{
+    display: block;
+    float: left;
+    margin: 0;
+}
+.header-nav a {
+    display: block;
+    float: left;
+    font-size: 20px;
+    padding: 20px;
+    line-height: 1;
+}
+.header__burger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 24px;
+    padding: 16px 16px;
+    background-image: url(../icons/icon-burger.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 24px;
+}
+.header-nav__wrap.open{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+}
+.header-nav__wrap.open .header-nav{
+    display: block;
+}
+.header-nav__wrap.open ul{
+    display: block;
+    margin: 60px 20px 20px;
+}
+.header-nav__wrap.open ul > li{
+    width: 100%;
+}
+.header-nav__wrap.open ul > li a{
+    color: #fff;
+}
+.header-nav__wrap.open .header-nav__back{
+    display: none;
+}
+
+/*----Project----*/
+.project-me{
+    background: #2e2455;
+}
+.project-tinkoff{
+    background: #F2D332;
+}
+.project-yoomoney{
+    background: #20418C;
+}
+.project-yandex{
+    background: #D4302A;
+}
+.project-personal{
+    background: #DFF360;
+}
+.project-epam{
+    background: #3DB1BE;
+}
+.project {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.project-me .project__title{
+    font-size: 42px;
+}
+.project-info-wrap{
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    justify-content: center;
+}
+
+.project__preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+
+.project__quote{
+    max-width: 400px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+}
+.project__title {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.4;
+    font-family: 'Lab Grotesque', sans-serif;
+    font-weight: bold;
+}
+.project__title a{
+    text-decoration: none;
+}
+.project__subtitle {
+    margin: 8px 0 0 0;
+    padding: 0;
+    margin-top: 4px;
+    color: #888888;
+    font-family: 'Lab Grotesque', sans-serif;
+    font-weight: 400;
+}
+
+
+a.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 16px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    background: #111;
+    border-radius: 0;
+    border: none;
+    font-weight: normal;
+    border-radius: 5px;
+    -webkit-transition: background 0.1s ease-out 0s;
+    -moz-transition: background 0.1s ease-out 0s;
+    -o-transition: background 0.1s ease-out 0s;
+    transition: background 0.1s ease-out 0s; 
+}
+.project-on-light, 
+.project-on-light a{
+    color: #111;
+}
+.project-on-dark, 
+.project-on-dark a{
+    color: #fff;
+}
+
+.project a.btn{
+    box-sizing: border-box;
+    font-weight: 500;
+    min-width: 300px;
+}
+.project-on-light a.btn{
+    color: #fff;
+}
+
+.project__subtitle, .project__quote{
+    color: rgba(0,0,0, 0.65);
+}
+.project-on-dark .project__subtitle, 
+.project-on-dark .project__quote{
+    color: rgba(255,255,255, 0.75);
+}
+.project-on-dark a.btn{
+    background: #fff;
+    color: #111;
+}
+.project-on-dark a.btn:hover,
+.project-on-light a.btn:hover{
+    opacity: 0.8;
+}
+.project__description .links{
+    
+}
+.project__short{
+    margin-top: 10px;
+}
+.project__description .links li{
+    list-style: none;
+    margin: 0;
+    padding: 0 0 16px;
+}
+.project__description .points li{
+    list-style: disc;
+    margin-bottom: 6px;
+}
+.project-logo__wrap{
+    display: flex;
+    align-items: center;    
+}
+.project__wrap{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+/*---Content---*/
+.content__text {
+    position: relative;
+}
+.content__text ul {
+    margin-bottom: 32px;
+}
+.content__text p {
+    margin: 20px 0;
+}   
+.content__text li{
+    list-style: disc;
+    margin-bottom: 12px;
+}
+.content__text li, 
+.content__text p {
+    line-height: 1.75;
+}
+.link--inline {
+    text-decoration: underline;
+}
+.image_with_comment{
+    margin-bottom: 60px;
+}
+.image_with_comment .comment {
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 0px;
+    color: #888;
+}
+.image_with_wrap{
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+}
+.image_with_wrap_screen{
+    border-radius: 15px;
+    border: 6px solid #0F192F;
+    overflow: hidden;
+}
+.image_with_wrap_screen.light{
+    border-color: #DEDEDE;
+}
+
+/*----Relative projects----*/
+.relative-projects{
+
+}
+.relative-projects .wrap{
+    display: flex;
+    margin-top: 60px;
+}
+.relative-projects .project-info-wrap{
+    flex-direction: column;    
+}
+.relative-projects .project{
+    min-height: 0;
+    padding: 50px 20px;
+}
+.relative-projects .project__preview,
+.relative-projects .project__info{
+    width: 100%;
+    text-align: center;
+}
+.relative-projects .project__quote{
+    line-height: 1.5;
+}
+.relative-projects .project__logo{
+    min-width: 150px;
+    max-width: 180px;
+}
+.relative-projects .project__info{
+    padding-right: 0;
+}
+.relative-projects .btn{
+    width: 100%;
+}
+.relative-projects .project-personal .project__logo{
+    width: 300px;
+    min-width: 300px;
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+
+/*----Footer----*/
+.footer{
+    display: flex;
+    min-height: 60vh;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: center;
+}
+.footer__links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.footer__links ul > li{
+    float: none;
+    text-align: center;
+    list-style: none;
+    margin: 12px 0;
+}
+.footer__links a{
+    float: none;
+    color: #222;
+}
+
+.footer__title{
+    font-family: 'Lab Grotesque', sans-serif;
+    font-size: 52px;
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header__burger{
+    display: none;
+}
+
+/*-----Scroll-----*/
+.scroll{
+    position: absolute;
+    height: 35px;
+    width: 55px;
+    bottom: 45px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translateX(-50%);
+    color: #fff;
+    font: normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+.project-on-light .scroll{
+    color: #222;    
+}
+.scroll span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+.project-on-light .scroll span{
+    border-color: #222;    
+}
+.scroll:hover{
+    opacity: 0.6;
+}
+
+
+@media (min-width: 1000px) {
+    body{
+        font-size: 24px;
+        line-height: 1.6;
+    }
+    .header-nav{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .project-info-wrap{
+        flex-direction: row;
+    }
+    .project__logo, .project__info{
+        box-sizing: border-box;
+    }
+    .project__preview{
+        width: 50%;
+    }
+    .project__info{
+        width: 50%; 
+        padding-right: 40px;
+        box-sizing: border-box;       
+    }
+    .project__wrap{
+        min-height: 100vh;
+        padding: 120px 0 100px;
+        margin-bottom: 100px;
+        font-size: 26px;
+        font-weight: 400;
+    }
+    .project__company-info{
+        margin-top: 60px;
+    }
+    .project__company-info p{
+        line-height: 1.75;
+    }
+    .project__description {
+        margin: 24px 0 24px;
+    }
+    .project__logo img{
+        width: 280px;
+        margin: 0 auto;
+    }
+    .project__logo{
+        max-width: 370px;   
+        min-width: 310px; 
+    }
+    .project-yoomoney .project__logo{
+        min-width: 400px;
+        max-height: 100px;    
+    }
+    
+    .project-yandex .project__logo{
+        min-width: 270px;
+    }
+    .project-personal .project__logo{
+        margin: 30px 0;
+        min-width: 440px;
+    }
+    .project-me .project__title{
+        font-size: 56px;
+    }
+    
+    .project__quote{
+        margin-top: 32px;
+    }
+    .project__description{
+        max-width: 600px;
+    }
+    .project__title{
+        font-size: 44px;
+    }
+    .project__bottom{
+        margin-top: 50px;
+    }
+
+    .project .btn{
+        font-size: 22px;
+        padding: 14px 24px;
+        min-width: 400px;
+    }
+    .project-logo__wrap{
+        min-height: 220px;
+    }
+
+    .content__h2{
+        font-size: 42px;
+        margin-top: 86px;
+        margin-bottom: 32px;
+    }
+    .content__h3{
+        font-size: 32px;
+        margin-top: 55px;
+        margin-bottom: 24px;
+    }
+    .content__text {
+        font-size: 22px;
+        margin-bottom: 120px;
+    }
+
+    .content__pic{
+        max-width: 100%;
+        width: auto;
+        margin: 20px 0 24px;
+    }
+    .content__pic.qt{
+        max-width: 690px;
+    }
+    .relative-projects .project{
+        width: 50%;
+        position: relative;
+    }
+    .relative-projects .project{
+        padding: 60px 24px;
+    }
+    .relative-projects .project__info{
+        min-height: 220px;
+    }
+    .relative-projects .project__title{
+        font-size: 32px;
+    }
+    .relative-projects .project-yandex .project__logo{
+        min-width: 0;
+    }
+    .relative-projects .project-yoomoney .project__logo{
+        min-width: 280px;
+        margin-top: 30px;
+    }
+    .relative-projects .project-epam .project__logo{
+        margin-top: 30px;
+    }
+    .relative-projects .project__bottom{
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 24px;
+    }
+    .relative-projects .project__preview {
+        min-height: 210px;
+    }
+
+}
+
+
+@media (max-width: 1000px) {
+    .project{
+        padding-top: 70px;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    .project__info{
+        box-sizing: border-box;
+        margin: 30px auto 40px;
+        max-width: 460px;
+        padding: 0 20px;
+    }
+    .project__title{
+        font-size: 28px;
+    }
+    .project__preview{
+        padding: 0 20px;
+    }
+    .project__logo{
+        max-width: 240px;
+    }
+    .project__description{
+        margin: 24px 0;
+    }
+    .project__quote{
+        margin-top: 20px;
+    }
+    .project .btn{
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 20px;
+    }
+    .project__bottom{
+        margin-top: 50px;
+    }
+
+    .project__wrap {
+        padding: 60px 20px 60px;
+        margin-bottom: 60px;
+        font-size: 22px;
+        line-height: 1.7;
+        font-weight: 400;
+    }
+
+    .project__wrap .project-logo__wrap{
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .project-yoomoney .project-logo__wrap{
+        min-height: 200px;
+    }
+    .project-yoomoney .project__wrap .project__logo{
+        max-width: 285px;
+        min-width: 285px;
+    }
+    .project__wrap .project__title{
+        font-size: 36px;
+    }
+
+    .project__company-info{
+        margin-top: 60px;
+        line-height: 1.6;
+    }
+
+    .content__h2{
+        font-size: 36px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+    .content__h3{
+        font-size: 28px;
+        margin-top: 50px;
+        margin-bottom: 32px;
+    }
+    .content__text {   
+        padding: 0 20px;
+        margin-bottom: 70px;
+        font-size: 20px;
+    }
+    .content__text li{
+        margin-bottom: 8px;
+    }
+
+    .content__pic{
+        width: 100%;
+    }
+
+    .project-logo__wrap {
+        min-height: 160px;
+    }
+
+    .relative-projects .wrap{
+        flex-direction: column;
+    }
+    .relative-projects .project{
+        width: 100%;
+    }
+    .relative-projects .content__h2{
+        padding: 0 20px;
+    }
+    .relative-projects .project__info{
+        margin-bottom: 0;
+    }
+   
+    .relative-projects .project__preview, 
+    .relative-projects .project__info,
+    .image_with_comment .comment{
+        margin-top: 20px;
+    }
+    .relative-projects .project__preview, 
+    .relative-projects .project__info{
+        padding: 0;
+    }
+    .relative-projects .project-yoomoney .project__logo{
+        max-width: 285px;
+        min-width: 285px;
+    }
+
+    .scroll{
+        display: none;
+    }
+    
+}
+@media (max-width: 700px) {
+    .header-nav{
+        display: none;
+    }
+    .header__burger{
+        display: block;
+    }
+    .header-nav a{
+        font-size: 24px;
+    }
+}
+@media (max-width: 460px) {
+    body{
+        font-size: 20px;
+    }
+    .content__text li, .content__text p{
+        line-height: 1.55;
+    }
+    .project__subtitle, 
+    .project__description p, 
+    .project__quote, 
+    .project .btn{
+        font-size: 20px;
+    }
+    .project-epam .project__logo {
+        max-width: 210px;
+    }
+    .project-yandex .project__logo {
+        max-width: 190px;
+    }
+    .project-tinkoff .project__logo {
+        max-width: 200px;
+    }
+    .project-personal .project__logo {
+        max-width: 290px;
+        margin-bottom: 30px;
+    }
+}

@@ -6,43 +6,47 @@
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style-new.css">
 </head>
 <body>
-  <header class="header container">
-    <div class="header__logo">
-      <a class="header__title link" href="index.html"><span class="icon-back"></span>Home</a>
+  <section class="project-yoomoney project-on-dark">
+    <div id="header-nav-wrap" class="header-nav__wrap">
+      <nav class="header-nav">
+        <a class="header-nav__back" href="index.html#yoomoney"><span class="icon-back"></span>Home</a>
+        <ul>
+          <li><a class="link" href="mailto: artewgen@gmail.com">artewgen@gmail.com</a></li>
+          <li><a class="link" target="_blank" href="assets/files/e.durov_CV.pdf">e.durov_CV.pdf</a></li>
+          <li><a class="link" target="_blank" href="https://www.linkedin.com/in/artewgen/">LinkedIn</a></li>
+        </ul>
+      </nav>
+      <span id="header__burger" class="header__burger"></span>
     </div>
+    <div class="project__wrap container">
+      <div class="project-logo__wrap">
+        <img alt="YooMoney" class="project__logo" src="assets/pic/logos/yoomoney.svg">
+      </div>
+      <h2 class="project__title">
+        Product Designer     
+      </h2>   
+      <div class="project__subtitle">2019–2021, Russia</div>
 
-    <nav class="header__nav" id="dropper">
-      <ul>
-        <li><a class="link" href="mailto: artewgen@gmail.com">artewgen@gmail.com</a></li>
-        <li><a class="link" target="_blank" href="assets/files/Eugene_Durov_CV.pdf">Eugene_Durov_CV.pdf</a></li>
-        <li><a class="link" target="_blank" href="https://www.linkedin.com/in/artewgen/">LinkedIn</a></li>
-      </ul>
-    </nav>
-
-    <span class="header__burger" onclick="toggleDiv('dropper');"></span>
-  </header>
-
-
- 
-  <main class="content content--project">
-
-    <h1 class="content__title">
-      YooMoney (ex.Yandex.Money)
-      <span class="comment">2019 – Present, Saint Petersburg<br> Design processes of payment solutions in YooKassa and B2C utility bills project</span>
-    </h1>
-    <div class="content__text">
-      <p>
+      <div class="project__short">Design processes of payment solutions and creating YooKassa app for business</div>
+      <div class="project__company-info">
+        <p>
         <a class="link link--inline" target="_blank" href="https://yoomoney.ru/">YooMoney</a> (ex Yandex.Money) company is a Russian electronic payment service that helps users pay for goods and services, and companies accept online payments.
         YooMoney is the most popular service in Runet in accepting payments on the Internet, based on the number of sites, 
         <a class="link link--inline" target="_blank" href="https://yoomoney.ru/page?id=529550">MARC data for 2019.</a> 
-      </p>  
+        </p>
+      </div> 
+      <a class="scroll"><span></span></a> 
+    </div>
+  </section>
+  <main class="content content--project container">
+    <div class="content__text">
       <p>
         <h3 class="content__h3">Scope of work</h3>
         <p>
-        During my work in B2B, I redesigned projects such as the Embedded checkout form (Widget), Redirect form and Mobile SDK. Also, I designed YooKassa payment management app.
+          During my work, I redesigned projects such as the Embedded checkout form (Widget), Redirect form and Mobile SDK. Also, I created design for YooKassa managment app for business.
       </p>
       <h3 class="content__h3">Responsibilities</h3>
       <ul>
@@ -51,28 +55,45 @@
         <li>developing a design system;</li>
         <li>mentoring new product designers.</li>
       </ul>
-
     </div>
     <div class="content__text">
-      <h2 class="content__h2">Checkout Widget Redesign</h2>
+      <h2 class="content__h2">Checkout widget redesign</h2>
+      <img class="content__pic" alt="Checkout widget redesign prototype" src="assets/pic/case-yoomoney-widget-proto.png">
       <p>
         <a class="link link--inline" target="_blank" href="https://yookassa.ru/widget/">YooMoney widget</a> 
-        is the company's latest payment acceptance solution. It's a ready-made form for websites that provides seamless payments without switching to other tabs. The widget is used by Adidas & Reebok, iHerb, Cian, Renault and other big names.
+        is the company's latest payment acceptance solution. It's a ready-made form for websites that provides seamless payments without switching to other tabs. The widget is used by Adidas & Reebok, iHerb, Renault and other big names.
       </p>
-      <h3 class="content__h3">Problems and solutions</h3>
+      <h3 class="content__h3">Problems. Quality user testing</h3>
+      <img class="content__pic" alt="Quality user testing reviews" src="assets/pic/case-yoomoney-widget-reviews.png" srcset="assets/pic/case-yoomoney-widget-reviews@2x.png 2x">
       <p>
-        The previous version of the widget is outdated, did not suit users and businesses, it was decided to make a redesign.
-        After conducting the user interviews and tests, collecting their wishes and problems, we identified major goals for the redesign: optimization, improvement and extension.
+        Series of accumulated requests from businesses and users served as the incentive for the redesign. In the beginning, business requirements were collected:  
       </p>
+      <ul>
+        <li>improve conversion rate;</li>
+        <li>add new payment methods as SberPay and linked cards;</li>
+        <li>add the ability to brand the appearance;</li>
+        <li>improve scalability and add re-select payment methods.</li>
+      </ul>
       <p>
-       
+        User testing helped to identify the main UX design problems:
       </p>
-      <p>      
-        <a class="link" target="_blank" href="https://www.behance.net/gallery/115549893/Checkout-Widget-Redesign-YooMoney-%28exYandexMoney%29">
-          <img class="content__pic" alt="Checkout Widget Redesign Behance Preview" src="assets/pic/case-yoomoney-widget-behance.png" srcset="assets/pic/case-yoomoney-widget-behance@2x.png 2x">
-        </a>
-      </p>
+      <ul>
+        <li>improve highlighting of the selected method;</li>
+        <li>fix the location of the payment button;</li>
+        <li>make it easier to fill out a bank card details.</li>
+      </ul>
+      <h3 class="content__h3">Quantitative user testing</h3>
+      <img class="content__pic qt" alt="Quantitative user testing results" src="assets/pic/case-yoomoney-widget-click-testing.png" srcset="assets/pic/case-yoomoney-widget-click-testing@2x.png 2x">
       <p>
+        The heatmap confirmed the concerns users expressed in their interviews. For instance, some of the users failed to understand which payment method was active and where they should click to commit the payment.
+      </p>
+      <h3 class="content__h3">New concepts</h3>
+      <img class="content__pic" alt="New concepts" src="assets/pic/case-yoomoney-widget-concept.png">
+      <p>
+        To cover all of the widget redesign goals, three prototypes were made. Each of them was quantitatively tested, compared to the old design. The best version was selected as the final one.
+      </p>
+    
+
         <h3 class="content__h3">Redesign results</h3>
         <ul>
           <li>major product and UX issues are closed;</li>
@@ -80,93 +101,111 @@
           <li>new features: loyalty, scalability, re-election etc.</li>
         </ul>
         <p>Additional goal — the concept of the widget was re-used in more than 8 company projects.</p>
-        
+        <h3 class="content__h3">Real widget examples</h3>
         <p>
-        You can find a full case of the
-        <a class="link link--color" target="_blank" href="https://www.behance.net/gallery/115549893/Checkout-Widget-Redesign-YooMoney-%28exYandexMoney%29">widget redesign on Behance</a> 
-        .
+          More than thousand of merchants integrate the widget to their websites — from little stores to multi-million services.
+        </p>
+        <img class="content__pic" alt="Real widget examples" src="assets/pic/case-yoomoney-widget-examples.png">
+
+        <h3 class="content__h3">Full case on Behance</h3>
+        <p>
+        You can find a more detailed case
+        <a class="link link--color" target="_blank" href="https://www.behance.net/gallery/115549893/Checkout-Widget-Redesign-YooMoney-%28exYandexMoney%29">widget redesign on Behance</a>.
+      </p>
+      <p>      
+        <a class="link" target="_blank" href="https://www.behance.net/gallery/115549893/Checkout-Widget-Redesign-YooMoney-%28exYandexMoney%29">
+          <img class="content__pic" alt="Checkout Widget Redesign Behance Preview" src="assets/pic/case-yoomoney-widget-behance.png" srcset="assets/pic/case-yoomoney-widget-behance@2x.png 2x">
+        </a>
       </p>
     </div>
-    <!--
     <div class="content__text">
-      <h2 class="content__h2">Redirect Form Redesign</h2>
-      <p>
-        YooMoney redirect form is the company's bigest payment acceptance solution that works with small and very large businesses as Aliexpress, Chanel, Ozon, Avito and many others. Redirect form provides more than 20 payment methods as Bank Cards, Pays, Bank Apps, E-wallets, Сrediting and etc.
-
-      <h3 class="content__h3">Problems and solutions</h3>
-      <p>
-        The old design of the redirect form was more than three years old, there were a lot of scripts and legacies. It was decided to make a redesign using the concept of the payment widget. The goal is to create consistent payment forms across the company.
-      </p>
-      <h3 class="content__h3">Redesign results</h3>
+      <h2 class="content__h2">Creating YooKassa app for business</h2>
+      <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-onboarding.svg">  
+      <p><a href="https://apps.apple.com/ru/app/юkassa/id1536936120" class="link link--color">YooKassa app</a> is a payment management center for merchants. It's an easy way to manage payments, issue invoices, make refunds, monitor payment and invoice analytics.</p>
+      <h3 class="content__h3">Problems</h3>
+      <p>Users of the YooKassa did not have the opportunity to monitor the statistics of their sites on mobile devices, because the site with the personal account of YooKassa does not have an adaptive version. Many requests were received from merchants for the mobile version and it was decided to make a mobile application on iOS and Android and tablet version for iPad.</p>
+      <p>During interviews with users, the main features for the application were identified:</p>
       <ul>
-        <li>major product and UX issues are closed;</li>
-        <li>consistency of payment forms achieved;</li>
-        <li>new features: brand customization and recurring payments.</li>
+        <li>analytics for payments and invoices;</li>
+        <li>full control over payments with filtering;</li>
+        <li>refunds and fast invoicing.</li>
+      </ul>
+      <h3 class="content__h3">Solution</h3>
+
+      <h3 class="content__h4">Analytics</h4>
+      <div class="image_with_comment">
+        <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-analytics.svg"> 
+        <p class="comment">
+          Analytics for payments and invoices: key metrics of your business always at hand
+        </p>
+      </div>
+      <div class="image_with_comment">
+        <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-payments.svg"> 
+        <p class="comment">
+          Full control over payments: confirm or cancel them and browse payment history with search and details for each transaction.
+        </p>
+      </div>
+      <div class="image_with_comment">
+        <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-inv-refund.svg"> 
+        <p class="comment">
+          Fast invoicing via email, a text message, or a link. Refunds: full or partial and refund history with search
+        </p>
+      </div>
+      <div class="image_with_comment">
+        <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-analytics-ipad.svg"> 
+        <p class="comment">
+          There were a lot of requests from users for the tablet version of the app
+        </p>
+      </div>
+      <h3 class="content__h3">Launch results</h3>
+      <ul>
+        <li>quick and convenient access to the merchant's personal account with main feautures on mobile and tablet devices;</li>
+        <li>app rating in the App Store 4.7;</li>
+        <li>more than 100,000 downloads for all time.</li>
       </ul>
     </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic" alt="List of payment methods" src="assets/pic/case-yoomoney-epl-list.png" srcset="assets/pic/case-yoomoney-epl-list@2x.png 2x">
-      <p class="comment">
-        List of payment methods
-      </p>
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic" alt="Inner method — Bank Card" src="assets/pic/case-yoomoney-epl-card.png" srcset="assets/pic/case-yoomoney-epl-card@2x.png 2x">
-      <p class="comment">
-        Inner method — Bank Card
-      </p>
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic outline-free" alt="Adaptive screens" src="assets/pic/case-yoomoney-epl-mobile.png" srcset="assets/pic/case-yoomoney-epl-mobile@2x.png 2x">
-      <p class="comment">
-        Adaptive screens
-      </p>
-    </div>
-    -->
 
     <div class="content__text">
       <h2 class="content__h2">Mobile SDK Redesign</h2>
-      <p>
-        YooMoney mSDK is mobile library that allows you to integrate payment acceptance into mobile apps on iOS and Android. It works as an extension to the YooMoney API.
-       </p>
-      <h3 class="content__h3">Research</h3>   
+      <img class="content__pic" alt="Real widget examples" src="assets/pic/case-yoomoney-msdk-preview.svg">
+      <p>YooMoney mSDK is mobile library that allows you to integrate payment acceptance into mobile apps on iOS and Android. It works as an extension to the YooMoney API.</p>
+      <h3 class="content__h3">Problems</h3>
+      <p>First version of mSDK was made more than 5 years ago and hasn’t chance since that time. During this time, a lot of requests from businesses have accumulated and obvious problems in UX have been noticeable.</p>
+      <p>In the process of research, users were surveyed about the current version, collecting product needs and technical limitations from developers. The research results were analyzed, problems were identified and the following goals for improvement were identified:</p>
       <ul>
-        <li>interviewing users about the current version;</li>
-        <li>conducting corridor UX testing, identifying problem areas;</li>
-        <li>collecting product needs and technical restrictions from developers;</li>
-        <li>investigating direct and indirect competitors.</li>
+        <li>simplify payment methods;</li>
+        <li>cimprove the card payment method;</li>
+        <li>add new payments methods like SberPay and linked cards;</li>
+        <li>add brand customization.</li>
       </ul>
-      <h3 class="content__h3">Prototyping, testing and visual</h3>   
+      <h3 class="content__h3">Solution</h3>
       <p>
         Prototypes are assembled, tested, modified, and re-tested to a successful version. Visual design was created based on the design system.
       </p>
-     
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic outline-free" alt="List of payment methods" src="assets/pic/case-yoomoney-msdk-list.png" srcset="assets/pic/case-yoomoney-msdk-list@2x.png 2x">
-      <p class="comment">
-        List of payment methods
-      </p>
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic outline-free" alt="List of payment methods" src="assets/pic/case-yoomoney-msdk-card.png" srcset="assets/pic/case-yoomoney-msdk-card@2x.png 2x">
-      <p class="comment">
-        Bank card and different input states 
-      </p>
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic outline-free" alt="YooMoney wallet" src="assets/pic/case-yoomoney-msdk-yoomoney.png" srcset="assets/pic/case-yoomoney-msdk-yoomoney@2x.png 2x">
-      <p class="comment">
-        YooMoney wallet method
-      </p>
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic outline-free" alt="Brand customization and dark theme" src="assets/pic/case-yoomoney-msdk-customization.png" srcset="assets/pic/case-yoomoney-msdk-customization@2x.png 2x">
-      <p class="comment">
-        Brand customization and dark theme
-      </p>
-    </div>
-    <div class="content__text">
+      <div class="image_with_comment">
+        <img class="content__pic outline-free" alt="List of payment methods" src="assets/pic/case-yoomoney-msdk-payment-list.svg">
+        <p class="comment">
+          List of payment methods
+        </p>
+      </div>
+      <div class="image_with_comment">
+        <img class="content__pic outline-free" alt="Bank card and different input states" src="assets/pic/case-yoomoney-msdk-bank-card.svg">
+        <p class="comment">
+          Bank card and different input states 
+        </p>
+      </div>
+      <div class="image_with_comment">
+        <img class="content__pic outline-free" alt="YooMoney wallet method" src="assets/pic/case-yoomoney-msdk-yoomoney.svg">
+        <p class="comment">
+          YooMoney wallet method 
+        </p>
+      </div>
+      <div class="image_with_comment">
+        <img class="content__pic outline-free" alt="Brand customization and dark theme" src="assets/pic/case-yoomoney-msdk-customization.svg">
+        <p class="comment">
+          Brand customization and dark theme
+        </p>
+      </div>
       <h3 class="content__h3">Redesign results</h3>  
       <p>
         <ul>
@@ -177,220 +216,47 @@
         </ul>
       </p>
     </div>
-<!--
-    <div class="content__text">
-      <h2 class="content__h2">SberPay Integration</h2>
-      <p>
-        <a class="link link--inline" target="_blank" href="https://www.sberbank.ru/ru/s_m_business/bankingservice/sberpay">SberPay</a>  is a method of making a payment using the SberBank Online app or by receiving an SMS.
-        </p>
-        <p>
-          Implemented Sberpay on all payment forms, replacing the old Sberbank Online method, which worked through the transition to the personal account and had a very small conversion.
-          </p>
-
-        <div class="image_with_comment content__text">
-          <img class="content__pic outline-free" alt="SberPay process in the Widget Form" src="assets/pic/case-yoomoney-sberpay-widget.png" srcset="assets/pic/case-yoomoney-sberpay-widget@2x.png 2x">
-          <p class="comment">
-            SberPay process in the Widget Form
-          </p>
-        </div>
-        <div class="image_with_comment content__text">
-          <img class="content__pic" alt="SberPay method in the Redirect Form" src="assets/pic/case-yoomoney-sberpay-epl.png" srcset="assets/pic/case-yoomoney-sberpay-epl@2x.png 2x">
-          <p class="comment">
-            SberPay method in the Redirect Form
-          </p>
-        </div>
-        <div class="image_with_comment content__text">
-          <img class="content__pic outline-free" alt="SberPay method in the Mobile SDK" src="assets/pic/case-yoomoney-sberpay-msdk.png" srcset="assets/pic/case-yoomoney-sberpay-msdk@2x.png 2x">
-          <p class="comment">
-            SberPay method in the Mobile SDK
-          </p>
-        </div>
-
-    </div>
- -->   
- <div class="content__text">
-  <h2 class="content__h2">YooKassa Mobile App</h2>
-  <p>
-    <a href="https://apps.apple.com/ru/app/юkassa/id1536936120" class="link link--color">YooKassa app</a> is a payment management center for merchants. It's an easy way to manage payments, issue invoices, make refunds, monitor payment and invoice analytics.
-   </p>
-   <h3 class="content__h3">Problems and solutions</h3>
-      <p>
-       Users of the YooKassa did not have the opportunity to monitor the statistics of their sites on mobile devices, because the site with the personal account of YooKassa does not have an adaptive version.
-       Many requests were received from merchants for the mobile version and it was decided to make a mobile application on iOS and Android.
-      </p>
-      <p>During interviews with users, the main features for the application were identified:
-       <ul>
-        <li>full control over payments;</li>
-        <li>analytics for payments and invoices;</li>
-        <li>fast invoicing;</li>
-        <li>refunds;</li>
-        <li>feedback and support.</li>  
-      </ul>
-      </p>
-</div>
-<div class="image_with_comment content__text">
-  <img class="content__pic outline-free" alt="Нome screen with onboarding" src="assets/pic/case-yoomoney-lk-main.png" srcset="assets/pic/case-yoomoney-lk-main@2x.png 2x">
-  <p class="comment">
-    Нome screen with onboarding
-  </p>
-</div>
-<div class="image_with_comment content__text">
-  <img class="content__pic outline-free" alt="Payments" src="assets/pic/case-yoomoney-lk-payments.png" srcset="assets/pic/case-yoomoney-lk-payments@2x.png 2x">
-  <p class="comment">
-    Payments with details
-  </p>
-</div>
-<div class="image_with_comment content__text">
-  <img class="content__pic outline-free" alt="Invoicing and refunds" src="assets/pic/case-yoomoney-lk-refunds.png" srcset="assets/pic/case-yoomoney-lk-refunds@2x.png 2x">
-  <p class="comment">
-    Invoicing and refunds
-  </p>
-</div>
-<div class="image_with_comment content__text">
-  <img class="content__pic outline-free" alt="Payment analytics" src="assets/pic/case-yoomoney-lk-analytics.png" srcset="assets/pic/case-yoomoney-lk-analytics@2x.png 2x">
-  <p class="comment">
-    Payment analytics
-  </p>
-</div>
-<div class="image_with_comment content__text">
-  <img class="content__pic outline-free" alt="Analytics for iPad" src="assets/pic/case-yoomoney-lk-analytics-ipad.png" srcset="assets/pic/case-yoomoney-lk-analytics-ipad@2x.png 2x">
-  <p class="comment">
-    Analytics for iPad
-  </p>
-</div>
-<div class="content__text">
-  <p>
-    <h3 class="content__h3">Launch results</h3>
-    <ul>
-      <li>quick and convenient access to the merchant's personal account on iOS and Android;</li>
-      <li>app rating in the App Store 4.8;</li>
-      <li>more than 100,000 downloads for all time;</li>
-    </ul>
-  </p>
-</div>
-
-
-<!--
-
-
-The app features:
-
-— Fast invoicing: via email, a text message, or a link. You can also get a QR code: convenient for offline payments.
-
-— Full control over payments: confirm or cancel them and browse payment history with search and details for each transaction.
-
-— Analytics for payments and invoices: key metrics of your business always at hand.
-
-— Refunds: full or partial (without text message verification) and refund history with search.
-
-— All your stores (if you have more than one): quick and simple to switch between them.
-
-— Feedback: in case you have a question for our Support Service or an interesting idea to suggest.
--->
-
-
-
-
-
-
- 
-
-
-    <div class="content__text">
-      <h2 class="content__h2 subtitle">B2C Projects</h2>
-      <p>
-        Before I was fully engaged in payment systems, I managed to work on B2C projects. The most interesting — the redesign of Payment of Fines and launching an Utility Bills project.
-      </p>
-    
-    </div>
-
-    <div class="content__text">
-      <h2 class="content__h2">Utility Bills Launching</h2>
-      <p>
-        <a class="link link--inline" target="_blank" href="https://yoomoney.ru/zhkh">Utility Bills Service</a> provides subscription to the debts on the personal account or address and payment.
-      </p>
-    
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic" alt="Data entry" src="assets/pic/case-yoomoney-bills-start.png" srcset="assets/pic/case-yoomoney-bills-start@2x.png 2x">
-      <p class="comment">
-        Data entry
-      </p>
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic" alt="List of utility bills" src="assets/pic/case-yoomoney-bills-list.png" srcset="assets/pic/case-yoomoney-bills-list@2x.png 2x">
-      <p class="comment">
-        List of utility bills
-      </p>
-    </div>
-    <div class="image_with_comment content__text">
-      <img class="content__pic" alt="Utility bill page" src="assets/pic/case-yoomoney-bills-page.png" srcset="assets/pic/case-yoomoney-bills-page@2x.png 2x">
-      <p class="comment">
-        Utility bill page
-      </p>
-    </div>
-<!--
-    <div class="content__text">
-      <h2 class="content__h2">Payment of Fines Redesign</h2>
-      <p>
-        <a class="link link--inline" target="_blank" href="https://yoomoney.ru/debts">Payment of Fines Service</a> provides subscription to the finds and payment.
-      </p>
-    
-    </div>
-  -->
-
-
-
-    <div class="relative-projects content__text">
+    <div class="relative-projects">
       <h2 class="content__h2 subtitle">Other jobs</h2>
-      <div class="project clearfix">
-        <a class="project__pic" href="yandex.html">
-          <img alt="Yandex" src="assets/pic/project-preview/project-yandex.png" srcset="assets/pic/project-preview/project-yandex@2x.png 2x">
-        </a>
-        <div class="project__info">
-          <h4 class="project__title"><a href="yandex.html">Product Designer at Yandex</a></h4>
-          <h4 class="project__subtitle">2019, Moscow</h4>
-          <p>
-            Participated in designing several intranet tools (VConf, Staff and Femida). Fully redesigned internal video conference service VConf — now it's one of the main tools of Yandex internal communication.
-          </p>
-  
-          <a class="btn" href="yandex.html">View projects</a>
+      <div class="wrap">
+        <div class="project project-yandex project-on-dark">
+          <div class="project-info-wrap">
+            <div class="project__preview">
+              <img alt="Yandex" class="project__logo" src="assets/pic/logos/yandex.svg">
+              <p class="project__quote">“The most expensive Russian multinational company in IT”, according&nbsp;to&nbsp;Forbes</p>
+            </div>
+            <div class="project__info">
+              <h3 class="project__title"><a href="yandex.html">Product Designer</a></h3>
+              <h4 class="project__subtitle">2019, Russia</h4>
+              <div class="project__bottom">
+                <a class="btn" href="yandex.html">View projects</a>
+              </div>
+            </div>
+          </div>
+            
         </div>
-      </div>
-  
-      <div class="project clearfix">
-        <a class="project__pic" href="it_academy.html">
-          <img alt="IT Academy" src="assets/pic/project-preview/project-academy.png" srcset="assets/pic/project-preview/project-academy@2x.png 2x">
-        </a>
-        <div class="project__info">
-          <h3 class="project__title"><a href="it_academy.html">UX/UI Design courses at IT Academy</a></h3>
-          <h4 class="project__subtitle">2019, Minsk</h4>
-          <p>
-            Taking courses on improving UX skills with a practicing art director. Two successfully completed projects: team and personal. The personal project 
-            <a class="link link--inline" target="_blank" href="https://www.behance.net/gallery/78078055/Medok-Medical-Service-UXUI">Medok (mobile telemedicine service)</a>
-            received excellent marks.
-          </p>
-  
-          <a class="btn" href="it_academy.html">View projects</a>
-        </div>
-      </div>
-  
-  
-      <div class="project clearfix">
-        <a class="project__pic" href="personal_projects.html">
-          <img alt="Personal Projects" src="assets/pic/project-preview/project-personal.png" srcset="assets/pic/project-preview/project-personal@2x.png 2x">
-        </a>
-        <div class="project__info">
-          <h3 class="project__title"><a href="personal_projects.html">UX/UI Designer | Frontend Developer at  Personal Projects</a></h3>
-          <h4 class="project__subtitle">2014–2019, Minsk</h4>
-          <p>
-            Design and frontend development with a small team. Realize freelance orders for UX/UI design, mostly online store design.
-          </p>
-          <a class="btn" href="personal_projects.html">View projects</a>
+    
+        <div class="project project-personal project-on-light">
+          <div class="project-info-wrap">
+            <div class="project__preview">
+              <img alt="Yandex" class="project__logo" src="assets/pic/logos/personal.svg">
+              <p class="project__quote">Engaging in the design and development of personal projects with a small team</p>
+            </div>
+            <div class="project__info">
+              <h3 class="project__title"><a href="yandex.html">UX/UI Designer and Front-end Developer</a></h3>
+              <h4 class="project__subtitle">2014-2019, Belarus</h4>
+              
+              </p>
+              <div class="project__bottom">
+                <a class="btn" href="personal.html">View projects</a>
+              </div>
+            </div>
+          </div>  
         </div>
       </div>
     </div>
   </main>
+  <script src="assets/js/jquery-3.5.1.min.js" type="text/javascript"></script>
   <script src="assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>

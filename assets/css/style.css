@@ -187,7 +187,7 @@ h1,h2,h3,h4{
 .header-nav a {
     display: block;
     float: left;
-    font-size: 20px;
+    font-size: 22px;
     padding: 20px;
     line-height: 1;
 }
@@ -327,7 +327,7 @@ a.btn{
 
 .project a.btn{
     box-sizing: border-box;
-    font-weight: 500;
+    font-weight: 600;
     min-width: 300px;
 }
 .project-on-light a.btn{
@@ -345,9 +345,8 @@ a.btn{
     background: #fff;
     color: #111;
 }
-.project-on-dark a.btn:hover,
-.project-on-light a.btn:hover{
-    opacity: 0.8;
+a.btn:hover{
+    opacity: 0.91;
 }
 .project__short{
     margin-top: 10px;
@@ -561,6 +560,9 @@ a.btn{
     }
     .project__preview *{
         margin-right: -15%;
+    }
+    .relative-projects .project__preview *{
+        margin-right: 0;
     }
     .project__info{
         width: 50%; 

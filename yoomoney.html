@@ -23,20 +23,19 @@
     </div>
     <div class="project__wrap container">
       <div class="project-logo__wrap">
-        <img alt="YooMoney" class="project__logo" src="assets/pic/logos/yoomoney.svg">
+        <a class="link link--inline" target="_blank" href="https://yoomoney.ru/"><img alt="YooMoney" class="project__logo" src="assets/pic/logos/yoomoney.svg"></a>
       </div>
       <h2 class="project__title">
         Product Designer     
       </h2>   
       <div class="project__subtitle">2019–2021, Russia</div>
 
-      <div class="project__short">Design processes of payment solutions and creating YooKassa app for business</div>
+      <div class="project__short">Design processes of payment solutions and create the YooKassa app for business</div>
       <div class="project__company-info">
         <p>
-        <a class="link link--inline" target="_blank" href="https://yoomoney.ru/">YooMoney</a> (ex Yandex.Money) company is a Russian electronic payment service that helps users pay for goods and services, and companies accept online payments.
-        YooMoney is the most popular service in Runet in accepting payments on the Internet, based on the number of sites, 
-        <a class="link link--inline" target="_blank" href="https://yoomoney.ru/page?id=529550">MARC data for 2019.</a> 
+        "<a class="link link--inline" target="_blank" href="https://yoomoney.ru/">YooMoney</a> (ex Yandex.Money) is the most popular payment service provider in Russia, based on the number of sites", according to <a class="link link--inline" target="_blank" href="https://yoomoney.ru/page?id=529550">MARC data for 2019</a>.
         </p>
+        YooMoney offers its merchants various solutions for sales growth and customer retention rate increase: solutions for marketplaces, B2B-payments, services for the self-employed and many other features. Currently, more than 160K online stores across the globe use YooMoney.
       </div> 
       <a class="scroll"><span></span></a> 
     </div>
@@ -45,7 +44,7 @@
     <div class="content__text">
         <h3 class="content__h3">Scope of work</h3>
         <p>
-          During my work, I redesigned projects such as the Embedded checkout form (Widget), Redirect form and Mobile SDK. Also, I created design for YooKassa managment app for business.
+          During my work, I redesigned projects such as the Embedded checkout form (Widget), Redirect form and Mobile SDK. Also, I created a design for the YooKassa management app for business.
       </p>
       <h3 class="content__h3">Responsibilities</h3>
       <ul>
@@ -88,35 +87,68 @@
       <p>
         The heatmap confirmed the concerns users expressed in their interviews. For instance, some of the users failed to understand which payment method was active and where they should click to commit the payment.
       </p>
-      <h3 class="content__h3">New concepts</h3>
-      <img class="content__pic" alt="New concepts" src="assets/pic/case-yoomoney-widget-concept.gif">
+      <h3 class="content__h3">Finding a solution — three concepts</h3> 
       <p>
         To cover all of the widget redesign goals, three prototypes were made. Each of them was quantitatively tested, compared to the old design. The best version was selected as the final one.
       </p>
-    
+      <h4 class="content__h4">Concept 1. Updated old version</h4>
+      <img class="content__pic" alt="Concept one" src="assets/pic/case-yoomoney-widget-concept-one.png" srcset="assets/pic/case-yoomoney-widget-concept-one@2x.png 2x">
+      <p>Initially, there was an attempt to fix the previous version of the UI with placing accents on the chosen method and submit button.
+        Thus, there was an attempt to correct consistency and to improve understanding the choice. 
+        <p>
+        User testing showed that the understanding of the chosen method has become better, but submit button was also poorly noticed. Also, in such a design, it would be difficult to fulfill the business goal of adding new methods without overflowing the design.
+      </p>
+      
+        <h4 class="content__h4">Concept 2. Accordion</h4>
+        <img class="content__pic" alt="Concept two" src="assets/pic/case-yoomoney-widget-concept-two.png" srcset="assets/pic/case-yoomoney-widget-concept-two@2x.png 2x">
+        <p>After an unsuccessful try to fix the old design, it was decided to make new design concepts. An accordion was a quite good solution — payment methods were placed on separate cards and the details of the method were revealed in accordion style.</p>
+        <p>Users understood of the chosen method good enough submit the button worked well too. The big problem was that the interface takes up a lot of space in height, which is problematic for an embedded solution.</p>
+        <p>It's okay, but the interface takes up a lot of space in height, you need to scroll down</p>
 
+      <h4 class="content__h4">Concept 3. Steps</h4>
+      <img class="content__pic" alt="Concept three" src="assets/pic/case-yoomoney-widget-concept-three.png" srcset="assets/pic/case-yoomoney-widget-concept-three@2x.png 2x">
+        <p>The previous concept was redesigned that the chosen method was opened by the next step. This concept worked perfectly on tests and was suitable for business purposes:
+          <ul>
+            <li>excellent user understanding of the selected method and the convenience of filling in on a separate screen;</li>
+            <li>easy to add a new payment method and steps without overloading the design;</li>
+            <li>compact size for embedding;</li>
+            <li>convenient to reuse in other projects.</li>
+          </ul>
+        <p>All three concepts were tested on quantitative tests and the third concept with steps showed the best results. It was decided to take this into developing.</p>
+
+        <h3 class="content__h3">New features</h3>
+        <p>The widget stands out among the competitors in a positive way due to its adaptability for most devices and customization to match the colors of the merchant's website.</p>
+        <h4 class="content__h4">Customization</h4>
+        <img class="content__pic" alt="Widget customization" src="assets/pic/case-yoomoney-widget-customization.gif" srcset="assets/pic/case-yoomoney-widget-customization@2x.gif 2x">
+        <p>The merchant can customize the color scheme — the widget takes the brand colors. It is possible to change the color of the "Pay" button, the color of the text or the background.
+          According to metrics, stores with customized widget had a 15% higher conversion payment rate.</p>
+       
+        <h4 class="content__h4">Responsive</h4>
+        <img class="content__pic" alt="Widget adaptive" src="assets/pic/case-yoomoney-widget-adaptive.png" srcset="assets/pic/case-yoomoney-widget-adaptive@2x.png 2x">
+        <p>Widget adapts to the screen resolutions of most devices. Therefore, it is equally convenient to pay via phone, tablet, or any laptop. You can pay via YooMoney widget even on a smart watch.</p>
         <h3 class="content__h3">Redesign results</h3>
         <ul>
-          <li>major product and UX issues are closed;</li>
-          <li>conversion rate increased more than 5%;</li>
-          <li>new features: loyalty, scalability, re-election etc.</li>
+          <li><b>major product and UX issues are closed;</b></li>
+          <li><b>conversion rate increased more than 5%;</b></li>
+          <li><b>new features: loyalty, scalability, re-election etc;</b></li>
+          <li><b>the concept of the widget was re-used in more than 8 company projects.</b></li>
         </ul>
-        <p>Additional goal — the concept of the widget was re-used in more than 8 company projects.</p>
         <h3 class="content__h3">Real widget examples</h3>
         <p>
           More than thousand of merchants integrate the widget to their websites — from little stores to multi-million services.
         </p>
-        <img class="content__pic" alt="Real widget examples" src="assets/pic/case-yoomoney-widget-examples.gif">
+        <img class="content__pic" alt="Real widget examples" src="assets/pic/case-yoomoney-widget-examples.gif" srcset="assets/pic/case-yoomoney-widget-examples@2x.png 2x">
 
         <h3 class="content__h3">Full case on Behance</h3>
-        <p>
-        You can find a more detailed case
-        <a class="link link--color" target="_blank" href="https://www.behance.net/gallery/115549893/Checkout-Widget-Redesign-YooMoney-%28exYandexMoney%29">widget redesign on Behance</a>.
-      </p>
+        
       <p>      
         <a class="link" target="_blank" href="https://www.behance.net/gallery/115549893/Checkout-Widget-Redesign-YooMoney-%28exYandexMoney%29">
           <img class="content__pic" alt="Checkout Widget Redesign Behance Preview" src="assets/pic/case-yoomoney-widget-behance.png" srcset="assets/pic/case-yoomoney-widget-behance@2x.png 2x">
         </a>
+      </p>
+      <p>
+        You can find a more detailed case
+        <a class="link link--color" target="_blank" href="https://www.behance.net/gallery/115549893/Checkout-Widget-Redesign-YooMoney-%28exYandexMoney%29">widget redesign on Behance</a>.
       </p>
     </div>
     <div class="content__text">
@@ -124,7 +156,7 @@
       <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-onboarding.svg">  
       <p><a href="https://apps.apple.com/ru/app/юkassa/id1536936120" class="link link--color">YooKassa app</a> is a payment management center for merchants. It's an easy way to manage payments, issue invoices, make refunds, monitor payment and invoice analytics.</p>
       <h3 class="content__h3">Problems</h3>
-      <p>Users of the YooKassa did not have the opportunity to monitor the statistics of their sites on mobile devices, because the site with the personal account of YooKassa does not have an adaptive version. Many requests were received from merchants for the mobile version and it was decided to make a mobile application on iOS and Android and tablet version for iPad.</p>
+      <p>Initially, there was only a web version of the personal account of YooKassa users without adaptive version. Many requests were received from merchants for the mobile version. Adding an adaptive version of the website to make it convenient was technically difficult, so it was decided to make a mobile application on iOS and Android and tablet version for iPad.</p>
       <p class="points-header">During interviews with users, the main features for the application were identified:</p>
       <ul>
         <li>analytics for payments and invoices;</li>
@@ -133,29 +165,54 @@
       </ul>
       <h3 class="content__h3">Solution</h3>
 
-      <h3 class="content__h4">Analytics</h4>
+      <h4 class="content__h4">Analytics</h4>
+      <p>In the first version of the application, the main section was a list of payments, and analytics was on the second tab. After launching and collecting the first reviews, it became clear that users more often go for analytics than for a list of payments, so in the next version analytics became the main. 
+      <p>The analytics included nine parameters: revenue, average check, amount and number of refunds, number of payments, paid bills and average bill receipt, invoices issued and unpaid bills.</p>
       <div class="image_with_comment">
-        <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-analytics.svg"> 
+        <img class="content__pic" alt="Analytics for payments and invoices" src="assets/pic/case-yoomoney-lk-analytics.svg"> 
         <p class="comment">
-          Analytics for payments and invoices: key metrics of your business always at hand
+          Analytics for payments and invoices
         </p>
       </div>
+      <p>  
+        Detailed analytics with a comparison of the chart with the opening in horizontal mode was very good rated by users.
+      </p>
       <div class="image_with_comment">
-        <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-payments.svg"> 
+      <img class="content__pic" alt="etailed analytics" src="assets/pic/case-yoomoney-lk-analytics-details.svg"> 
         <p class="comment">
-          Full control over payments: confirm or cancel them and browse payment history with search and details for each transaction.
+          Detailed analytics in horizontal view
         </p>
       </div>
+      <h4 class="content__h4">Payments</h4>
+      <p>List of payments with details was basic information for merchants. They received full control over payments: confirm or cancel them and browse payment history with search and details for each transaction.</p>
       <div class="image_with_comment">
-        <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-inv-refund.svg"> 
+        <img class="content__pic" alt="Payment list and payment filter" src="assets/pic/case-yoomoney-lk-payments.svg"> 
         <p class="comment">
-          Fast invoicing via email, a text message, or a link. Refunds: full or partial and refund history with search
+          Payment list and payment filter
         </p>
       </div>
+      <p>It was possible to view the detailed history of the payment: when it was paid, whether the receipt was received, whether there was a refund, and so on. View and send a receipt functional was in great demand by merchants.</p>
+      <div class="image_with_comment">
+      <img class="content__pic" alt="Payment details" src="assets/pic/case-yoomoney-lk-payment.svg"> 
+        <p class="comment">
+          Payment details
+        </p>
+      </div>
+      <h4 class="content__h4">Invoicing and refunds</h4>
+        <p>Fast invoicing via email, a text message, or a link was developed. The buyer would receive a payment link directly and would be able to pay immediately. After paying the bill, the merchant received a push notification.
+        <p>Merchant can do full or partial refunds for an unpaid invoices or set a date after which it cannot be paid.</p>
+      <div class="image_with_comment">
+        <img class="content__pic" alt="Invoicing and refunds" src="assets/pic/case-yoomoney-lk-inv-refund.svg"> 
+        <p class="comment">
+          Invoicing and refunds
+        </p>
+      </div>
+      <h4 class="content__h4">Tablet version</h4>
+      <p>There were a lot of requests from merchants for the tablet version of the app</p>
       <div class="image_with_comment">
         <img class="content__pic" alt="Yookassa app example" src="assets/pic/case-yoomoney-lk-analytics-ipad.svg"> 
         <p class="comment">
-          There were a lot of requests from users for the tablet version of the app
+          Tablet version of the app
         </p>
       </div>
       <h3 class="content__h3">Launch results</h3>

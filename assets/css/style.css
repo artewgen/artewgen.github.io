@@ -393,9 +393,11 @@ a.btn:hover{
 }
 .link--inline {
     text-decoration: underline;
+    color: inherit;
 }
 .image_with_comment{
     margin-bottom: 60px;
+    text-align: center;
 }
 .image_with_comment .comment {
     text-align: center;
@@ -633,17 +635,26 @@ a.btn:hover{
     }
     .project-logo__wrap{
         min-height: 220px;
+        margin-bottom: 30px;
+    }
+    .project-tinkoff  .project-logo__wrap{
+        margin-bottom: 60px;
     }
 
     .content__h2{
         font-size: 42px;
-        margin-top: 86px;
+        margin-top: 92px;
         margin-bottom: 32px;
     }
     .content__h3{
         font-size: 32px;
-        margin-top: 55px;
+        margin-top: 64px;
         margin-bottom: 24px;
+    }
+    .content__h4{
+        font-size: 26px;
+        margin-top: 56px;
+        margin-bottom: 16px;
     }
     .content__text {
         font-size: 22px;
@@ -752,6 +763,9 @@ a.btn:hover{
         max-width: 285px;
         min-width: 285px;
     }
+    .project-tinkoff  .project-logo__wrap{
+        margin-bottom: 40px;
+    }
     .project__wrap .project__title{
         font-size: 36px;
     }
@@ -770,6 +784,11 @@ a.btn:hover{
         font-size: 28px;
         margin-top: 50px;
         margin-bottom: 32px;
+    }
+    .content__h4{
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 10px;
     }
     .content__text {   
         padding: 0 20px;

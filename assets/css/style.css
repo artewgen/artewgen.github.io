@@ -572,6 +572,7 @@ a.btn:hover{
         box-sizing: border-box;       
     }
     .project__wrap{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;

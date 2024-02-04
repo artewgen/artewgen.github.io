@@ -824,6 +824,10 @@ a.btn:hover{
     .project__bottom{
         margin-top: 50px;
     }
+    .project__bottom .links.horiz{
+        flex-direction: column;
+        gap: 5px;
+    }
 
     .project__wrap {
         padding: 60px 20px 60px;
@@ -919,7 +923,36 @@ a.btn:hover{
     .scroll{
         display: none;
     }
-    
+    .project-activity .activity__list, .project-activity img{
+        width: 100%;
+    }
+    .project-activity{
+        padding-top: 0;
+    }
+    .project-activity .activity__img{
+        position: relative;
+    }
+    .activity__hover{
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .project-activity  a.btn {
+       
+        width: 100%;
+        height: 100%;
+   
+        opacity: 0;
+    }
+    .footer{
+        padding: 0;
+    }
+    .footer__title{
+        font-size: 40px;
+    }
 }
 @media (max-width: 700px) {
     .header-nav{

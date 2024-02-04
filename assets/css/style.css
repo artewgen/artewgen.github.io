@@ -119,11 +119,16 @@
 .container {
     margin: 0 auto;
 }
+.container-main{
+    max-width: 1260px;
+    margin: 0 auto;
+}
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 20px;
-    color: #111;
+    color: #222;
     font-weight: 400;
+    letter-spacing: .35;
 }
 a {
     text-decoration: underline;
@@ -134,6 +139,10 @@ a:hover{
 ul {
     padding: 0;
     margin: 0;
+}
+ul.horiz{
+    display: flex;
+    gap: 30px;
 }
 li {
     margin-left: 30px;
@@ -150,6 +159,9 @@ h1,h2,h3,h4{
 }
 .points-header{
     margin-bottom: 10px;
+}
+.centered{
+    text-align: center;
 }
 
 /*----Header nav----*/
@@ -229,8 +241,11 @@ h1,h2,h3,h4{
 }
 
 /*----Project----*/
-.project-me{
-    background: #545265;
+.project-me, #fullview .footer{
+    background: #f5edff;
+}
+.project-semrush{
+    background: #421983;
 }
 .project-tinkoff{
     background: #F2D332;
@@ -247,6 +262,12 @@ h1,h2,h3,h4{
 .project-epam{
     background: #3DB1BE;
 }
+.project-activity{
+    flex-direction: column;
+}
+.project-activity .project__title{
+    margin-bottom: 60px;
+}
 .project {
     display: flex;
     width: 100%;
@@ -256,6 +277,9 @@ h1,h2,h3,h4{
 }
 .project-me .project__title{
     font-size: 42px;
+}
+.project-me .project__logo{
+    max-width: 300px;
 }
 .project-info-wrap{
     display: flex;
@@ -461,7 +485,7 @@ a.btn:hover{
 .footer{
     display: flex;
     min-height: 60vh;
-    margin-top: 150px;
+    padding: 150px 0 80px;
     align-items: center;
     justify-content: center;
 }
@@ -589,7 +613,7 @@ a.btn:hover{
         line-height: 1.75;
     }
     .project__description {
-        margin: 24px 0 70px;
+        margin: 24px 0 50px;
     }
     .project__logo img{
         width: 280px;
@@ -599,7 +623,8 @@ a.btn:hover{
         max-width: 370px;   
         min-width: 310px; 
     }
-    .project-yoomoney .project__logo{
+    .project-yoomoney .project__logo,
+    .project-semrush .project__logo{
         min-width: 400px;
         max-height: 100px;    
     }
@@ -620,7 +645,7 @@ a.btn:hover{
         margin-top: 32px;
     }
     .project__description{
-        max-width: 600px;
+        max-width: 620px;
     }
     .project__title{
         font-size: 44px;
@@ -643,29 +668,32 @@ a.btn:hover{
     }
 
     .content__h2{
-        font-size: 42px;
+        font-size: 48px;
         margin-top: 92px;
         margin-bottom: 32px;
     }
     .content__h3{
-        font-size: 32px;
+        font-size: 36px;
         margin-top: 64px;
         margin-bottom: 24px;
     }
     .content__h4{
-        font-size: 26px;
+        font-size: 28px;
         margin-top: 56px;
         margin-bottom: 16px;
     }
     .content__text {
-        font-size: 22px;
+        font-size: 24px;
         margin-bottom: 120px;
     }
 
     .content__pic{
         max-width: 100%;
         width: auto;
-        margin: 20px 0 24px;
+        margin: 10px 0 24px;
+    }
+    .content__pic.gif{
+        width: 860px;
     }
     .content__pic.qt{
         max-width: 690px;
@@ -705,6 +733,60 @@ a.btn:hover{
         min-height: 210px;
     }
 
+    /*----Activity----*/
+    .activity__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .activity__item{
+        position: relative;
+        width: 50%;  
+    }
+    .activity__item:hover .activity__hover{
+        opacity: 1;  
+    }
+    .activity__hover{
+        opacity: 0;
+        display: flex;
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,.2);
+        -webkit-transition: opacity 0.1s ease-out 0s;
+        -moz-transition: opacity 0.1s ease-out 0s;
+        -o-transition: opacity 0.1s ease-out 0s;
+        transition: opacity 0.1s ease-out 0s; 
+    }
+    .activity__hover a.btn{
+        background: #fff;
+        color: #111;
+    }
+    .activity__img{
+        width: 100%;
+      
+    }
+    .activity__img img{
+        width: 100%;
+    }
+    .activity__header{
+        margin: 20px 0 0;
+        font-size: 28px;
+        color: #fff;
+    }
+
+    .cases_item__description{
+        margin: 0 0;
+    }
+    .activity__info{
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+    }
 }
 
 
@@ -777,17 +859,17 @@ a.btn:hover{
     }
 
     .content__h2{
-        font-size: 36px;
+        font-size: 40px;
         margin-top: 80px;
         margin-bottom: 40px;
     }
     .content__h3{
-        font-size: 28px;
+        font-size: 32px;
         margin-top: 50px;
         margin-bottom: 32px;
     }
     .content__h4{
-        font-size: 22px;
+        font-size: 24px;
         margin-top: 30px;
         margin-bottom: 10px;
     }

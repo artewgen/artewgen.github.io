@@ -276,7 +276,7 @@ h1,h2,h3,h4{
     justify-content: center;
 }
 .project-me .project__title{
-    font-size: 42px;
+    font-size: 48px;
 }
 .project-me .project__logo{
     max-width: 300px;
@@ -637,7 +637,6 @@ a.btn:hover{
         min-width: 440px;
     }
     .project-me .project__title{
-        font-size: 56px;
         margin-bottom: 32px;
     }
     

@@ -275,11 +275,18 @@ h1,h2,h3,h4{
     align-items: center;
     justify-content: center;
 }
+
 .project-me .project__title{
     font-size: 48px;
 }
 .project-me .project__logo{
     max-width: 300px;
+}
+.project-me.project__list{
+    margin-bottom: 32px;
+}
+.project-me.project__list .title__list{
+    margin-bottom: 8px;
 }
 .project-info-wrap{
     display: flex;
@@ -382,7 +389,7 @@ a.btn:hover{
 }
 .project__description .points li{
     list-style: disc;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 .project-logo__wrap{
     display: flex;
@@ -391,6 +398,9 @@ a.btn:hover{
 .project__wrap{
     margin: 0 auto;
     box-sizing: border-box;
+}
+.project__info{
+    line-height: 1.45;
 }
 
 
@@ -582,7 +592,7 @@ a.btn:hover{
         box-sizing: border-box;
     }
     .project__preview{
-        width: 50%;
+        width: 47%;
     }
     .project__preview *{
         margin-right: -15%;
@@ -591,7 +601,7 @@ a.btn:hover{
         margin-right: 0;
     }
     .project__info{
-        width: 50%; 
+        width: 53%; 
         padding-right: 40px;
         box-sizing: border-box;       
     }
@@ -644,7 +654,7 @@ a.btn:hover{
         margin-top: 32px;
     }
     .project__description{
-        max-width: 620px;
+        max-width: 640px;
     }
     .project__title{
         font-size: 44px;

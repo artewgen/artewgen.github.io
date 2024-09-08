@@ -208,13 +208,26 @@ h1,h2,h3,h4{
     position: absolute;
     top: 0;
     right: 0;
-    width: 18px;
+    width: 24px;
     height: 24px;
     padding: 16px 16px;
-    background-image: url(../icons/icon-burger.svg);
+    background-image: url(../icons/burger-menu.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 18px 24px;
+    background-size: 24px 24px;
+}
+.header__back {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    padding: 16px 16px;
+    background-image: url(../icons/back-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
 }
 .header-nav__wrap.open{
     position: absolute;
@@ -527,9 +540,10 @@ a.btn:hover{
     text-align: center;
 }
 
-.header__burger{
+.mobile-nav{
     display: none;
 }
+
 
 /*-----Scroll-----*/
 .scroll{
@@ -973,7 +987,7 @@ a.btn:hover{
     .header-nav{
         display: none;
     }
-    .header__burger{
+    .mobile-nav{
         display: block;
     }
     .header-nav a{

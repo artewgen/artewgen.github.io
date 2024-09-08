@@ -638,7 +638,8 @@ a.btn:hover{
         min-width: 310px; 
     }
     .project-yoomoney .project__logo,
-    .project-semrush .project__logo{
+    .project-semrush .project__logo,
+    .project-revealbot .project__logo{
         min-width: 400px;
         max-height: 100px;    
     }

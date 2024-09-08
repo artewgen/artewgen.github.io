@@ -244,6 +244,9 @@ h1,h2,h3,h4{
 .project-me, #fullview .footer{
     background: #f5edff;
 }
+.project-revealbot{
+    background: #141414;
+}
 .project-semrush{
     background: #421983;
 }

@@ -740,7 +740,7 @@ a.btn:hover{
         padding: 60px 24px;
     }
     .relative-projects .project__info{
-        min-height: 220px;
+        min-height: 185px;
     }
     .relative-projects .project__title{
         font-size: 32px;
@@ -748,9 +748,13 @@ a.btn:hover{
     .relative-projects .project-yandex .project__logo{
         min-width: 0;
     }
-    .relative-projects .project-yoomoney .project__logo{
-        min-width: 280px;
+    .relative-projects .project-yoomoney .project__logo{ 
+        min-width: 280px;   
         margin-top: 30px;
+    }
+    .relative-projects .project-revealbot .project__logo{
+        min-width: 280px;
+        margin-top: 10px;
     }
     .relative-projects .project-epam .project__logo{
         margin-top: 30px;

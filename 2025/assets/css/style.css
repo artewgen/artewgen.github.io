@@ -78,8 +78,8 @@
     --font-h1: calc(48px * var(--scale));  
 
     --border-radius-s: calc(18px * var(--scale));
-    --border-radius-m: calc(26px * var(--scale));
-    --border-radius-l: calc(32px * var(--scale));
+    --border-radius-m: calc(28px * var(--scale));
+    --border-radius-l: calc(36px * var(--scale));
 
     --color-text-primary: #141414;
     --color-text-secondary: #4D4D4D;
@@ -252,6 +252,9 @@ h4{
 }
 .no-paddings{
     padding: 0 !important;
+}
+.bottom-margins{
+    margin-bottom: calc(48px * var(--scale));;
 }
 
 /*-----Header nav---------------------------------------------------------*/

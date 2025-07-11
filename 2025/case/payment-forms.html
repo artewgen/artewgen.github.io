@@ -40,7 +40,7 @@
         </ul>
       </li>
       <li class="nav-section">
-        <button class="nav-h1" data-target="section-widget">Widget Redesign</button>
+        <button class="nav-h1" data-target="section-widget">1.Widget Redesign</button>
         <ul class="nav-h2-list">
           <li><a href="#widget-merchant-requirements" class="nav-h2">Merchant Requirements</a></li>
           <li><a href="#widget-user-challenges" class="nav-h2">User Challenges</a></li>
@@ -53,7 +53,7 @@
         </ul>
       </li>
       <li class="nav-section">
-        <button class="nav-h1" data-target="section-msdk">MSDK Redesign</button>
+        <button class="nav-h1" data-target="section-msdk">2.MSDK Redesign</button>
         <ul class="nav-h2-list">
           <li><a href="#msdk-research" class="nav-h2">Research and Goals</a></li>
           <li><a href="#msdk-bank-card" class="nav-h2">Bank Card Payment Flow</a></li>
@@ -179,12 +179,12 @@
         <li>Complexity in entering bank card details.</li>
       </ul>
       <p>Quantitative heatmap testing validated these concerns. For instance, some users struggled to identify which payment method was active or where to click to complete their payment.</p>
-      <div class="centered two-in-row">
-        <div class="item rounded">
+      <div class="centered no-paddings">
+        <div class="item item-1-2 rounded">
           <p><i><strong>“Where do you click to change card details?”</strong></i></p>
           <img src="../assets/pic/case/payment-forms/heatmap-1.png">
         </div>  
-        <div class="item rounded">
+        <div class="item item-1-2 rounded">
           <p><i><strong>“Where do you click to pay by card?”</strong></i></p>
           <img src="../assets/pic/case/payment-forms/heatmap-2.png">
         </div>  
@@ -213,7 +213,7 @@
       <h2>Finding Solutions: Three Concepts</h2>
       <p>I developed three concepts to address redesign goals.</p>
 
-      <div class="centered-wrap no-margins">
+      <div class="centered-wrap no-margins no-paddings">
         <div class="centered">
           <div class="item-1-3">
             <div class="img-block-title">
@@ -242,7 +242,7 @@
 
       <h3>Concept Testing</h3>
       <p>Quantitative testing compared all concepts against the original design across metrics such as method selection clarity and ease of data entry. The step-by-step process consistently outperformed others.</p>
-      <div class="centered-wrap no-margins rounded rounded-l">
+      <div class="centered-wrap no-margins no-paddings rounded rounded-l">
         <div class="centered">
           <img src="../assets/pic/case/payment-forms/concept-testing.svg">
         </div>
@@ -252,10 +252,20 @@
     <div id="widget-killer-features" class="case-study__block">
       <h2>Killer Features: Adaptability and Customisation</h2>
       <p>The widget stands out for its adaptability across devices and customisation to match merchant branding.</p>
-      <h3>Adaptability</h3>
+      <h3>Adaptability: Even for Smartwatches</h3>
       <p>Seamless functionality across devices, including smartwatches, ensured convenience for users.</p>
+      <div class="centered-wrap no-margins no-paddings bottom-margins rounded rounded-l">
+        <div class="centered">
+          <img src="../assets/pic/case/payment-forms/responsive.svg">
+        </div>
+      </div>
       <h3>Brand Customisation</h3>
-      <p>Merchants using custom colour schemes saw a 20% higher conversion rate.</p>
+      <p>Merchants using custom colour schemes reported a 20% higher conversion rate.</p>
+      <div class="centered-wrap no-margins no-paddings bottom-margins rounded rounded-l"></div>
+        <div class="centered">
+          <img src="../assets/pic/case/payment-forms/customization.svg">
+        </div>
+      </div>
     </div>
   
     <div id="widget-launch" class="case-study__block">
@@ -267,6 +277,21 @@
         <li>Animations were developed directly in Codesandbox to streamline implementation.</li>
         <li>Detailed specifications ensured adaptability across screen resolutions.</li>
       </ul>
+      <br>
+      <p>Below is my Sandbox widget code example with hover animations and a bank card transition, which I shared with the developers—and it’s still available after four years.</p>
+      <div class="centered-wrap no-margins no-paddings rounded rounded-l">
+        <div class="centered">
+          <iframe
+            src="https://codesandbox.io/p/sandbox/7bj0g?file=%2Fsrc%2Fstyles.css%3A29%2C1"
+            width="100%"
+            height="700"
+            style="border:0; border-radius: 8px; overflow:hidden;"
+            allow="accelerometer; camera; encrypted-media; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write"
+            sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+          ></iframe>
+        </div>
+      </div>
+
       <h3>Successful A/B testing</h3>
       <p>A limited beta launch involving 100 merchants validated the redesign through A/B testing:</p>
       <ul class="description-list">

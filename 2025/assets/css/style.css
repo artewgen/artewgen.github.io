@@ -104,6 +104,8 @@
     --color-case-bg-widget: #14213D;
     --color-case-bg-lk: #163020;
 
+    --color-case-inside-bg-widget: #2850AC;
+
     --color-block-contribution-bg: #1F3021;
 
     --color-block-bg-highlight: #F3F5F1;
@@ -253,8 +255,8 @@ h4{
 .no-paddings{
     padding: 0 !important;
 }
-.bottom-margins{
-    margin-bottom: calc(48px * var(--scale));;
+.bottom-margin{
+    margin-bottom: calc(56px * var(--scale)) !important;
 }
 
 /*-----Header nav---------------------------------------------------------*/
@@ -1000,6 +1002,22 @@ ul.contact-me__links{
     width: 100%;
 }
 
+.svg-switcher img{
+  transition: opacity 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.video-wrap{  
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.video-wrap video{
+    width: 100%;
+}
+
+
+/*-----Finhealth----------------------------------------------------------*/
+
 .main-image-finhealth .centered{
     gap: calc(36px * var(--scale));
     align-items: center;
@@ -1012,14 +1030,6 @@ ul.contact-me__links{
     padding-right: calc(4px * var(--scale));
 }
 
-.video-wrap{  
-    box-sizing: border-box;
-    overflow: hidden;
-}
-.video-wrap video{
-    width: 100%;
-}
-
 .main-image-finhealth .video-wrap{
     border-radius: calc(32px * var(--scale));
     border: calc(8px * var(--scale)) solid #fff;
@@ -1027,6 +1037,7 @@ ul.contact-me__links{
     box-sizing: border-box;
     overflow: hidden;
 }
+
 
 
 /*-----Finhealth Benchmark BottomSheet----------------------------------------*/
@@ -1246,9 +1257,9 @@ ul.contact-me__links{
 .slider-before-after{
     width: 100%;
     padding: calc(32px * var(--scale)) 0;
-    border: 1px solid #d5d5d5;
     border-radius: var(--border-radius-m);
-    background: #f7f7f7;
+    background: var(--color-case-inside-bg-widget);
+    color: #fff;
 }
 .slider-before-after p{
     text-align: center;

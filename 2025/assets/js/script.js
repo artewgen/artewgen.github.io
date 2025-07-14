@@ -2,6 +2,7 @@
 
 
 $(function() {
+
   /* Mobile navigation */
   $('#menu-mobile-switcher').on('click', function(){
     $('#header-nav').toggleClass('open');
@@ -245,6 +246,37 @@ wraps.forEach((wrap, i) => {
 // Initialise
 openBenchmark(0);
 startAutoOpen();
+
+//SVG Switcher
+
+const svgContainers = document.querySelectorAll('.svg-switcher');
+
+svgContainers.forEach(container => {
+  const img = container.querySelector('img');
+  // Collect all data-src attributes dynamically
+  const svgLinks = [];
+  let i = 1;
+  while (img.getAttribute(`data-src${i}`)) {
+    svgLinks.push(img.getAttribute(`data-src${i}`));
+    i++;
+  }
+  let currentIndex = 0;
+
+  function switchSVG() {
+    img.style.opacity = 0;
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % svgLinks.length;
+      img.src = svgLinks[currentIndex];
+      img.style.opacity = 1;
+    }, 150); // Duration matches the CSS transition
+  }
+
+  // Initial display
+  img.src = svgLinks[0];
+
+  // Start the loop
+  setInterval(switchSVG, 2500);
+});
 
 
 });

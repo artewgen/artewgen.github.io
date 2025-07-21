@@ -125,7 +125,7 @@ html {
     clear: both;
 }
 .container {
-    max-width: 1600px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 calc(32px * var(--scale));
     box-sizing: border-box;
@@ -857,7 +857,7 @@ ul.contact-me__links{
     justify-content: center; /* Vertically centre content */
     align-items: stretch;    /* Make children take full width */
     gap: calc(48px * var(--scale));
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: calc(200px * var(--scale)) calc(32px * var(--scale)) calc(64px * var(--scale));
     box-sizing: border-box; 
@@ -942,7 +942,7 @@ ul.contact-me__links{
 }
 .centered{
     display: flex;
-    width: calc(1200px * var(--scale)*0.95);
+    width: calc(1300px * var(--scale)*0.95);
     max-width: 100%;
     margin: calc(32px * var(--scale)) 0;
     padding: 0 calc(32px * var(--scale));;
@@ -1348,7 +1348,9 @@ ul.contact-me__links{
   }
 
 
-
+  .sandbox-frame{
+    display: none;
+  }
 
 
 
@@ -1553,6 +1555,11 @@ a.btn:hover{
 @media (min-width: 1600px) {
     :root {
         --scale: 1.15;
+    }
+}
+@media (max-width: 1120px){
+    .case-study__nav{
+        display: none !important;
     }
 }
 

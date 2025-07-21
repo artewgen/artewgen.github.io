@@ -248,7 +248,6 @@ openBenchmark(0);
 startAutoOpen();
 
 //SVG Switcher
-
 const svgContainers = document.querySelectorAll('.svg-switcher');
 
 svgContainers.forEach(container => {
@@ -277,6 +276,24 @@ svgContainers.forEach(container => {
   // Start the loop
   setInterval(switchSVG, 2500);
 });
+
+/*Show Sandbox iframe when scrolling to it*/
+$(window).on('scroll load resize', function() {
+  var 
+  $frameWrap = $('#sandbox-frame-wrap'),
+  $frame = $('#sandbox-frame');
+  if ($frame.is(':visible')) return; // Already shown
+
+  var winTop = $(window).scrollTop();
+  var winBottom = winTop + $(window).height();
+  var elTop = $frameWrap.offset().top;
+
+  /*
+  if (elTop < winBottom) {
+    $frame.show(); // Or .show() for instant
+  }*/
+});
+
 
 
 });

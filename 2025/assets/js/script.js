@@ -282,7 +282,7 @@ $(window).on('scroll load resize', function() {
   var 
   $frameWrap = $('#sandbox-frame-wrap'),
   $frame = $('#sandbox-frame');
-  if ($frame.is(':visible')) return; // Already shown
+  //if ($frame.is(':visible')) return; // Already shown
 
   var winTop = $(window).scrollTop();
   var winBottom = winTop + $(window).height();

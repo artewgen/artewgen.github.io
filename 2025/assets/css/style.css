@@ -948,9 +948,17 @@ ul.contact-me__links{
     padding: 0 calc(32px * var(--scale));;
     gap: calc(48px * var(--scale));
 }
+.centered-wrap .centered,
 .centered-wrap img,
 .centered-wrap video,
 .centered-wrap iframe{
+    max-width: 1620px;
+    width: 100%;
+}
+.payment-forms .centered-wrap .centered,
+.payment-forms .centered-wrap img,
+.payment-forms .centered-wrap video,
+.payment-forms .centered-wrap iframe{
     max-width: 1420px;
 }
 .item-1-2{
@@ -1257,6 +1265,22 @@ ul.contact-me__links{
     color: var(--color-text-accent-purple);
     text-align: center;
     font-weight: 500;
+}
+
+
+/*-----Widget Preview Video------------------------------------------*/
+.widget-preview-wrap .centered{
+    position: relative;
+}
+
+.widget-preview-wrap video{
+    position: absolute;
+    left: 42%;
+    top: 12%;
+    z-index: 2;
+    -webkit-transform: translate(0, -50%);
+    transform: translateX(-50%);
+    width: 42%;
 }
 
 

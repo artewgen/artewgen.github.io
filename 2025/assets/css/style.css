@@ -995,6 +995,9 @@ ul.contact-me__links{
     gap: calc(24px * var(--scale));
 }
 
+.transparent{
+    opacity: 0.4;
+}
 
 .rounded img,
 .rounded video,
@@ -1275,12 +1278,13 @@ ul.contact-me__links{
 
 .widget-preview-wrap video{
     position: absolute;
-    left: 42%;
-    top: 12%;
+    left: 45%;
+    top: 17%;
     z-index: 2;
     -webkit-transform: translate(0, -50%);
     transform: translateX(-50%);
-    width: 42%;
+    width: 39%;
+
 }
 
 
@@ -1380,7 +1384,7 @@ ul.contact-me__links{
 
 
   .sandbox-frame{
-    /*display: none;*/
+    display: none;
   }
 
 

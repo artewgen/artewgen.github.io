@@ -141,13 +141,14 @@
       <p>The payment form redesign began with the web widget, as it was more popular among merchants than the mobile SDK. Its seamless integration into web checkouts—without needing developer support—drove its widespread adoption.</p>
       <div class="centered-wrap no-margins no-paddings widget-preview-wrap">
         <div class="centered">
-          <img src="../assets/pic/case/payment-forms/widget-preview-wrap.svg">
+          <img src="../assets/pic/case/payment-forms/widget-preview-flow-wrap.svg">
           <div class="video-wrap">
-            <video src="../assets/pic/case/payment-forms/widget-flow.mp4"  muted playsinline loop poster="../assets/pic/case/payment-forms/widget-flow-preview.svg"></video>
+            <video class="play-after-scrollto" src="../assets/pic/case/payment-forms/widget-preview-flow.mp4"  muted playsinline loop poster="../assets/pic/case/payment-forms/widget-preview-flow-poster.svg"></video>
           </div>
         </div>
       </div>
-      <p>Compare the old and new versions of the Widget.</p>
+      <p>The widget’s initial version was launched as an beta version to quickly test demand and prove value. After its early success, I led the development of a more advanced next version—addressing user pain points and incorporating merchant needs.</p>
+      <p>Compare the original and redesigned widget versions using the slider below to see the evolution and impact of the improvements.</p>
       <div class="slider-before-after">
         <div class="section--before-after">
           <div class="before-after-outer">
@@ -241,25 +242,16 @@
       <div class="centered-wrap no-margins no-paddings">
         <div class="centered">
           <div class="item-1-3">
-            <div class="img-block-title">
-              <p class="title">1. Updated Original 
-              <p class="sub-title">Improved button visibility, but solution lacked scalability</p>
-            </div>
-            <img class="screen" src="../assets/pic/case/payment-forms/widget-concept-1.png">
+            <p><strong class="title">1. Updated Original</strong></p>
+            <video id="widget-concept-1" class="screen" src="../assets/pic/case/payment-forms/widget-concept-old-updated.mp4" muted poster="../assets/pic/case/payment-forms/widget-concept-old-updated-poster.svg"></video>
           </div>  
           <div class="item-1-3">
-            <div class="img-block-title">
-              <p class="title">2. Accordion 
-              <p class="sub-title">Focused on clarity but sacrificed compactness for embedded solutions</p>
-            </div>
-            <img class="screen" src="../assets/pic/case/payment-forms/widget-concept-2.png">
+            <p><strong class="title">2. Accordion</strong></p>
+            <video id="widget-concept-2" class="screen transparent" src="../assets/pic/case/payment-forms/widget-concept-accordion.mp4" muted poster="../assets/pic/case/payment-forms/widget-concept-accordeon-poster.svg"></video>
           </div>  
           <div class="item-1-3">
-            <div class="img-block-title">
-              <p class="title">3. Step-by-step
-              <p class="sub-title">Compact, scalable, and user-friendly — this emerged as the preferred solution</p>
-            </div>
-            <img class="screen" src="../assets/pic/case/payment-forms/widget-concept-3.png">
+            <p><strong class="title">3. Step-by-step</strong></p>
+            <video id="widget-concept-3" class="screen transparent" src="../assets/pic/case/payment-forms/widget-concept-steps.mp4" muted poster="../assets/pic/case/payment-forms/widget-concept-steps-poster.svg"></video>
           </div>  
         </div>
       </div>
@@ -317,14 +309,13 @@
       <p>Below is my CodeSandbox widget example featuring hover animations and a bank card method selection, which I originally shared with the developers—and it’s still available after four years.</p>
       <div id="sandbox-frame-wrap" class="centered-wrap no-margins bottom-margin no-paddings rounded">
         <div class="centered">
-          <!--<iframe
+          <iframe
             id="sandbox-frame"
             class="sandbox-frame"
             src="https://codesandbox.io/p/sandbox/7bj0g?file=%2Fsrc%2Fstyles.css%3A29%2C1"
             width="100%"
             height="700"
-            loading="lazy"
-          ></iframe>-->
+          ></iframe>
         </div>
       </div>
 
@@ -341,11 +332,11 @@
       <p>More than a thousand merchants—from small shops to multi-million-dollar services—have integrated the widget into their websites. This includes major brands like Adidas, Reebok, iHerb, and Renault, where customers can even pre-order a car directly through the widget.</p>
       <div class="centered-wrap no-margins no-paddings">
         <div class="centered svg-switcher">
-          <img src="../assets/pic/case/payment-forms/widget-example-1@2x.png" 
-          data-src1="../assets/pic/case/payment-forms/widget-example-1@2x.png"
-          data-src2="../assets/pic/case/payment-forms/widget-example-2@2x.png"
-          data-src3="../assets/pic/case/payment-forms/widget-example-3@2x.png"
-          data-src4="../assets/pic/case/payment-forms/widget-example-4@2x.png">
+          <img src="../assets/pic/case/payment-forms/widget-example-1.svg" 
+          data-src1="../assets/pic/case/payment-forms/widget-example-1.svg"
+          data-src2="../assets/pic/case/payment-forms/widget-example-2.svg"
+          data-src3="../assets/pic/case/payment-forms/widget-example-3.svg"
+          data-src4="../assets/pic/case/payment-forms/widget-example-4.svg">
         </div>
       </div>
 
@@ -376,7 +367,7 @@
     </div>
   
     <div id="msdk-research" class="case-study__block">
-      <h2>Research and Goals</h2>
+      <h2>Research and Goals: Closing Payments Gaps</h2>
       <p>The first version of the Mobile SDK was developed 5 years ago and has remained unchanged since. During this time, numerous business requests accumulated, and clear UX issues became apparent.</p>
       <div class="case-study__image-wrap">
         <img src="../assets/pic/case/payment-forms/sdk-old.svg">
@@ -457,7 +448,7 @@
       <ol class="description-list">
         <li>Simplifying the payment logic and confirmation, boosting conversion rates by 5% and generating an additional $165K in monthly revenue.</li>
         <li>Enhancing the bank card payment flow increased conversion by 11% for this primary payment method.</li>
-        <li>Added new features, for example, SberPay;</li>
+        <li>Added new features, such as paying with bonuses.</li>
         <li>Improved brand customisation and added a dark theme.</li>
       </ol>
     </div>

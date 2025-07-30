@@ -171,28 +171,6 @@ blocks.forEach(block => {
   if (navSections.length) navSections[0].classList.add('open');
 
 
-const videos = document.querySelectorAll('video');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const video = entry.target;
-    video.playbackRate = 1.15;
-    // Only control playback if the video is muted (autoplay policy)
-    video.muted = true;
-    if (entry.isIntersecting) {
-      video.play();
-    } else {
-      video.pause();
-    }
-  });
-}, {
-  threshold: 0.5 // Adjust: 0.5 means 50% of the video must be visible to play
-});
-
-// Observe each video
-videos.forEach(video => observer.observe(video));
-
-
 //--- Finhealth benchmark auto-opening
 
 const wraps = document.querySelectorAll('.finhealth-screens__wrap');
@@ -278,22 +256,101 @@ svgContainers.forEach(container => {
 });
 
 /*Show Sandbox iframe when scrolling to it*/
-$(window).on('scroll load resize', function() {
-  var 
-  $frameWrap = $('#sandbox-frame-wrap'),
-  $frame = $('#sandbox-frame');
-  //if ($frame.is(':visible')) return; // Already shown
+var $iframe = $('#sandbox-frame-wrap');
+var iframeShown = false;
 
-  var winTop = $(window).scrollTop();
-  var winBottom = winTop + $(window).height();
-  var elTop = $frameWrap.offset().top;
-
-  /*
-  if (elTop < winBottom) {
-    $frame.show(); // Or .show() for instant
-  }*/
+var observer = new window.IntersectionObserver(function(entries, obs) {
+    entries.forEach(function(entry) {
+        if (!iframeShown && entry.isIntersecting) {
+            $('#sandbox-frame').show();   // Show the iframe
+            iframeShown = true;
+            obs.unobserve(entry.target); // Stop observing to improve performance
+        }
+    });
+}, {
+    threshold: 0.2 // 20% of the iframe must be visible
 });
 
+observer.observe($iframe[0]);
+
+
+
+
+//Start auto-playing videos after scroll to
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+      var video = entry.target;
+      // Playback speed
+      video.playbackRate = 1.15;
+      // Mute video to ensure autoplay is allowed
+      video.muted = true;
+      if (entry.isIntersecting) {
+          $(video).trigger('play');
+      } else {
+          $(video).trigger('pause');
+      }
+  });
+}, {
+  threshold: 0.5 // 50% visible
+});
+
+// jQuery: select only videos with the class play-after-scrollto
+$('video.play-after-scrollto').each(function() {
+  observer.observe(this);
+});
+
+ // Start auto-playing videos of widget concept in sequence
+var widgetVideo1 = $('#widget-concept-1')[0];
+var widgetVideo2 = $('#widget-concept-2')[0];
+var widgetVideo3 = $('#widget-concept-3')[0];
+
+var sequenceStarted = false;
+
+// Set up Intersection Observer to watch the first video
+var observer = new window.IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting && !sequenceStarted) {
+            sequenceStarted = true;
+            playVideoSequence();
+        }
+    });
+}, { threshold: 0.5 }); // Trigger when 50% visible
+
+observer.observe(widgetVideo1);
+
+
+function playVideoSequence() {
+    // Play first video
+    widgetVideo1.currentTime = 0;
+    widgetVideo2.currentTime = 0;
+    widgetVideo3.currentTime = 0;
+    
+    widgetVideo1.play();
+    setTimeout(function() {
+        widgetVideo1.pause();
+        // Play second video immediately
+        widgetVideo2.currentTime = 0;
+        $(widgetVideo2).removeClass('transparent');
+        widgetVideo2.play();
+        setTimeout(function() {
+            widgetVideo2.pause();
+            // Play third video immediately
+            widgetVideo3.currentTime = 0;
+            $(widgetVideo3).removeClass('transparent');
+            widgetVideo3.play();
+            setTimeout(function() {
+                widgetVideo3.pause();
+                // Immediately restart the loop from first video
+                playVideoSequence();
+            }, 8500); // Play video 3 for 7 seconds + 1.5 sec delay
+        }, 6000); // Play video 2 for 6 seconds
+    }, 9000); // Play video 1 for 9 seconds
+    $(widgetVideo2).addClass('transparent');
+    $(widgetVideo3).addClass('transparent');
+    
+}
+
+playVideoSequence();
 
 
 });

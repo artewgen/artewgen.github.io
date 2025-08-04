@@ -566,6 +566,10 @@ h4{
     justify-content: center;
     color: var(--color-ondark-acent-lettuce);
 }
+.case__stats.two-blocks .stat-block{
+    flex: 1 1 50%;
+    max-width: 50%;
+}
 .stat__number {
     font-size: var(--font-h2);
     line-height: 1.1;
@@ -929,6 +933,11 @@ ul.contact-me__links{
 .case-study .image-with-description h3{
     margin-block-start: calc(32px * var(--scale));
 }
+
+li .case-study__image-wrap{
+    margin: 20px 0 40px;
+}
+
 .centered-wrap{
     display: flex;
     position: relative;
@@ -1638,6 +1647,12 @@ a.btn:hover{
     }
     .contributions__description{
         max-width: 70%;
+    }
+    li .case-study__image-wrap.w-60{
+        text-align: center;
+    }
+    li .case-study__image-wrap.w-60 img{
+        width: 60%;
     }
 }
 @media (max-width: 799px) {

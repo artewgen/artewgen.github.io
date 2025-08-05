@@ -1,6 +1,3 @@
-
-
-
 $(function() {
 
   /* Mobile navigation */
@@ -44,7 +41,7 @@ $(function() {
   }
   
   showSlide(current); 
-  setInterval(nextSlide, 1500);
+  setInterval(nextSlide, 3500);
   }
  
 
@@ -352,6 +349,8 @@ function playVideoSequence() {
 
 playVideoSequence();
 
+
+//Random facts
 
 });
 

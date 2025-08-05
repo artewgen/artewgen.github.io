@@ -22,6 +22,33 @@
     font-style: italic;
 }
 
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('fonts/TT_Commons_Pro_Medium.eot');
+    src: local('TT Commons Medium'), local('fonts/TT_Commons_Pro_Medium'),
+        url('fonts/TT_Commons_Pro_Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TT_Commons_Pro_Medium.woff2') format('woff2'),
+        url('fonts/TT_Commons_Pro_Medium.woff') format('woff'),
+        url('fonts/TT_Commons_Pro_Medium.ttf') format('truetype');
+    font-weight: 450;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: url('fonts/TT_Commons_Pro_Medium_Italic.eot');
+    src: local('TT Commons Medium Italic'), local('fonts/TT_Commons_Pro_Medium_Italic'),
+        url('fonts/TT_Commons_Pro_Medium_Italic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TT_Commons_Pro_Medium_Italic.woff2') format('woff2'),
+        url('fonts/TT_Commons_Pro_Medium_Italic.woff') format('woff'),
+        url('fonts/TT_Commons_Pro_Medium_Italic.ttf') format('truetype');
+    font-weight: 450;
+    font-style: italic;
+}
+
+
+
 @font-face {
     font-family: 'TT Commons';
     src: url('fonts/TT_Commons_Pro_DemiBold.eot');
@@ -219,6 +246,7 @@ h4{
     align-items: center;
     justify-content: center;
     gap: 8px;
+    font-weight: 450;
 }
 .button-arrow,
 .button-arrow span,
@@ -450,7 +478,7 @@ h4{
     display: inline-flex;
     align-items: center; 
     padding: 5px;
-    font-weight: 500;
+    font-weight: 450;
     font-size: var(--font-body-l);
 }
 .intro__links .icon{
@@ -707,7 +735,7 @@ h4{
 .contribution__title{
     margin: 0;
     font-size: var(--font-body-l);
-    font-weight: 500;
+    font-weight: 400;
 }
 .contribution__type, .contribution__date{
     font-size: var(--font-body-l);
@@ -734,6 +762,7 @@ h4{
  }
  .about__description{
     font-size: var(--font-body-l);
+    line-height: 135%;
  }
  .about__image{
     max-width: 100%;
@@ -748,36 +777,74 @@ h4{
  .contact-me__wrap{
     display: flex;
     align-self: stretch;
-    padding: calc(80px * var(--scale)) 0;
+    padding: calc(60px * var(--scale)) calc(60px * var(--scale)) calc(80px * var(--scale));
     flex-direction: column;
     align-items: center;
-    gap: calc(20px * var(--scale));
+    gap: calc(56px * var(--scale));
     border-radius: var(--border-radius-l);
     background: linear-gradient(90deg, #3F00DE 0%, #BB0061 100%);
- }
+}
  .contact-me .top{
     display: flex;
-    gap: calc(20px * var(--scale));
+    gap: calc(12px * var(--scale));
     align-items: center;
+    flex-direction: column;
+    max-width: 900px;
+    box-sizing: border-box;
 }
 ul.contact-me__links{
     gap: calc(40px * var(--scale));
+}
+.contact-me__title-avatar{
+    display: flex;
+    gap: calc(20px * var(--scale));
+    align-items: center;
 }
 .contact-me__avatar{
     width: calc(64px * var(--scale));
     height: calc(64px * var(--scale));
     border-radius: 100px;
 }
+.contact-me__about{
+    margin-top: 0;
+    margin-bottom: calc(4px * var(--scale));;
+    font-size: var(--font-body-l);
+    color: var(--color-ondark-text-primary); 
+    text-align: center;
+    line-height: 135%;
+}
+.contact-me__refresh{
+    opacity: 0.85;
+    cursor: pointer;
+    transition: all 0.15s;
+    margin-left: -2px;
+}
+.contact-me__refresh:hover{
+    opacity: 1;
+}
+.contact-me__refresh svg{
+    fill: var(--color-ondark-acent-orange);
+}
+.contact-me__refresh svg:hover{
+    fill: var(--color-ondark-acent-orange-hovered);
+    transform: rotate(25deg) translateY(1px);
+    transition-duration: 100ms;
+}
+
+
+.contact-me__bottom{
+    text-align: center;
+}
 
 .contact-me h2.contact-me__title,
 .contact-me .links a{
     font-size: var(--font-h3);
-    font-weight: 500;
+    font-weight: 450;
     color: var(--color-ondark-text-primary);
 }
 .contact-me .links a{
     font-size: var(--font-body-l);
-    font-weight: 500;
+    font-weight: 450;
     color: var(--color-ondark-acent-orange);
 }
 .contact-me__links a{
@@ -797,6 +864,9 @@ ul.contact-me__links{
     background-position: center;
     background-repeat: no-repeat;
     background-size: calc(24px * var(--scale)) calc(24px * var(--scale));
+}
+.contact-me .links a:hover{
+    color: var(--color-ondark-acent-orange-hovered);
 }
 
 /*-----Case Study---------------------------------------------------------*/
@@ -868,6 +938,7 @@ ul.contact-me__links{
 }
 .case-study__top__description{
     font-size: var(--font-h3);
+    line-height: 132%;
 }
 .case-study__image-wrap{
     position: relative;

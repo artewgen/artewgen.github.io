@@ -329,6 +329,28 @@ h4{
     padding: 5px;
     text-decoration: none;
 }
+
+.header-nav__home{
+    display: flex;
+    gap: calc(16px * var(--scale));
+    text-decoration: none !important;
+}
+.header-nav__home .label{
+    display: inline-block;
+    font-size: var(--font-h3);
+    font-weight: 500;
+    line-height: 48px;
+}
+.header-nav__home path{
+    transition: all 0.15s;
+}
+.header-nav__home:hover{
+    color: var(--color-acent-purple);
+}
+.header-nav__home:hover path{
+    stroke: var(--color-acent-purple);
+}
+
 .menu-mobile{
     display: none;
     margin-right: -8px;
@@ -786,7 +808,7 @@ h4{
 }
  .contact-me .top{
     display: flex;
-    gap: calc(12px * var(--scale));
+    gap: calc(16px * var(--scale));
     align-items: center;
     flex-direction: column;
     max-width: 900px;
@@ -805,13 +827,15 @@ ul.contact-me__links{
     height: calc(64px * var(--scale));
     border-radius: 100px;
 }
-.contact-me__about{
-    margin-top: 0;
-    margin-bottom: calc(4px * var(--scale));;
+.contact-me .contact-me__about{
+    margin-top: calc(4px * var(--scale));
+    margin-bottom: calc(4px * var(--scale));
     font-size: var(--font-body-l);
     color: var(--color-ondark-text-primary); 
     text-align: center;
     line-height: 135%;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 .contact-me__refresh{
     opacity: 0.85;
@@ -1093,7 +1117,7 @@ li .case-study__image-wrap{
 
 .bordered img,
 .bordered video{
-    border: 1px solid var(--color-border-light);
+    border: 1.5px solid var(--color-border-light);
 }
 
 .main-image .centered{
@@ -1335,6 +1359,14 @@ li .case-study__image-wrap{
     background: var(--color-acent-pink);
 }
 
+
+/*-----Other cases-----------------------------------------------------*/
+.other-cases a{
+    text-decoration: none;
+}
+.other-cases .process__preview a{
+    display: block;
+}
 
 
 /*-----Footer---------------------------------------------------------*/
@@ -1684,6 +1716,9 @@ a.btn:hover{
         box-sizing: border-box;
         position: absolute;
         padding: 0 calc(32px * var(--scale));
+    }
+    .other-cases{
+        margin: calc(140px * var(--scale)) auto calc(160px * var(--scale));
     }
 }
 

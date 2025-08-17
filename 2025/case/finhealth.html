@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -12,21 +13,13 @@
 <body>
 <main id="fullview" class="main case-study">
   <div id="header-nav" class="header-nav">
-    <div class="me">
-      <img alt="Eugene Durov" class="me__avatar" src="../assets/pic/avatar.jpg">
-      <h2 class="me__name">Eugene Durov</h2>
-      <p class="me__location"><span class="me__location__flag">🇪🇦</span><span class="me__location__name">Barcelona, Spain</span></p>
-    </div>
-    <ul class="links horiz">
-      <li><a href="#cases">Cases</a></li>
-      <li><a href="#processes">Processes</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-    <div id="menu-mobile-switcher" class="menu-mobile">
-      <div class="menu-mobile__title"><span class="menu-mobile__title__name">Menu</span><span class="menu-mobile__title__icon"></span></div>
-    </div>
+    <a class="header-nav__home" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path d="M44.2286 23.9998H7.94196M7.94196 23.9998L21.942 37.9998M7.94196 23.9998L21.942 9.99976" stroke="#1E1E1E" stroke-width="4.28571" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="label">Home</span>
+    </a>
   </div>
-  <div class="header-nav-mobile"></div>
 
   <nav id="case-study-nav" class="case-study__nav">
     <ul>
@@ -83,6 +76,9 @@
     <div id="intro-tinkoff" class="case-study__block top-space start-scroll-nav">
       <h2>Tinkoff: Global Leader in Digital Banking</h2>
       <p><a href="https://tinkoff-group.com/">Tinkoff Bank</a> is a leading independent digital bank with over 48 million customers. Renowned for innovation, its mobile app is rated 4.9 on the App Store and ranks first in the finance category. Tinkoff is recognised as the Most Innovative Digital Bank in Central and Eastern Europe and has won multiple awards for its digital solutions.</p>
+      <div class="case-study__image-wrap rounded">
+        <img src="../assets/pic/case/finhealth/tinkoff.svg">
+      </div>
     </div>
     <div id="intro-overview" class="case-study__block with-image-top">
       <h2>Overview of the Financial Health Project</h2>
@@ -304,7 +300,7 @@
   
   
     <div id="results-future" class="case-study__block">
-      <h2>Future plans</h2>
+      <h2>Future Plans</h2>
       <p>Together with the product manager, we planned the next evolution of FinHealth to deepen user value and engagement. Upcoming features include:</p>
       <ul class="description-list">
         <li>Subscription manager: a top-requested feature, designed to help users effortlessly track, manage, and cancel subscriptions with ease. I have already developed the design for it.</li>
@@ -329,6 +325,7 @@
       <p class="highlight end-scroll-nav"><span class="highlight__icon">🎯</span>I played a central role from concept to launch—shaping user and business needs, research, data analysis, and service improvements—gaining invaluable end-to-end product and cross-functional experience.</p>
     </div>
   </section>
+
   <section class="case-study__block bigger-top-margin">
     <div class="centered-wrap rounded rounded-l">
       <div class="centered">
@@ -336,19 +333,65 @@
       </div>
     </div>
   </section>
-  <!--
-  <section>
-    <h2>Other projects</h2>  
+
+  <section id="other-cases" class="processes other-cases container">
+    <h2>Check Out Other Cases</h2>
+    <div class="processes__list">
+      <div class="processes__item process">
+        <div class="process__preview image-wrap">
+          <a href="../case/payment-forms.html">
+            <img src="assets/pic/process/thumbnail-birch-retro.png">
+          </a>
+        </div>
+        <a href="../case/payment-forms.html" class="process__title">Redesigned Payment Solutions, Boosting Conversion by 12%</a>
+      </div>
+      <div class="processes__item process">
+          <div class="process__preview image-wrap">
+            <a href="../case/business-app.html">
+              <img src="assets/pic/process/thumbnail-finhealth-interviews.png">
+            </a>
+          </div>
+        <a href="../case/business-app.html" class="process__title">Launched a business management app, achieving a 4.7 App Store rating</a>
+      </div>
+    </div>
   </section>
-  -->
 
   
-
-
   
-  <div class="footer">
+  <section id="contact-me" class="contact-me container">
+    <div class="contact-me__wrap">
+      <div class="top">
+        <div class="contact-me__title-avatar">
+          <img alt="Eugene Durov" class="contact-me__avatar" src="../assets/pic/avatar.jpg">
+          <h2 class="contact-me__title">Random fact about me</h2>
+          <div id="refresh-fact" class="contact-me__refresh">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+              <path d="M18.1002 10.4046C17.5535 9.85789 16.667 9.85789 16.1203 10.4046C15.5736 10.9514 15.5736 11.8378 16.1203 12.3845L17.1102 11.3946L18.1002 10.4046ZM21.51 15.7943L20.5201 16.7843C21.0668 17.331 21.9532 17.331 22.5 16.7843L21.51 15.7943ZM26.8997 12.3845C27.4465 11.8378 27.4465 10.9514 26.8997 10.4046C26.353 9.85789 25.4666 9.85789 24.9198 10.4046L25.9098 11.3946L26.8997 12.3845ZM20.3769 13.9948C20.3769 14.768 21.0037 15.3948 21.7769 15.3948C22.5501 15.3948 23.1769 14.768 23.1769 13.9948H21.7769H20.3769ZM17.8651 22.1399C18.5163 21.723 18.7062 20.8572 18.2893 20.206C17.8724 19.5548 17.0066 19.3649 16.3554 19.7818L17.1102 20.9609L17.8651 22.1399ZM17.1102 11.3946L16.1203 12.3845L20.5201 16.7843L21.51 15.7943L22.5 14.8044L18.1002 10.4046L17.1102 11.3946ZM21.51 15.7943L22.5 16.7843L26.8997 12.3845L25.9098 11.3946L24.9198 10.4046L20.5201 14.8044L21.51 15.7943ZM11.6658 22.5503V21.1503C6.85478 21.1503 2.95469 17.2503 2.95469 12.4392H1.55469H0.154688C0.154688 18.7966 5.30839 23.9503 11.6658 23.9503V22.5503ZM1.55469 12.4392H2.95469C2.95469 7.62822 6.85479 3.72812 11.6658 3.72812V2.32812V0.928125C5.30839 0.928125 0.154688 6.08182 0.154688 12.4392H1.55469ZM11.6658 2.32812V3.72812C16.4768 3.72812 20.3769 7.62822 20.3769 12.4392H21.7769H23.1769C23.1769 6.08183 18.0232 0.928125 11.6658 0.928125V2.32812ZM21.7769 12.4392H20.3769V13.9948H21.7769H23.1769V12.4392H21.7769ZM17.1102 20.9609L16.3554 19.7818C15.0024 20.648 13.3949 21.1503 11.6658 21.1503V22.5503V23.9503C13.9458 23.9503 16.0749 23.286 17.8651 22.1399L17.1102 20.9609Z"/>
+            </svg> 
+          </div>
+        </div>
+        <p id="fact-text" class="contact-me__about">
+          Fact 2: Passionate about mentoring, supporting over 25 designers through Women in Tech and ADPList via various long and short term sessions.   
+        </p>
+      </div>
+      <div class="contact-me__bottom">
+        <h2 class="contact-me__title">Reach me out and let’s chat!</h2>
+        <ul class="contact-me__links links horiz">
+          <li><a class="link" href="mailto: hi@eugenedurov.works"><span
+                class="icon">📩</span><span>hi@eugenedurov.works</span></a></li>
+          <li><a class="link" target="_blank" href="https://www.linkedin.com/in/eugenedurov/"><span
+                class="icon icon-linkedin"></span><span>LinkedIn</span></a></li>
+        </ul>
+      </div>
+     
+    </div> 
+  </section>
+
+
+ 
+  <section class="footer">
     <h3 class="footer__title">© 2025 Handcrafted with pure HTML/CSS by Eugene Durov</h3>
-  </div>
+  </section>
     
 </main>
 

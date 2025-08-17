@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -12,24 +13,19 @@
 <body>
 <main id="fullview" class="main case-study payment-forms">
   <div id="header-nav" class="header-nav">
-    <div class="me">
-      <img alt="Eugene Durov" class="me__avatar" src="../assets/pic/avatar.jpg">
-      <h2 class="me__name">Eugene Durov</h2>
-      <p class="me__location"><span class="me__location__flag">🇪🇦</span><span class="me__location__name">Barcelona, Spain</span></p>
-    </div>
-    <ul class="links horiz">
-      <li><a href="#cases">Cases</a></li>
-      <li><a href="#processes">Processes</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-    <div id="menu-mobile-switcher" class="menu-mobile">
-      <div class="menu-mobile__title"><span class="menu-mobile__title__name">Menu</span><span class="menu-mobile__title__icon"></span></div>
-    </div>
+    <a class="header-nav__home" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+        <path d="M44.2286 23.9998H7.94196M7.94196 23.9998L21.942 37.9998M7.94196 23.9998L21.942 9.99976" stroke="#1E1E1E" stroke-width="4.28571" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="label">Home</span>
+    </a>
   </div>
-  <div class="header-nav-mobile"></div>
   
   <nav id="case-study-nav" class="case-study__nav">
     <ul>
+      <li class="home">
+        <a href="/"><i class="icon-back"></i><span class="nav-h1">Home</span></a>
+      </li>
       <li class="nav-section">
         <button class="nav-h1" data-target="section-intro">Introduction</button>
         <ul class="nav-h2-list">
@@ -68,7 +64,7 @@
       </div>
     </div>
     <div class="case-study__image-wrap">
-      <img>
+      <img src="../assets/pic/case/business-app/preview.svg">
     </div>
   </section>
   
@@ -76,6 +72,9 @@
     <div id="intro-yoomoney" class="case-study__block top-space">
       <h2 class="start-scroll-nav">YooMoney: B2B Payment Leader in CIS</h2>
       <p><a href="https://yookassa.ru/en">YooMoney</a> is the leading online payment platform in Russia and neighboring countries in Eastern Europe and Central Asia. It serves over 214,000 online platforms and mobile apps across 75 countries and processes up to 4 million daily transactions. Businesses of all sizes, including major brands like Adidas, Reebok, iHerb and Renault, trust it.</p>
+      <div class="case-study__image-wrap rounded">
+        <img src="../assets/pic/case/business-app/yoomoney.svg">
+      </div>
     </div>
     <div id="intro-overview" class="case-study__block with-image-top">
       <h2>Overview of the Business Management App</h2>
@@ -84,7 +83,7 @@
       <ul class="description-list">
         <li><strong>User-Centred Approach:</strong> Conducted 20 interviews to identify key needs and prioritise features.</li>
         <li><strong>Intuitive Mobile Interfaces:</strong> Developed gesture-controlled dashboards, allowing users to quickly explore payment data, engaging over 75% of web users to easily track trends and cash flow via the app.</li>
-        <li><strong>Iterative MVP Refinement:</strong> Led MVP design, running 30+ usability tests and incorporating user feedback, resulting in a 4.7 App Store rating at launch.</li>
+        <li><strong>Iterative MVP Refinement:</strong> Led MVP design, running 30+ usability tests and incorporating user feedback, resulting in a 4.7 App Store rating.</li>
         <li><strong>Data-Driven Optimisation:</strong> Used analytics and user feedback to prioritise updates, increasing retention by 20% and maintaining high user satisfaction post-launch.</li>
       </ul>
     </div>
@@ -117,8 +116,17 @@
     
     <div id="rd-problems" class="case-study__block">
       <h2>Merchant Problems: Mobile Access Limitations</h2>
-      <p>At first, YooMoney provided only a web-based merchant account, lacking any adaptive or mobile versions. Merchants expressed frustration at not being able to manage essential tasks on the go. Since simply making the website adaptive wasn’t technically feasible, dedicated mobile apps were developed for iOS, Android, and iPad.</p>
-      <p>I conducted about 20 user interviews, where merchants highlighted their most significant needs for mobile:</p>
+      <p>
+        Initially, YooMoney offered only a web-based merchant account with no mobile or adaptive versions, leaving merchants frustrated by the lack of on-the-go access to essential tasks. 
+      <p>  
+        Me and my manager surveyed around 120 merchants, where demand for a mobile app or adaptive solution emerged as the top feature request, with one-third specifically highlighting the need for mobile access.
+      </p>  
+      <div class="case-study__image-wrap">
+        <img src="../assets/pic/case/business-app/survey.svg">
+      </div>
+      <p>
+        Since simply making the website adaptive wasn’t technically feasible, dedicated mobile apps were developed for iOS, Android, and iPad.</p>
+      <p>Then, about 20 user interviews were conducted, revealing merchants’ most important needs for mobile access:</p>
       <ul class="description-list">
         <li>Instant access to payment and sales analytics.</li>
         <li>Full control over payments with advanced search and filtering.</li>
@@ -138,56 +146,138 @@
     <div id="rd-analytics" class="case-study__block">
       <h2>Analytics in Focus</h2>
       <p>In the initial release, the main screen displayed a list of payments, with analytics on the second tab. From early user reviews, I learned that merchants were accessing analytics more frequently than the payments list. In response, analytics was moved to the primary position in the next update, and users welcomed the change.</p>
-      <p>The analytics dashboard featured nine key metrics: revenue, average bill amount, number of refunds and amount, number of payments, paid bills, average bill receipt, invoices issued, and unpaid bills.</p>
+      <div class="centered-wrap rounded rounded-l no-margins no-paddings">
+        <div class="centered">
+          <img src="../assets/pic/case/business-app/analytics-general.svg">
+        </div>
+      </div>
+      <p>The analytics dashboard featured nine key metrics: revenue, average bill amount, number of refunds and their total amount, number of payments, paid bills, average bill receipt, invoices issued, and unpaid bills.</p>
       <p>Users especially appreciated the ability to compare data via an interactive chart that could be expanded in horizontal mode—a feature that received consistently high ratings and positive feedback.</p>
+      <div class="case-study__image-wrap">
+        <img src="../assets/pic/case/business-app/analytics-vertical.svg">
+      </div>
       <p class="highlight"><span class="highlight__icon">📈</span> Many merchants shared that they opened the app first thing in the morning to check analytics, treating it as their business dashboard. After moving analytics to the main screen, daily active sessions increased by 35%.
     </div>
     <div id="rd-payments" class="case-study__block">
       <h2>Fast Payment Actions</h2>
       <p>The payments section provided merchants with a comprehensive, searchable list of all transactions, putting essential information at their fingertips. Merchants could confirm or cancel payments, review detailed histories, and search for specific transactions easily.</p>
+      <div class="case-study__image-wrap">
+        <img src="../assets/pic/case/business-app/payments.svg">
+      </div>
       <p>Users could view a full timeline of each payment, including its status, receipt details, and any refunds. The ability to quickly view and send receipts proved especially valuable, becoming one of merchants' most requested and well-used features.</p>
       <p class="highlight"><span class="highlight__icon">🎯</span> A lot of users highlighted frustration with web-based workflows that buried transaction details several clicks deep. Surfacing this data on one screen and enabling actions with minimal taps was a major usability win on mobile.</p>
     </div>
     <div id="rd-invoicing" class="case-study__block">
       <h2>Instant Invoicing and Refunds</h2>
       <p>The app made invoicing fast and effortless—merchants could generate and send invoices instantly via email, SMS, or a direct link, allowing buyers to pay on the spot from any device. Once a payment was received, the merchant was notified with a push notification, keeping cash flow up to date in real time.</p>
+      <div class="case-study__image-wrap">
+        <img src="../assets/pic/case/business-app/invoce-refund.svg">
+      </div>
       <p>Merchants also had the flexibility to issue full or partial refunds and could set expiration dates for invoices, preventing payments after a specified deadline.</p>
       <p class="highlight"><span class="highlight__icon">⏱️</span> User research showed that merchants wasted time tracking unpaid invoices on desktops. The app helped them speed up payment collection by streamlining invoicing and adding real-time mobile notifications.</p>
     </div>
     <div id="rd-support" class="case-study__block">
       <h2>Real-Time Merchant Support</h2>
       <p>Through feedback from user interviews, I added real-time support chat to the app. This allowed merchants to get help without leaving their workflow and made support faster and more effective by letting them send messages, screenshots, and transaction details directly to the support team.</p>
+      <div class="case-study__image-wrap">
+        <img src="../assets/pic/case/business-app/support.svg">
+      </div>
       <p class="highlight"><span class="highlight__icon">💬</span> By embedding chat within the mobile app, average support response times were reduced by 35%, and merchant satisfaction scores increased significantly.</p>
     </div>
     <div id="rd-tablet" class="case-study__block">
       <h2>Tablet Version</h2>
       <p>Merchants frequently requested a tablet version, as many managed operations and reviewed analytics on larger screens during meetings or on the go. 
         Introducing a tablet-optimised solution enabled users to manage complex workflows with greater efficiency and drove higher engagement among businesses using tablet devices.</p>
-    </div>
+        <div class="centered-wrap rounded rounded-l no-margins no-paddings">
+          <div class="centered">
+            <img src="../assets/pic/case/business-app/tablet-version.svg">
+          </div>
+        </div>  
+      </div>
   </section>
 
   <section id="section-results">
     <div id="results-achievements" class="case-study__block">
       <h2>Outstanding Launch Achievements</h2>
       <p>The app delivered merchants fast, convenient access to their accounts—and all essential business features—right from their mobile and tablet devices. With an emphasis on intuitive analytics dashboards and gesture-based controls, the app made exploring financial data engaging and straightforward.</p>
-      <ol class="description-list"></ol>
+      <ol class="description-list">
         <li>Achieved a 4.7 App Store rating.</li>
         <li>Gained over 27,000 business clients.</li>
         <li>Reached 100,000 downloads across platforms.</li>
         <li>Delivered 75% user adoption in three months.</li>
       </ol>
+      <br>
+      <div class="centered-wrap rounded rounded-l bordered no-margins no-paddings">
+        <div class="centered">
+          <img src="../assets/pic/case/business-app/app-store.png"
+          srcset="../assets/pic/case/business-app/app-store.png 1x, 
+          ../assets/pic/case/business-app/app-store@2x.png 2x"  
+          >
+        </div>
+      </div>
     </div>
-    <div id="results-reflection" class="case-study__block end-scroll-nav">
+    <div id="results-reflection" class="case-study__block">
       <h2>Reflection: Empathy and Data in Product Design</h2>
       <p>This project reinforced the value of user research and rapid iteration in product design. The analytics-first pivot, driven by user feedback, proved that data and empathy matter.</p>
       <p>By working closely with a cross-functional team, I delivered a mobile app that wasn’t just a smaller web version, but a tailored, intuitive tool merchants could rely on anytime, anywhere.</p>
-      <p>Shipping fast and embracing tradeoffs helped us build a product that users truly loved.</p>
+      <p class="end-scroll-nav">Shipping fast and embracing tradeoffs helped us build a product that users truly loved.</p>
     </div>
   </section>
+
+  <section id="other-cases" class="processes other-cases container">
+    <h2>Check out other cases</h2>
+    <div class="processes__list">
+      <div class="processes__item process">
+          <div class="process__preview image-wrap">
+            <a href="../case/finhealth.html">
+              <img src="assets/pic/process/thumbnail-finhealth-interviews.png">
+            </a>
+          </div>
+        <a href="../case/finhealth.html" class="process__title">Created a personal finance tool, achieving a 32% retention rate</a>
+      </div>
+      <div class="processes__item process">
+        <div class="process__preview image-wrap">
+          <a href="../case/payment-forms.html">
+            <img src="assets/pic/process/thumbnail-birch-retro.png">
+          </a>
+        </div>
+        <a href="../case/payment-forms.html" class="process__title">Redesigned Payment Solutions, Boosting Conversion by 12%</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-me" class="contact-me container">
+    <div class="contact-me__wrap">
+      <div class="top">
+        <div class="contact-me__title-avatar">
+          <img alt="Eugene Durov" class="contact-me__avatar" src="../assets/pic/avatar.jpg">
+          <h2 class="contact-me__title">Random fact about me</h2>
+          <div id="refresh-fact" class="contact-me__refresh">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+              <path d="M18.1002 10.4046C17.5535 9.85789 16.667 9.85789 16.1203 10.4046C15.5736 10.9514 15.5736 11.8378 16.1203 12.3845L17.1102 11.3946L18.1002 10.4046ZM21.51 15.7943L20.5201 16.7843C21.0668 17.331 21.9532 17.331 22.5 16.7843L21.51 15.7943ZM26.8997 12.3845C27.4465 11.8378 27.4465 10.9514 26.8997 10.4046C26.353 9.85789 25.4666 9.85789 24.9198 10.4046L25.9098 11.3946L26.8997 12.3845ZM20.3769 13.9948C20.3769 14.768 21.0037 15.3948 21.7769 15.3948C22.5501 15.3948 23.1769 14.768 23.1769 13.9948H21.7769H20.3769ZM17.8651 22.1399C18.5163 21.723 18.7062 20.8572 18.2893 20.206C17.8724 19.5548 17.0066 19.3649 16.3554 19.7818L17.1102 20.9609L17.8651 22.1399ZM17.1102 11.3946L16.1203 12.3845L20.5201 16.7843L21.51 15.7943L22.5 14.8044L18.1002 10.4046L17.1102 11.3946ZM21.51 15.7943L22.5 16.7843L26.8997 12.3845L25.9098 11.3946L24.9198 10.4046L20.5201 14.8044L21.51 15.7943ZM11.6658 22.5503V21.1503C6.85478 21.1503 2.95469 17.2503 2.95469 12.4392H1.55469H0.154688C0.154688 18.7966 5.30839 23.9503 11.6658 23.9503V22.5503ZM1.55469 12.4392H2.95469C2.95469 7.62822 6.85479 3.72812 11.6658 3.72812V2.32812V0.928125C5.30839 0.928125 0.154688 6.08182 0.154688 12.4392H1.55469ZM11.6658 2.32812V3.72812C16.4768 3.72812 20.3769 7.62822 20.3769 12.4392H21.7769H23.1769C23.1769 6.08183 18.0232 0.928125 11.6658 0.928125V2.32812ZM21.7769 12.4392H20.3769V13.9948H21.7769H23.1769V12.4392H21.7769ZM17.1102 20.9609L16.3554 19.7818C15.0024 20.648 13.3949 21.1503 11.6658 21.1503V22.5503V23.9503C13.9458 23.9503 16.0749 23.286 17.8651 22.1399L17.1102 20.9609Z"/>
+            </svg> 
+          </div>
+        </div>
+        <p id="fact-text" class="contact-me__about">
+          Fact 2: Passionate about mentoring, supporting over 25 designers through Women in Tech and ADPList via various long and short term sessions.   
+        </p>
+      </div>
+      <div class="contact-me__bottom">
+        <h2 class="contact-me__title">Reach me out and let’s chat!</h2>
+        <ul class="contact-me__links links horiz">
+          <li><a class="link" href="mailto: hi@eugenedurov.works"><span
+                class="icon">📩</span><span>hi@eugenedurov.works</span></a></li>
+          <li><a class="link" target="_blank" href="https://www.linkedin.com/in/eugenedurov/"><span
+                class="icon icon-linkedin"></span><span>LinkedIn</span></a></li>
+        </ul>
+      </div>
+     
+    </div> 
+  </section>
  
-  <div class="footer">
+  <section class="footer">
     <h3 class="footer__title">© 2025 Handcrafted with pure HTML/CSS by Eugene Durov</h3>
-  </div>
+  </section>
     
 </main>
 

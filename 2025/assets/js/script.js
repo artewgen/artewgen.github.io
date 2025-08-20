@@ -91,8 +91,8 @@ if ($factText.length && $refreshFact.length) {
 // --------- Sticky Case Study Navigation --------- 
 
 var $nav = $('#case-study-nav');
-var $start = $('.start-scroll-nav');
-var $end = $('.end-scroll-nav');
+var $start = $('#start-scroll-nav');
+var $end = $('#end-scroll-nav');
 var $navSections = $('.nav-section');
 var $navH1s = $('.nav-h1');
 var $navH2Links = $('.nav-h2');
@@ -114,7 +114,7 @@ if (
         var endRect = $end[0].getBoundingClientRect();
         var navHeight = $nav.outerHeight();
 
-        if (startRect.bottom > 320) {
+        if (startRect.bottom > 0) {
             $nav.css({
                 position: 'absolute',
                 top: $start.offset().top + 'px',
@@ -214,6 +214,117 @@ if (
     // Expand the first section by default
     $navSections.first().addClass('open');
 }
+
+
+// --------- Sticky Case Study Navigation, for Short Nav --------- 
+
+
+var $navShort = $('#case-study-nav-short');
+
+if (
+    $navShort.length && $start.length && $end.length && $navH2Links.length && $blocks.length
+) {
+
+    function handleStickyNav() {
+        // Defensive: check for start/end existence each call
+        if (!$start.length || !$end.length) return;
+
+        var startRect = $start[0].getBoundingClientRect();
+        var endRect = $end[0].getBoundingClientRect();
+        var navHeight = $navShort.outerHeight();
+
+        if (startRect.bottom > 0) {
+            // Before start marker: nav in absolute position at top
+            $navShort.css({
+                position: 'absolute',
+                top: $start.offset().top + 'px',
+                display: 'flex'
+            });
+        } else if (endRect.top < navHeight) {
+            // After end marker: nav in absolute position at bottom
+            $navShort.css({
+                position: 'absolute',
+                top: ($end.offset().top - navHeight) + 'px',
+                display: 'flex'
+            });
+        } else {
+            // Between start & end: nav is fixed at the top
+            $navShort.css({
+                position: 'fixed',
+                top: '2rem',
+                display: 'flex'
+            });
+        }
+    }
+
+    $(window).on('scroll resize', handleStickyNav);
+    handleStickyNav();
+
+    // --- Smooth scroll + active highlight ---
+    var scrollSpyDisabled = false;
+    $navH2Links.on('click', function(e) {
+        var targetId = $(this).attr('href');
+        if (targetId && targetId.startsWith('#')) {
+            e.preventDefault();
+            var $target = $(targetId);
+            if ($target.length) {
+                scrollSpyDisabled = true;
+
+                $navH2Links.removeClass('active');
+                $(this).addClass('active');
+
+                // Native scrollIntoView for smooth scroll
+                $target[0].scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                setTimeout(function() {
+                    scrollSpyDisabled = false;
+                }, 700);
+            }
+        }
+    });
+
+    // --- Scrollspy for active state ---
+    $(window).on('scroll', function() {
+        if (scrollSpyDisabled) return;
+
+        var currentBlockId = null;
+        var minDistance = Infinity;
+        var offset = 320;
+
+        $($blocks).each(function() {
+            if (!this) return; // Defensive: skip if not found
+            var rect = this.getBoundingClientRect();
+            var distance = Math.abs(rect.top - offset);
+            if (rect.top - offset <= 0 && distance < minDistance) {
+                minDistance = distance;
+                currentBlockId = this.id;
+            }
+        });
+
+        if (!currentBlockId) return;
+
+        $navH2Links.each(function() {
+            var $link = $(this);
+            if ($link.attr('href').substring(1) === currentBlockId) {
+                $link.addClass('active');
+            } else {
+                $link.removeClass('active');
+            }
+        });
+    });
+} else {
+    // Optional: fallback if no markers, just fix nav at top (no errors)
+    if ($navShort.length && $navH2Links.length && $blocks.length) {
+        $navShort.css({
+            position: 'fixed',
+            top: '2rem',
+            display: 'flex'
+        });
+    }
+}
+
+
+
 
 
 

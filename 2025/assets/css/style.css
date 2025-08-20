@@ -954,7 +954,7 @@ ul.contact-me__links{
     flex-direction: column;
     justify-content: center; /* Vertically centre content */
     align-items: stretch;    /* Make children take full width */
-    gap: calc(48px * var(--scale));
+    gap: calc(64px * var(--scale));
     max-width: 1300px;
     margin: 0 auto;
     padding: calc(200px * var(--scale)) calc(32px * var(--scale)) calc(64px * var(--scale));
@@ -964,12 +964,14 @@ ul.contact-me__links{
     font-size: var(--font-h3);
     line-height: 132%;
 }
+.case-study__top__description p:last-child{
+    margin-bottom: 0;
+}
 .case-study__image-wrap{
     position: relative;
     z-index: 99;
-    /*
-    margin: calc(48px * var(--scale)) calc(32px * var(--scale)) calc(24px * var(--scale));
-    */
+    margin-top: calc(40px * var(--scale));
+    margin-bottom: calc(40px * var(--scale));
 }
 .case-study__image-wrap.bigger-top-margin{
     margin-top: calc(48px * var(--scale));
@@ -1109,6 +1111,12 @@ li .case-study__image-wrap{
     border-radius: calc(var(--border-radius-m) * var(--scale));    
 }
 
+.rounded-s img,
+.rounded-s video,
+.rounded-s iframe{
+    border-radius: calc(var(--border-radius-s) * var(--scale));    
+}
+
 .rounded-l img,
 .rounded-l video,
 .rounded-l iframe{
@@ -1118,6 +1126,10 @@ li .case-study__image-wrap{
 .bordered img,
 .bordered video{
     border: 1.5px solid var(--color-border-light);
+}
+
+.case-study .main-image{
+    margin-top: calc(24px * var(--scale));
 }
 
 .main-image .centered{

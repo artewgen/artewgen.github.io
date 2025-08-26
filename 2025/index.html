@@ -28,7 +28,7 @@
     <div class="me">
       <img alt="Eugene Durov" class="me__avatar" src="assets/pic/avatar.jpg">
       <h2 class="me__name">Eugene Durov</h2>
-      <p class="me__location"><span class="me__location__flag">🇪🇦</span><span class="me__location__name">Barcelona, Spain</span></p>
+      <p class="me__location"><span class="me__location__name">Barcelona <span class="me__location__flag">🇪🇺</span> Open to relocate</span></p>
     </div>
     <ul class="links horiz">
       <li><a href="#cases">Cases</a></li>
@@ -42,14 +42,15 @@
 
   <div class="header-nav-mobile"></div>
 
-  <section class="intro">
+  <section id="intro" class="intro">
     <p class="intro__about">
-      Senior product designer with 14 years of experience in UX/UI and Product design, delivering projects from zero to final for large products with 40M+ users
-      <span class="intro__pet pet-0">
+      Senior product designer with 14 years of experience in UX/UI and product design, delivering projects from zero to final for large products with 40M+ users
+      <span id="intro-pet" class="intro__pet pet-0">
         <span class="intro__pet__text">and 2+ years with</span>       
         <span class="intro__pet__image"></span>      
         </span>
     </p>
+
     <ul class="intro__links links horiz">
       <li><a class="link" href="mailto: hi@eugenedurov.works"><span
             class="icon">📩</span><span>hi@eugenedurov.works</span></a></li>
@@ -61,324 +62,335 @@
     
   </section>
 
-  <section id="cases" class="cases container">
-    <div class="casses__list">
-      <div class="case case-studio">
-        <div class="case__preview">
-          <img src="assets/pic/case/studio-landing-preview.png">
+  <div class="parallax">
+    <section id="cases" class="cases container">
+      <div class="casses__list">
+        <div class="case case-studio">
+          <div class="case__preview">
+            <img src="assets/pic/case/studio-landing-preview.png">
+          </div>
+          <div class="case__details">
+            <a class="case__title" href="case/studio.html">Designed a collaborative B2B product from concept to launch,
+              gaining 20+ paying clients</a>
+            <div class="case__stats">
+              <div class="stat-block">
+                <div class="stat__number">20+</div>
+                <div class="stat__label">new paid clients</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">65%</div>
+                <div class="stat__label">mobile adoption</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">+3%</div>
+                <div class="stat__label">social engagement</div>
+              </div>
+            </div>
+            <ul class="case__achivements">
+              <li>Facilitated 8 design workshops to produce multiple concepts and made 45 user tests.</li>
+              <li>Developed a web tool to streamline SMM team collaboration, enabling teams to increase engagement rates on
+                their social accounts by 3%.</li>
+              <li>Launched a collaborative mobile app with 65% user adoption, increasing engagement by 25%.</li>
+              <li>Created a new design system with hybrid component libraries.</li>
+            </ul>
+            <a class="case__button button button-arrow" href="case/studio.html">
+              <span>Explore Case Study</span>          
+              <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="case__details">
-          <a class="case__title" href="case/studio.html">Designed a collaborative B2B product from concept to launch,
-            gaining 20+ paying clients</a>
-          <div class="case__stats">
-            <div class="stat-block">
-              <div class="stat__number">20+</div>
-              <div class="stat__label">new paid clients</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">65%</div>
-              <div class="stat__label">mobile adoption</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">+3%</div>
-              <div class="stat__label">social engagement</div>
-            </div>
-          </div>
-          <ul class="case__achivements">
-            <li>Facilitated 8 design workshops to produce multiple concepts and made 45 user tests.</li>
-            <li>Developed a web tool to streamline SMM team collaboration, enabling teams to increase engagement rates on
-              their social accounts by 3%.</li>
-            <li>Launched a collaborative mobile app with 65% user adoption, increasing engagement by 25%.</li>
-            <li>Created a new design system with hybrid component libraries.</li>
-          </ul>
-          <a class="case__button button button-arrow" href="case/studio.html">
-            <span>Explore Case Study</span>          
-            <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-  
-      <div class="case case-finhealth">
-        <div class="case__details">
-          <a class="case__title" href="case/finhealth.html">Created a personal finance tool for mobile banking, achieving a 32% retention rate</a>
-          <div class="case__stats">
-            <div class="stat-block">
-              <div class="stat__number">32%</div>
-              <div class="stat__label">user retention</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">+$7.5M</div>
-              <div class="stat__label">in monthly revenue</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">+10%</div>
-              <div class="stat__label">in new accounts</div>
-            </div>
-          </div>
-          <ul class="case__achivements">
-            <li>Drove product strategy and target audience definition.</li>
-            <li>Conducted over 80 UX interviews and tests, iterating through 7 design cycles to refine user experiences.
-            </li>
-            <li>Expanded design system, enabling adaptation functional for a B2B app.</li>
-          </ul>
-          <a class="case__button button button-arrow" href="case/finhealth.html">
-            <span>Explore Case Study</span>          
-            <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-        <div class="case__preview">
-          <img src="assets/pic/case/finhealth-landing-preview.png">
-        </div>
-      </div>
-  
-      <div class="case case-widget">
-        <div class="case__preview">
-          <img src="assets/pic/case/widget-landing-preview.png">
-        </div>
-        <div class="case__details">
-          <a class="case__title" href="case/payment-forms.html">Redesigned payment solutions, boosting conversion by 12%</a>
-          <div class="case__stats">
-            <div class="stat-block">
-              <div class="stat__number">+12%</div>
-              <div class="stat__label">conversion rate</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">+$615K</div>
-              <div class="stat__label">in monthly revenue</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">+78%</div>
-              <div class="stat__label">merchants grow</div>
-            </div>
-          </div>
-          <ul class="case__achivements">
-            <li>Conducted qualitative and quantitative researches, then prototyped and tested 3 concepts via collaborative workshops.</li>
-            <li>Designed web and mobile payment interfaces, driving client growth via conversion-focused flows and customizable UI.
-            </li>
-            <li>Established a design system reused across 8 projects.</li>
-          </ul>
-          <a class="case__button button button-arrow" href="case/payment-forms.html">
-            <span>Explore Case Study</span>          
-            <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-        
-      </div>
-  
-      <div class="case case-business-app">
-        <div class="case__details">
-          <a class="case__title" href="case/business-app.html">Launched a business management app, achieving a 4.7 App Store rating</a>
-          <div class="case__stats">
-            <div class="stat-block">
-              <div class="stat__number">4.7</div>
-              <div class="stat__label">App Store rating</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">27K</div>
-              <div class="stat__label">business clients</div>
-            </div>
-            <div class="stat-block">
-              <div class="stat__number">100K</div>
-              <div class="stat__label">app downloads</div>
-            </div>
-          </div>
-          <ul class="case__achivements">
-            <li>Conducted 20 interviews to identify key needs and prioritize features.</li>
-            <li>Designed intuitive analytics dashboards with gesture controls for better user interaction and financial insight, engaging over 75% of web users.
-            </li>
-            <li>Refined MVP version and achieved 100K downloads at final launch.</li>
-          </ul>
-          <a class="case__button button button-arrow" href="case/business-app.html">
-            <span>Explore Case Study</span>          
-            <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-        <div class="case__preview">
-          <img src="assets/pic/case/business-app-landing-preview.png">
-        </div>
-      </div>
-    </div>  
-  </section>
-
-  <section id="processes" class="processes container">
-    <h2>Process Optimization</h2>
-    <div class="processes__list">
-      <div class="processes__item process">
-        <div class="process__preview image-wrap">
-          <a href="process/streamlined-interview.html">
-            <img src="assets/pic/process/thumbnail-interviews.png"
-            srcset="assets/pic/process/thumbnail-interviews.png 1x, 
-            assets/pic/process/thumbnail-interviews@2x.png 2x"  
-            >
-          </a>
-        </div>
-        <a href="process/streamlined-interview.html" class="process__title">Streamlined the user interviews process, cutting testing time from weeks to days</a>
-        <a class="process__button button button-arrow" href="process/streamlined-interview.html">
-          <span>Explore Case Study</span>
-          <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a> 
-      </div>
-      <div class="processes__item process">
-        <div class="process__preview image-wrap">
-          <a href="process/facilitated-retro.html">
-            <img src="assets/pic/process/thumbnail-retro.png"
-            srcset="assets/pic/process/thumbnail-retro.png 1x, 
-            assets/pic/process/thumbnail-retro@2x.png 2x"  
-            >
-          </a>
-        </div>
-        <a href="process/facilitated-retro.html" class="process__title">Facilitated 10+ retrospectives, improving developer team efficiency by 30%</a>
-        <a class="process__button button button-arrow" href="process/facilitated-retro.html">
-          <span>Explore Case Study</span>
-          <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a> 
-      </div>
-    </div>
-  </section>
-
-  <section id="contributions" class="contributions container">
-    <div class="contributions__wrap">
-      <div class="image-top image-wrap">
-        <img src="assets/pic/contribution/main.jpg">
-      </div>  
-      <div class="contributions__info">
-        <h2>Design Community Contributor</h2>
-        <p class="contributions__description">As a seasoned UX designer, I mentor junior designers, share insights through public speaking, and create educational content to bridge the knowledge gap in UX design, enhancing both my expertise and the community's.</p>
-      </div>
-      <ul class="contributions__list">
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-1.png" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">Creating with Empathy: Know Your Audience for Success, in Work and Life</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Public speaking</span>
-              <span class="contribution__date">2025</span>  
-          </div>   
-        </li>
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-2.png" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">Sign-Up Rescue Mission — Making It 3x Faster</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Company’s blog article</span>
-              <span class="contribution__date">2025</span>  
-          </div>   
-        </li>
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-4.png" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">Eduson Academy: Web Design</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Design lecturers</span>
-              <span class="contribution__date">2024</span>  
-          </div>   
-        </li>
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-5.png" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">Mentor at Women in Tech</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Mentorship</span>
-              <span class="contribution__date">2024 till now</span>  
-          </div>   
-        </li>
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-3.png" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">Practical Guide on How to Relocate to Spain</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Medium article</span>
-              <span class="contribution__date">2024</span>  
-          </div>   
-        </li>
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-6.png" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">Mentor at ADPList</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Mentorship</span>
-              <span class="contribution__date">2023 till now</span>  
-          </div>   
-        </li>
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-7.jpg" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">First-Time Speaker’s Guide: the Product Design Conference with Confidence</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Medium article</span>
-              <span class="contribution__date">2023</span>  
-          </div>   
-        </li>
-        <li class="contribution__item contribution">
-          <div class="contribution__left-side">
-            <img src="assets/pic/contribution/thumbnail-8.jpg" alt="Description" class="contribution__img">  
-            <h3 class="contribution__title">UX Research and How to Choose the Right Method</h3>
-          </div>
-          <div class="contribution__right-side">
-              <span class="contribution__type">Public speaking</span>
-              <span class="contribution__date">2023</span>  
-          </div>   
-        </li>
-      </ul>  
-    </div>
     
-  </section>
-
-  <section id="about" class="about container">
-    <div class="about__info">
-      <h2 class="about__title">Outside of work</h2>  
-      <p class="about__description">I'm animal lover (three rescued cats and a Spanish dog), music fan, home chef, and outdoor enthusiast. My core belief is "Joy drives Creativity!"</p>
-    </div>
-    <img src="assets/pic/about-temp.png" class="about__image">
-  </section>
-
-  <section id="contact-me" class="contact-me container">
-    <div class="contact-me__wrap">
-      <div class="top">
-        <div class="contact-me__title-avatar">
-          <img alt="Eugene Durov" class="contact-me__avatar" src="assets/pic/avatar.jpg">
-          <h2 class="contact-me__title">Random fact about me</h2>
-          <div id="refresh-fact" class="contact-me__refresh">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
-              <path d="M18.1002 10.4046C17.5535 9.85789 16.667 9.85789 16.1203 10.4046C15.5736 10.9514 15.5736 11.8378 16.1203 12.3845L17.1102 11.3946L18.1002 10.4046ZM21.51 15.7943L20.5201 16.7843C21.0668 17.331 21.9532 17.331 22.5 16.7843L21.51 15.7943ZM26.8997 12.3845C27.4465 11.8378 27.4465 10.9514 26.8997 10.4046C26.353 9.85789 25.4666 9.85789 24.9198 10.4046L25.9098 11.3946L26.8997 12.3845ZM20.3769 13.9948C20.3769 14.768 21.0037 15.3948 21.7769 15.3948C22.5501 15.3948 23.1769 14.768 23.1769 13.9948H21.7769H20.3769ZM17.8651 22.1399C18.5163 21.723 18.7062 20.8572 18.2893 20.206C17.8724 19.5548 17.0066 19.3649 16.3554 19.7818L17.1102 20.9609L17.8651 22.1399ZM17.1102 11.3946L16.1203 12.3845L20.5201 16.7843L21.51 15.7943L22.5 14.8044L18.1002 10.4046L17.1102 11.3946ZM21.51 15.7943L22.5 16.7843L26.8997 12.3845L25.9098 11.3946L24.9198 10.4046L20.5201 14.8044L21.51 15.7943ZM11.6658 22.5503V21.1503C6.85478 21.1503 2.95469 17.2503 2.95469 12.4392H1.55469H0.154688C0.154688 18.7966 5.30839 23.9503 11.6658 23.9503V22.5503ZM1.55469 12.4392H2.95469C2.95469 7.62822 6.85479 3.72812 11.6658 3.72812V2.32812V0.928125C5.30839 0.928125 0.154688 6.08182 0.154688 12.4392H1.55469ZM11.6658 2.32812V3.72812C16.4768 3.72812 20.3769 7.62822 20.3769 12.4392H21.7769H23.1769C23.1769 6.08183 18.0232 0.928125 11.6658 0.928125V2.32812ZM21.7769 12.4392H20.3769V13.9948H21.7769H23.1769V12.4392H21.7769ZM17.1102 20.9609L16.3554 19.7818C15.0024 20.648 13.3949 21.1503 11.6658 21.1503V22.5503V23.9503C13.9458 23.9503 16.0749 23.286 17.8651 22.1399L17.1102 20.9609Z"/>
-            </svg> 
+        <div class="case case-finhealth">
+          <div class="case__details">
+            <a class="case__title" href="case/finhealth.html">Created a personal finance tool for mobile banking, achieving a 32% retention rate</a>
+            <div class="case__stats">
+              <div class="stat-block">
+                <div class="stat__number">32%</div>
+                <div class="stat__label">user retention</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">+$7.5M</div>
+                <div class="stat__label">in monthly revenue</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">+10%</div>
+                <div class="stat__label">in new accounts</div>
+              </div>
+            </div>
+            <ul class="case__achivements">
+              <li>Drove product strategy and target audience definition.</li>
+              <li>Conducted over 65 UX interviews and tests, iterating through 12 design cycles to refine user experiences.
+              </li>
+              <li>Expanded design system, enabling adaptation functional for a B2B app.</li>
+            </ul>
+            <a class="case__button button button-arrow" href="case/finhealth.html">
+              <span>Explore Case Study</span>          
+              <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          <div class="case__preview">
+            <a href="case/finhealth.html">
+              <img src="assets/pic/case/finhealth-preview.svg">
+            </a>
           </div>
         </div>
-        <p id="fact-text" class="contact-me__about">
-          Fact 2: Passionate about mentoring, supporting over 25 designers through Women in Tech and ADPList via various long and short term sessions.   
-        </p>
+    
+        <div class="case case-widget">
+          <div class="case__preview">
+            <a href="case/payment-forms.html">
+              <img src="assets/pic/case/payment-forms-preview.svg">
+            </a>  
+          </div>
+          <div class="case__details">
+            <a class="case__title" href="case/payment-forms.html">Redesigned payment solutions, boosting conversion by 12%</a>
+            <div class="case__stats">
+              <div class="stat-block">
+                <div class="stat__number">+12%</div>
+                <div class="stat__label">conversion rate</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">+$615K</div>
+                <div class="stat__label">in monthly revenue</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">+78%</div>
+                <div class="stat__label">merchants grow</div>
+              </div>
+            </div>
+            <ul class="case__achivements">
+              <li>Conducted qualitative and quantitative research, prototyped and tested 3 concepts via collaborative workshops.</li>
+              <li>Designed web and mobile payment interfaces, driving client growth via conversion-focused flows and customizable UI.
+              </li>
+              <li>Established a design system reused across 8 projects.</li>
+            </ul>
+            <a class="case__button button button-arrow" href="case/payment-forms.html">
+              <span>Explore Case Study</span>          
+              <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          
+        </div>
+    
+        <div class="case case-business-app">
+          <div class="case__details">
+            <a class="case__title" href="case/business-app.html">Launched a business management app, achieving a 4.7 App Store rating</a>
+            <div class="case__stats">
+              <div class="stat-block">
+                <div class="stat__number">4.7</div>
+                <div class="stat__label">App Store rating</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">27K</div>
+                <div class="stat__label">business clients</div>
+              </div>
+              <div class="stat-block">
+                <div class="stat__number">100K</div>
+                <div class="stat__label">app downloads</div>
+              </div>
+            </div>
+            <ul class="case__achivements">
+              <li>Conducted 20 interviews to identify key needs and prioritize features.</li>
+              <li>Designed intuitive analytics dashboards with gesture controls for better user interaction and financial insight, engaging over 75% of web users.
+              </li>
+              <li>Refined MVP version and achieved 100K downloads at final launch.</li>
+            </ul>
+            <a class="case__button button button-arrow" href="case/business-app.html">
+              <span>Explore Case Study</span>          
+              <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+          <div class="case__preview">
+            <img src="assets/pic/case/business-app-preview.svg">
+          </div>
+        </div>
+      </div>  
+    </section>
+  
+    <section id="contributions" class="contributions container"></section>
+      <div class="contributions__wrap">
+        <div class="image-top image-wrap">
+          <img src="assets/pic/contribution/main.jpg">
+        </div>  
+        <div class="contributions__info">
+          <h2>Design Community Contributor</h2>
+          <p class="contributions__description">As a seasoned UX designer, I mentor junior designers, share insights through public speaking, and create educational content to bridge the knowledge gap in UX design, enhancing both my expertise and the community's.</p>
+        </div>
+        <ul class="contributions__list">
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-1.png" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">Creating with Empathy: Know Your Audience for Success, in Work and Life</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Public speaking</span>
+                <span class="contribution__date">2025</span>  
+            </div>   
+          </li>
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-2.png" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">Sign-Up Rescue Mission — Making It 3x Faster</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Company’s blog article</span>
+                <span class="contribution__date">2025</span>  
+            </div>   
+          </li>
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-4.png" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">Eduson Academy: Web Design</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Design lecturers</span>
+                <span class="contribution__date">2024</span>  
+            </div>   
+          </li>
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-5.png" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">Mentor at Women in Tech</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Mentorship</span>
+                <span class="contribution__date">2024 till now</span>  
+            </div>   
+          </li>
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-3.png" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">Practical Guide on How to Relocate to Spain</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Medium article</span>
+                <span class="contribution__date">2024</span>  
+            </div>   
+          </li>
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-6.png" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">Mentor at ADPList</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Mentorship</span>
+                <span class="contribution__date">2023 till now</span>  
+            </div>   
+          </li>
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-7.jpg" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">First-Time Speaker’s Guide: the Product Design Conference with Confidence</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Medium article</span>
+                <span class="contribution__date">2023</span>  
+            </div>   
+          </li>
+          <li class="contribution__item contribution">
+            <div class="contribution__left-side">
+              <img src="assets/pic/contribution/thumbnail-8.jpg" alt="Description" class="contribution__img">  
+              <h3 class="contribution__title">UX Research and How to Choose the Right Method</h3>
+            </div>
+            <div class="contribution__right-side">
+                <span class="contribution__type">Public speaking</span>
+                <span class="contribution__date">2023</span>  
+            </div>   
+          </li>
+        </ul>  
       </div>
-      <div class="contact-me__bottom">
-        <h2 class="contact-me__title">Reach me out and let’s chat!</h2>
-        <ul class="contact-me__links links horiz">
-          <li><a class="link" href="mailto: hi@eugenedurov.works"><span
-                class="icon">📩</span><span>hi@eugenedurov.works</span></a></li>
-          <li><a class="link" target="_blank" href="https://www.linkedin.com/in/eugenedurov/"><span
-                class="icon icon-linkedin"></span><span>LinkedIn</span></a></li>
-        </ul>
+      
+    </section>
+  
+    <section id="processes" class="processes container">
+      <h2>Process Optimization</h2>
+      <div class="processes__list">
+        <div class="processes__item process">
+          <div class="process__preview image-wrap">
+            <a href="process/streamlined-interview.html">
+              <img src="assets/pic/process/thumbnail-interviews.png"
+              srcset="assets/pic/process/thumbnail-interviews.png 1x, 
+              assets/pic/process/thumbnail-interviews@2x.png 2x"  
+              >
+            </a>
+          </div>
+          <a href="process/streamlined-interview.html" class="process__title">Streamlined the user interviews process, cutting testing time from weeks to days</a>
+          <a class="process__button button button-arrow" href="process/streamlined-interview.html">
+            <span>Explore Case Study</span>
+            <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a> 
+        </div>
+        <div class="processes__item process">
+          <div class="process__preview image-wrap">
+            <a href="process/facilitated-retro.html">
+              <img src="assets/pic/process/thumbnail-retro.png"
+              srcset="assets/pic/process/thumbnail-retro.png 1x, 
+              assets/pic/process/thumbnail-retro@2x.png 2x"  
+              >
+            </a>
+          </div>
+          <a href="process/facilitated-retro.html" class="process__title">Facilitated 10+ retrospectives, improving developer team efficiency by 30%</a>
+          <a class="process__button button button-arrow" href="process/facilitated-retro.html">
+            <span>Explore Case Study</span>
+            <svg class="button-arrow__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M2 10H18M18 10L10 2M18 10L10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a> 
+        </div>
       </div>
-     
-    </div> 
-  </section>
+    </section>
+  
+    
+    <section id="about" class="about container">
+      <div class="about__info">
+        <h2 class="about__title">Outside of work</h2>  
+        <p class="about__description">I'm animal lover (three rescued cats and a Spanish dog), music fan, home chef, and outdoor enthusiast. My core belief is "Joy drives Creativity!"</p>
+      </div>
+      <img src="assets/pic/about-temp.png" class="about__image">
+    </section>
+  
+    <section id="contact-me" class="contact-me container">
+      <div class="contact-me__wrap">
+        <div class="top">
+          <div class="contact-me__title-avatar">
+            <img alt="Eugene Durov" class="contact-me__avatar" src="assets/pic/avatar.jpg">
+            <h2 class="contact-me__title">Random fact about me</h2>
+            <div id="refresh-fact" class="contact-me__refresh">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 28 24" fill="none">
+                <path d="M18.1002 10.4046C17.5535 9.85789 16.667 9.85789 16.1203 10.4046C15.5736 10.9514 15.5736 11.8378 16.1203 12.3845L17.1102 11.3946L18.1002 10.4046ZM21.51 15.7943L20.5201 16.7843C21.0668 17.331 21.9532 17.331 22.5 16.7843L21.51 15.7943ZM26.8997 12.3845C27.4465 11.8378 27.4465 10.9514 26.8997 10.4046C26.353 9.85789 25.4666 9.85789 24.9198 10.4046L25.9098 11.3946L26.8997 12.3845ZM20.3769 13.9948C20.3769 14.768 21.0037 15.3948 21.7769 15.3948C22.5501 15.3948 23.1769 14.768 23.1769 13.9948H21.7769H20.3769ZM17.8651 22.1399C18.5163 21.723 18.7062 20.8572 18.2893 20.206C17.8724 19.5548 17.0066 19.3649 16.3554 19.7818L17.1102 20.9609L17.8651 22.1399ZM17.1102 11.3946L16.1203 12.3845L20.5201 16.7843L21.51 15.7943L22.5 14.8044L18.1002 10.4046L17.1102 11.3946ZM21.51 15.7943L22.5 16.7843L26.8997 12.3845L25.9098 11.3946L24.9198 10.4046L20.5201 14.8044L21.51 15.7943ZM11.6658 22.5503V21.1503C6.85478 21.1503 2.95469 17.2503 2.95469 12.4392H1.55469H0.154688C0.154688 18.7966 5.30839 23.9503 11.6658 23.9503V22.5503ZM1.55469 12.4392H2.95469C2.95469 7.62822 6.85479 3.72812 11.6658 3.72812V2.32812V0.928125C5.30839 0.928125 0.154688 6.08182 0.154688 12.4392H1.55469ZM11.6658 2.32812V3.72812C16.4768 3.72812 20.3769 7.62822 20.3769 12.4392H21.7769H23.1769C23.1769 6.08183 18.0232 0.928125 11.6658 0.928125V2.32812ZM21.7769 12.4392H20.3769V13.9948H21.7769H23.1769V12.4392H21.7769ZM17.1102 20.9609L16.3554 19.7818C15.0024 20.648 13.3949 21.1503 11.6658 21.1503V22.5503V23.9503C13.9458 23.9503 16.0749 23.286 17.8651 22.1399L17.1102 20.9609Z"/>
+              </svg> 
+            </div>
+          </div>
+          <p id="fact-text" class="contact-me__about">
+            Fact 2: Passionate about mentoring, supporting over 25 designers through Women in Tech and ADPList via various long and short term sessions.   
+          </p>
+        </div>
+        <div class="contact-me__bottom">
+          <h2 class="contact-me__title">Reach me out and let’s chat!</h2>
+          <ul class="contact-me__links links horiz">
+            <li><a class="link" href="mailto: hi@eugenedurov.works"><span
+                  class="icon">📩</span><span>hi@eugenedurov.works</span></a></li>
+            <li><a class="link" target="_blank" href="https://www.linkedin.com/in/eugenedurov/"><span
+                  class="icon icon-linkedin"></span><span>LinkedIn</span></a></li>
+          </ul>
+        </div>
+       
+      </div> 
+    </section>
+
+  </div>
+
+  
+  
 
   <div class="footer">
     <h3 class="footer__title">© 2025 Handcrafted with pure HTML/CSS by Eugene Durov</h3>

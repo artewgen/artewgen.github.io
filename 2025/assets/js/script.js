@@ -9,6 +9,8 @@ $(function() {
 
 
   // --------- Main page pet slides --------- 
+
+function petSlider(){
 var $sliderBlock = $('.intro__pet');
 
 if ($sliderBlock.length) {
@@ -37,8 +39,56 @@ if ($sliderBlock.length) {
     }
 
     showSlide(current);
-    setInterval(nextSlide, 3500);
+    setInterval(nextSlide, 1500);
+    }
 }
+
+
+// ----------- Pet Slider Parallax ----------
+var $intro = $('#intro');
+var $pet = $('#intro-pet');
+
+if ($intro.length && $pet.length) {
+  var petWidth = $pet.outerWidth();
+  var petHeight = $pet.outerHeight();
+  var sliderAppear = false;
+
+  $(window).on('scroll', function() {
+    if (!sliderAppear){
+        var introOffset = $intro.offset().top;
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var introHeight = $intro.outerHeight();
+    
+        // introTopInView: distance from intro top to viewport top
+        var introTopInView = introOffset - scrollTop;
+        var introBottomInView = introTopInView + introHeight;
+    
+        // Define entry and exit scroll points
+        var entryPoint = windowHeight * 0.1;
+        var exitPoint = -(introHeight - petHeight);
+    
+        // Calculate progress for the animation
+        var progress = 1;
+        if (introTopInView < entryPoint && introTopInView > exitPoint) {
+          var total = entryPoint - exitPoint;
+          progress = (introTopInView - exitPoint) / total;
+          progress = Math.max(0, Math.min(1, progress));
+        } else if (introTopInView <= exitPoint) {
+          progress = 0;
+        }
+    
+        // Animate the right property (from -petWidth to 16px)
+        var finalRight = 16;
+        var right = -petWidth + progress * (petWidth + finalRight);
+        $pet.css('right', right + 'px');
+        petSlider();
+        sliderAppear = true;
+    }
+   
+  });
+}
+
 
 
 
@@ -52,7 +102,7 @@ if ($factText.length && $refreshFact.length) {
         "Fact 2: Passionate about mentoring, supporting over 25 designers through Women in Tech and ADPList via various long and short term sessions.",
         "Fact 3: Continuously invest in learning, recently completing advanced courses in data-driven product management and smart interface design patterns.",
         "Fact 4: Began my IT career as a front-end developer, skilled in HTML, CSS, and JavaScript. I built this site myself completely from scratch, without any platforms.",
-        "Fact 5: I have a cat named Pixel.",
+        "Fact 5: With attention to detail and interaction, this portfolio includes 15 interactive elements designed for a richer user experience.",
         "Fact 6: Coffee fuels my mornings.",
         "Fact 7: I've travelled to 15 countries.",
         "Fact 8: I enjoy cooking Italian food.",

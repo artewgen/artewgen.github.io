@@ -162,7 +162,7 @@ html {
     margin: 0 auto;
 }
 .landing .container{
-    max-width: 1400px;
+    max-width: 1560px;
 }
 body {
     font-family: 'TT Commons', sans-serif;
@@ -311,10 +311,9 @@ h4{
     margin-top: calc(-120px * var(--scale));
     font-size: 44px;
     font-weight: 500;
+    text-align: center;
 }
-.landing .intro__links{
-    display: none;
-}
+
 
 .landing .intro__pet{
     right: -50%;
@@ -323,6 +322,9 @@ h4{
 }
 .landing .intro__pet__image{
     top: calc(-4px * var(--scale));
+}
+.intro__links{
+    justify-content: center;
 }
 
 /*-----Header nav---------------------------------------------------------*/
@@ -334,7 +336,7 @@ h4{
     top: 0;
     height: calc(120px * var(--scale));
     margin: auto;
-    max-width: 1400px;
+    max-width: 1560px;
 }
 .header-nav .me{
     display: grid;
@@ -359,6 +361,7 @@ h4{
     display: flex;
     gap: 6px;
     color: var(--color-text-secondary);
+    font-size: var(--font-body);
 }
 .header-nav .me__location__flag{
     display: inline-block;
@@ -610,7 +613,7 @@ h4{
 }
 .case{
     display: flex;
-    gap: calc(56px * var(--scale));
+    gap: calc(64px * var(--scale));
     padding: calc(80px * var(--scale));
     border-radius: var(--border-radius-l);
     color: var(--color-ondark-text-primary);
@@ -636,13 +639,18 @@ h4{
     justify-content: center; 
 }
 .case__preview{
-    flex: 1 1 47%; 
+    flex: 1 1 50%; 
 }
 .case__details{
-    flex: 1 1 53%; 
+    flex: 1 1 50%; 
 }
 .case__preview img{
     max-width: 100%;
+    transition: transform 0.42s cubic-bezier(.75,.2,.3,1);
+    will-change: transform;
+}
+.case__preview:hover img{
+    transform: scale(1.035);
 }
 .case__title{
     font-size: var(--font-h3);
@@ -743,6 +751,18 @@ h4{
 }
 .process__button span{
     font-weight: 500;
+}
+.process__preview a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.process__preview{
+    transition: transform 0.32s cubic-bezier(.75,.2,.3,1);
+    will-change: transform;
+}
+.process__preview:hover {
+    transform: scale(1.025);
 }
 
 /*-----Contribution---------------------------------------------------------*/

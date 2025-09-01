@@ -131,7 +131,7 @@
     --color-case-bg-widget: #14213D;
     --color-case-bg-lk: #163020;
 
-    --color-case-inside-bg-widget: #2850AC;
+    --color-case-inside-bg-widget: #132A5E;
 
     --color-block-contribution-bg: #1F3021;
 
@@ -305,10 +305,10 @@ h4{
 .landing .intro{
     z-index: 8;
     top: 0;
-    margin-top: -120px;
+    margin-top: calc(-60px * var(--scale));
 }
 .landing .intro__about{
-    margin-top: calc(-120px * var(--scale));
+    margin-top: calc(-60px * var(--scale));
     font-size: 44px;
     font-weight: 500;
     text-align: center;
@@ -722,7 +722,6 @@ h4{
 }
 
 
-
 /*---Processes---------------------------------------------------------*/
 
 .processes{
@@ -997,9 +996,10 @@ ul.contact-me__links{
     color: var(--color-text-secondary);
 }
 .case-study h3{
-    margin-block-start: calc(56px * var(--scale));;
-    margin-block-end: calc(16px * var(--scale));;
+    margin-block-start: calc(56px * var(--scale));
+    margin-block-end: calc(16px * var(--scale));
 }
+
 .case-study__block{
     max-width: calc(800px * var(--scale)); 
     margin: calc(80px * var(--scale)) auto calc(100px * var(--scale));
@@ -1104,6 +1104,11 @@ ul.contact-me__links{
 li .case-study__image-wrap{
     margin: 20px 0 40px;
 }
+
+.case-study .other-cases h2{
+    margin-bottom: calc(48px * var(--scale)); 
+}
+
 
 .centered-wrap{
     display: flex;

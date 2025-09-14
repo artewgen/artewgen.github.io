@@ -77,9 +77,10 @@ if ($intro.length && $pet.length) {
         } else if (introTopInView <= exitPoint) {
           progress = 0;
         }
-    
+        
+        $pet.addClass("show");
         // Animate the right property (from -petWidth to 16px)
-        var finalRight = 16;
+        var finalRight = -12;
         var right = -petWidth + progress * (petWidth + finalRight);
         $pet.css('right', right + 'px');
         petSlider();
@@ -90,6 +91,66 @@ if ($intro.length && $pet.length) {
 }
 
 
+// --------- About photo slider --------- 
+
+const $aboutSlider = $('#about-slider');
+const $slides = $('.about__slider > img');
+
+if ($aboutSlider.length && $slides.length) {
+    const angles = [-10, 2, 11, -3, 5]; // Rotation angle for each image
+    let zStack = $slides.length;
+    const animDuration = 1200;
+    const restDelay = 1500;
+
+    setSliderHeight();
+
+    // Initial setup
+    $slides.each(function(i) {
+        $(this).css('z-index', zStack - i);
+        $(this).data('angle', angles[i]);
+        $(this).css({
+            'transform': `translateX(0) rotate(${angles[i]}deg)`,
+            'transition': `transform ${animDuration}ms`
+        });
+    });
+
+    function animateAndRestack() {
+        const $top = $slides.sort((a, b) =>
+            parseInt($(b).css('z-index')) - parseInt($(a).css('z-index'))
+        )[0];
+        const angle = $($top).data('angle');
+        // Pure horizontal shift, then rotate (animation appears horizontal)
+        $($top).css('transform', `translateX(110%) rotate(${angle}deg)`);
+
+        setTimeout(() => {
+            $($top).css('z-index', 1);
+            $($top).css('transform', `translateX(0) rotate(${angle}deg)`);
+            $slides.not($top).each(function() {
+                $(this).css('z-index', parseInt($(this).css('z-index')) + 1);
+            });
+            setTimeout(animateAndRestack, restDelay);
+        }, animDuration);
+    }
+
+    function setSliderHeight(){
+        $aboutSlider.height($slides.height());
+    }
+
+    setTimeout(animateAndRestack, restDelay);
+
+    $(window).resize(function(){
+        setSliderHeight();
+    });
+}
+
+
+
+
+  
+
+  
+
+
 
 
   // --------- Random facts --------- 
@@ -98,35 +159,39 @@ var $refreshFact = $('#refresh-fact');
 
 if ($factText.length && $refreshFact.length) {
     var facts = [
-        "Fact 1: I love hiking.",
-        "Fact 2: Passionate about mentoring, supporting over 25 designers through Women in Tech and ADPList via various long and short term sessions.",
-        "Fact 3: Continuously invest in learning, recently completing advanced courses in data-driven product management and smart interface design patterns.",
-        "Fact 4: Began my IT career as a front-end developer, skilled in HTML, CSS, and JavaScript. I built this site myself completely from scratch, without any platforms.",
-        "Fact 5: With attention to detail and interaction, this site is packed with 15 interactive moments for a richer journey",
-        "Fact 6: This portfolio website is fully optimised for mobile devices—smooth browsing everywhere",
-        "Fact 7: I've travelled to 15 countries.",
-        "Fact 8: I enjoy cooking Italian food.",
-        "Fact 9: I play the guitar.",
-        "Fact 10: I'm a morning person.",
-        "Fact 11: I practise meditation daily.",
-        "Fact 12: My favourite colour is blue.",
-        "Fact 13: I run marathons.",
-        "Fact 14: I'm a film buff.",
-        "Fact 15: I collect vintage cameras.",
-        "Fact 16: I love painting.",
-        "Fact 17: I'm learning to code in Python.",
-        "Fact 18: I enjoy birdwatching.",
-        "Fact 19: I have a small garden.",
-        "Fact 20: I write short stories."
+        "Fact 1: Driven by user insight, led 300+ UX interviews and tests, using Lean UX practices to achieve a 12% conversion lift and $450K in monthly revenue.",
+        "Fact 2: Mentored over 35 designers through Women in Tech and ADPList, and there’s always someone new in my calendar.",
+        "Fact 3: Continuously invest in learning, recently completing advanced courses in data-driven product management and smart interface design patterns.",
+        "Fact 4: Began my IT career as a front-end developer, skilled in HTML, CSS, and JavaScript. I built this site myself completely from scratch, without any platforms.",
+        "Fact 5: This site includes 15 interactive moments for those who appreciate details and for those who notice them.",
+        "Fact 6: This portfolio website is fully optimised for mobile devices, smooth browsing everywhere.",
+        "Fact 7: Streamlined user onboarding at current company, achieving 3x faster completion and 9% conversion growth by reducing friction with CJM and UX best practices.",
+        "Fact 8: Raise company brand visibility by speaking at conferences, writing on LinkedIn and the company blog. One way to make HR’s job lighter.",
+        "Fact 9: Delivered numerous products across web, iOS, and Android platforms for both B2B and B2C audiences. The full product playground.",
+        "Fact 10: Designed for teams from 35 up to thousands, with insight into what drives success. Recently increased developer efficiency by 30% through regular retros.",
+        "Fact 11: Integrate AI tools such as ChatGPT and Lovable into daily workflow to accelerate research, design, and content creation, boosting productivity.",
+        "Fact 12: Built this portfolio as a dedicated project: researched, planned, tested, and refined with HR and hiring managers in mind. Hoping it’s exactly what you need and maybe earns a smile.",
+        "Fact 13: Taking acting classes to discover fresh, playful approaches to public speaking and deliver ideas with more impact and creativity."
     ];
+    
+    
+
+    var lastFactIndex = -1;
 
     function refreshFact() {
-        var randomIndex = Math.floor(Math.random() * facts.length);
+        var randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * facts.length);
+        } while (randomIndex === lastFactIndex && facts.length > 1);
         $factText.text(facts[randomIndex]);
+        lastFactIndex = randomIndex;
     }
 
-    $refreshFact.on('click', function() {
+    $refreshFact.on('click', function(e) {
         refreshFact();
+    });
+    $refreshFact.on('mousedown', function(e) {
+        e.preventDefault();
     });
 
     // Show a random fact on initial load

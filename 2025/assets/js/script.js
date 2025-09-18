@@ -11,9 +11,9 @@ $(function() {
   // --------- Main page pet slides --------- 
 
 function petSlider(){
-var $sliderBlock = $('.intro__pet');
+var $petSlider = $('.intro__pet');
 
-if ($sliderBlock.length) {
+if ($petSlider.length) {
     var slides = [
         { text: 'and 2+ years with' },
         { text: 'and 3+ years with' },
@@ -31,9 +31,9 @@ if ($sliderBlock.length) {
     function nextSlide() {
         showSlide(current);
         setTimeout(function() {
-            $sliderBlock.removeClass('pet-' + current);
+            $petSlider.removeClass('pet-' + current);
             current = (current + 1) % slides.length;
-            $sliderBlock.addClass('pet-' + current);
+            $petSlider.addClass('pet-' + current);
             showSlide(current);
         }, 400);
     }
@@ -41,6 +41,10 @@ if ($sliderBlock.length) {
     showSlide(current);
     setInterval(nextSlide, 1500);
     }
+
+    $petSlider.on('click', function(){
+        ym(88891643,'reachGoal','clickOnPetSlider');
+    });
 }
 
 
@@ -141,6 +145,10 @@ if ($aboutSlider.length && $slides.length) {
     $(window).resize(function(){
         setSliderHeight();
     });
+
+    $aboutSlider.on('click', function(){
+        ym(88891643,'reachGoal','clickOnAboutSlider');
+    })
 }
 
 
@@ -188,6 +196,7 @@ if ($factText.length && $refreshFact.length) {
     }
 
     $refreshFact.on('click', function(e) {
+        ym(88891643,'reachGoal','clickOnRandomFact');
         refreshFact();
     });
     $refreshFact.on('mousedown', function(e) {

@@ -14,31 +14,17 @@ function petSlider(){
 var $petSlider = $('.intro__pet');
 
 if ($petSlider.length) {
-    var slides = [
-        { text: 'and 2+ years with' },
-        { text: 'and 3+ years with' },
-        { text: 'and 4+ years with' },
-        { text: 'and 5+ years with' }
-    ];
     
     var current = 0;
-    var $txt = $('.intro__pet__text');
-
-    function showSlide(index) {
-        $txt.text(slides[index].text);
-    }
 
     function nextSlide() {
-        showSlide(current);
         setTimeout(function() {
             $petSlider.removeClass('pet-' + current);
-            current = (current + 1) % slides.length;
+            current = (current + 1) % 4;
             $petSlider.addClass('pet-' + current);
-            showSlide(current);
         }, 400);
     }
 
-    showSlide(current);
     setInterval(nextSlide, 1500);
     }
 
@@ -84,7 +70,7 @@ if ($intro.length && $pet.length) {
         
         $pet.addClass("show");
         // Animate the right property (from -petWidth to 16px)
-        var finalRight = -12;
+        var finalRight = -48;
         var right = -petWidth + progress * (petWidth + finalRight);
         $pet.css('right', right + 'px');
         petSlider();

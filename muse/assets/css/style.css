@@ -2000,6 +2000,13 @@ a.btn:hover{
     .stat-block{
        padding-right: 8px; 
     }
+    .header-nav .me__name{
+        position: relative;
+        top: 10px;
+    }
+    .me__location__name{
+        display: none;
+    }
     .contact-me__avatar{
         width: 80px;
         height: 80px;

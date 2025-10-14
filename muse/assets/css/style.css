@@ -752,7 +752,7 @@ a .contribution__img:hover {
 
 .about__slider {
     display: grid;
-    height: 400px; 
+    min-height: 300px;
     position: relative;
     overflow: visible;
     padding: 0;

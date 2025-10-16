@@ -1886,10 +1886,10 @@ a.btn:hover{
     }
 
     .landing .intro{
-        margin-top: calc(-60px * var(--scale));
+        margin-top: calc(-150px * var(--scale));
     }
     .landing .intro__about{
-        margin-top: calc(-60px * var(--scale));
+        margin-top: calc(-100px * var(--scale));
     }
     .landing .intro{
         padding: calc(32px * var(--scale)) calc(32px * var(--scale));

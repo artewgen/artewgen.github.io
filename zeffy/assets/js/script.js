@@ -673,31 +673,32 @@ function getClientId() {
     const KEY = 'clientId';
     let id = localStorage.getItem(KEY);
     if (!id) {
-        id = crypto.randomUUID();
-        localStorage.setItem(KEY, id);
+      id = crypto.randomUUID();
+      localStorage.setItem(KEY, id);
     }
     return id;
-    }
-    
-    async function trackPageView() {
+  }
+  
+  async function trackPageView() {
     const clientId = getClientId();
-    
+  
     try {
-        await fetch('http://localhost:4000/track/pageview', {
+      await fetch('http://localhost:4000/track/pageview', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            url: window.location.href,
-            title: document.title,
-            clientId,
+          url: window.location.href,
+          title: document.title,
+          clientId,
         }),
-        });
+      });
     } catch (e) {
-        console.error('trackPageView error', e);
+      console.error('trackPageView error', e);
     }
-    }
-    
-    window.addEventListener('load', trackPageView);
+  }
+  
+  window.addEventListener('load', trackPageView);
+  
 
 
 });

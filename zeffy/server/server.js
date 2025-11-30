@@ -4,13 +4,17 @@ const fetch = require('node-fetch');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-const COUNTER_ID = 'ТВОЙ_ID_СЧЁТЧИКА';
-const TOKEN = 'ТВОЙ_MEASUREMENT_TOKEN';
+const COUNTER_ID = '88891643';
+const TOKEN = '9e93b3cb-d6e3-4867-b21b-054918d4103b';
 
 app.use(express.json());
 
+
 app.post('/track/pageview', async (req, res) => {
-  const { url, title, clientId } = req.body;
+
+    console.log('INCOMING /track/pageview', req.body);
+
+    const { url, title, clientId } = req.body;
 
   try {
     const body = {
@@ -38,6 +42,7 @@ app.post('/track/pageview', async (req, res) => {
       return res.status(500).json({ ok: false });
     }
 
+    console.log('SENT TO METRICA OK');
     res.json({ ok: true });
   } catch (e) {
     console.error(e);

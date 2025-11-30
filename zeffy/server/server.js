@@ -7,6 +7,18 @@ const PORT = process.env.PORT || 4000;
 const COUNTER_ID = '88891643';
 const TOKEN = '9e93b3cb-d6e3-4867-b21b-054918d4103b';
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // или точный домен: 'https://eugenedurov.works'
+    res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+  
+    if (req.method === 'OPTIONS') {
+      return res.sendStatus(204); // отвечаем на preflight и выходим
+    }
+  
+    next();
+  });
+
 app.use(express.json());
 
 

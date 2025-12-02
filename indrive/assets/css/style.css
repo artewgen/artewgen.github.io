@@ -1883,17 +1883,7 @@ a.btn:hover{
     }
     li .case-study__image-wrap.w-60 img{
         width: 60%;
-    }
-
-    .landing .intro{
-        margin-top: calc(-150px * var(--scale));
-    }
-    .landing .intro__about{
-        margin-top: calc(-100px * var(--scale));
-    }
-    .landing .intro{
-        padding: calc(32px * var(--scale)) calc(32px * var(--scale));
-    }
+    } 
 }
 @media (max-width: 799px) {
     :root {

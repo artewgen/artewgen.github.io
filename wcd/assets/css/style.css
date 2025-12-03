@@ -1780,6 +1780,10 @@ a.btn:hover{
     .other-cases{
         margin: calc(140px * var(--scale)) auto calc(160px * var(--scale));
     }
+    .landing .intro {
+        margin-top: calc(-150px * var(--scale));
+    }
+    
 }
 
 @media (max-width: 1199px){
@@ -1884,6 +1888,7 @@ a.btn:hover{
     li .case-study__image-wrap.w-60 img{
         width: 60%;
     } 
+
 }
 @media (max-width: 799px) {
     :root {

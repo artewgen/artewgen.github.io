@@ -585,6 +585,14 @@ h4{
     flex: 1 1 50%;
     max-width: 50%;
 }
+.landing .case__stats{
+    justify-content: space-between; 
+    align-items: flex-start;
+}
+.landing .stat-block{
+    flex: none;
+}
+
 .stat__number {
     font-size: var(--font-h2);
     line-height: 1.1;

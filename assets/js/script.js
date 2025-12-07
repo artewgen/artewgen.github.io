@@ -1,33 +1,12 @@
 $(function() {
 
-    //-----------Redirect to company page--------
-
-     // Redirect from homepage to the last personal directory saved in localStorage
-     var saved = localStorage.getItem('lastPersonalDir');
-     if (!saved) return;
- 
-     try {
-       var obj = JSON.parse(saved);
-       // Optional expiry: 30 days (remove or adjust as needed)
-       var maxAgeMs = 30 * 24 * 60 * 60 * 1000;
- 
-       if (obj && obj.dir && Date.now() - (obj.ts || 0) < maxAgeMs) {
-         // Ensure single leading/trailing slashes handled gracefully
-         var dir = String(obj.dir).replace(/^\/+|\/+$/g, '');
-         if (dir) window.location.replace('/' + dir + '/');
-       }
-     } catch (e) {
-       // Clear corrupted value
-       localStorage.removeItem('lastPersonalDir');
-     }
-
-
-
     // --------- Mobile navigation --------- 
   $('#menu-mobile-switcher').on('click', function(){
     $('#header-nav').toggleClass('open');
   });
-
+  $('.header-nav .links a').on('click', function(){
+    $('#header-nav').removeClass('open');
+  });
 
 
 
@@ -692,7 +671,44 @@ $('#other-cases a').on('click', function(){
 });
 
 
+function getClientId() {
+    const KEY = 'clientId';
+    let id = localStorage.getItem(KEY);
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem(KEY, id);
+    }
+    return id;
+  }
+  
+  async function trackPageView() {
+    const clientId = getClientId();
+  
+    try {
+      await fetch('http://localhost:4000/track/pageview', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          url: window.location.href,
+          title: document.title,
+          clientId,
+        }),
+      });
+    } catch (e) {
+      console.error('trackPageView error', e);
+    }
+  }
+  
+  window.addEventListener('load', trackPageView);
+  
+
+
 });
+
+
+
+
+
 
 
 

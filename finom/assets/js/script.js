@@ -4,7 +4,9 @@ $(function() {
   $('#menu-mobile-switcher').on('click', function(){
     $('#header-nav').toggleClass('open');
   });
-
+  $('.header-nav .links a').on('click', function(){
+    $('#header-nav').removeClass('open');
+  });
 
 
 

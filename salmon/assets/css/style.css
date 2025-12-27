@@ -289,6 +289,9 @@ h4{
 .bottom-margin{
     margin-bottom: calc(56px * var(--scale)) !important;
 }
+.nowrap{
+    white-space: nowrap;
+}
 
 
 

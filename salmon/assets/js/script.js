@@ -155,18 +155,18 @@ var $refreshFact = $('#refresh-fact');
 
 if ($factText.length && $refreshFact.length) {
     var facts = [
-        "Fact 1: Driven by user insight, led 300+ UX interviews and tests, using Lean UX practices to achieve a 12% conversion lift and $450K in monthly revenue.",
+        "Fact 1: Driven by user insight, led 350+ UX interviews and usability tests, translating insights into design decisions that increased shipping confidence.",
         "Fact 2: Mentored over 35 designers through Women in Tech and ADPList, and there’s always someone new in my calendar.",
         "Fact 3: Continuously invest in learning, recently completing advanced courses in data-driven product management and smart interface design patterns.",
         "Fact 4: Began my IT career as a front-end developer, skilled in HTML, CSS, and JavaScript. I built this site myself completely from scratch, without any platforms.",
         "Fact 5: This site includes 15 interactive moments for those who appreciate details and for those who notice them.",
         "Fact 6: This portfolio website is fully optimised for mobile devices, smooth browsing everywhere.",
-        "Fact 7: Streamlined user onboarding at current company, achieving 3x faster completion and 9% conversion growth by reducing friction with CJM and UX best practices.",
+        "Fact 7: Streamlined user onboarding at Birch, achieving 3x faster completion and 9% conversion growth by reducing friction with CJM and UX best practices.",
         "Fact 8: Raise company brand visibility by speaking at conferences, writing on LinkedIn and the company blog. One way to make HR’s job lighter.",
-        "Fact 9: Delivered numerous products across web, iOS, and Android platforms for both B2B and B2C audiences. The full product playground.",
-        "Fact 10: Designed for teams from 35 up to thousands, with insight into what drives success. Recently increased developer efficiency by 30% through regular retros.",
+        "Fact 9: Delivered numerous products across web, iOS, and Android platforms for both B2B and B2C audiences.",
+        "Fact 10: Worked in companies from 35 up to thousands people, with insight into what drives success. Recently increased developer efficiency by 30% through regular retros.",
         "Fact 11: Integrate AI tools such as ChatGPT and Lovable into daily workflow to accelerate research, design, and content creation, boosting productivity.",
-        "Fact 12: Built this portfolio as a dedicated project: researched, planned, tested, and refined with HR and hiring managers in mind. Hoping it’s exactly what you need and maybe earns a smile.",
+        "Fact 12: Built this portfolio as a dedicated project: researched, tested, and refined with hiring managers in mind. Hoping you enjoy it :)",
         "Fact 13: Taking acting classes to discover fresh, playful approaches to public speaking and deliver ideas with more impact and creativity."
     ];
     

@@ -138,14 +138,7 @@ if ($aboutSlider.length && $slides.length) {
         ym(88891643,'reachGoal','clickOnAboutSlider');
     })
 }
-
-
-
-
   
-
-  
-
 
 
 

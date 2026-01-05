@@ -80,9 +80,35 @@
     </div>
     <div class="centered-wrap main-image main-image-finhealth">
       <div class="centered">
-        <div class="item-1-3"><img src="../assets/pic/case/finhealth/main-left-frame.svg"></div>  
+        <div class="item-1-3">
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/main-left-frame.png 1x,
+                ../assets/pic/case/finhealth/main-left-frame@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/main-left-frame@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+        </div>  
         <div class="item-1-3"><div class="video-wrap"><video class="play-after-scrollto" src="../assets/pic/case/finhealth/main-flow.mp4"  muted playsinline loop poster="../assets/pic/case/finhealth/finhealth-flow-preview.svg"></video></div></div>  
-        <div class="item-1-3"><img src="../assets/pic/case/finhealth/main-right-frame.svg"></div>  
+        <div class="item-1-3">
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/main-right-frame.png 1x,
+                ../assets/pic/case/finhealth/main-right-frame@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/main-right-frame@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+        </div>  
       </div>
     </div>  
   </section>
@@ -96,14 +122,20 @@
 
         <picture>
           <source
-            media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/tinkoff-mobile.svg"
+            media="(max-width: 798px)" 
+            srcset="
+              ../assets/pic/case/finhealth/tinkoff-mobile.png 1x,
+              ../assets/pic/case/finhealth/tinkoff-mobile@2x.png 2x,
+              ../assets/pic/case/finhealth/tinkoff-mobile@3x.png 3x
+            "
           />
           <source
-            media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/tinkoff.svg"
+            media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/tinkoff.png 1x, 
+                                              ../assets/pic/case/finhealth/tinkoff@2x.png 2x"
           />
           <!-- Fallback (very old browsers) -->
           <img
-            src="../assets/pic/case/finhealth/tinkoff.svg" loading="lazy" decoding="async"
+            src="../assets/pic/case/finhealth/tinkoff@2x.png" loading="lazy" decoding="async"
           />
         </picture>
 
@@ -156,10 +188,36 @@
       <p>Despite Tinkoff’s feature-rich app, users couldn’t see their full financial picture. Switching between balances and charts, they still struggled to answer, <i>“Am I really okay with money right now?”</i>. This led to stress and missed engagement opportunities.</p>
       <div class="centered no-paddings gap-mini">
         <div class="item rounded item-1-3">
-          <img src="../assets/pic/case/finhealth/user-1.png">
+
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/user-1.jpg 1x,
+                ../assets/pic/case/finhealth/user-1@2x.jpg 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/user-1@2x.jpg" loading="lazy" decoding="async"
+            />
+          </picture>
+        
         </div>  
         <div class="item rounded item-2-3">
-          <img src="../assets/pic/case/finhealth/user-2.png">
+
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/user-2.jpg 1x,
+                ../assets/pic/case/finhealth/user-2@2x.jpg 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/user-2@2x.jpg" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>  
       </div>
       <p>To address these challenges, I conducted 15 customer development sessions with the product manager focused on savings behaviours. It helped uncover and validate key user needs:</p>
@@ -206,14 +264,23 @@
 
           <picture>
             <source
-              media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/design-iterations-mobile.svg"
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/design-iterations-mobile.png 1x,
+                ../assets/pic/case/finhealth/design-iterations-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/design-iterations-mobile@3x.png 3x
+              "
             />
             <source
-              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/design-iterations.svg"
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/design-iterations.png 1x,
+                ../assets/pic/case/finhealth/design-iterations@2x.png 2x
+              "
             />
             <!-- Fallback (very old browsers) -->
             <img
-              src="../assets/pic/case/finhealth/tinkoff.svg" loading="lazy" decoding="async"
+              src="../assets/pic/case/finhealth/design-iterations@2x.png" loading="lazy" decoding="async"
             />
           </picture>
 
@@ -226,7 +293,13 @@
        
         <picture>
             <source
-              media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/interviews-mobile.png"
+              media="(max-width: 798px)" 
+              type="image/png"
+              srcset="
+                ../assets/pic/case/finhealth/interviews-mobile.png 1x,
+                ../assets/pic/case/finhealth/interviews-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/interviews-mobile@3x.png 3x
+              "
             />
             <source
               media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/interviews.png 1x, 
@@ -310,16 +383,26 @@
 
           <picture>
             <source
-              media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/ideas-mobile.svg"
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/ideas-mobile.png 1x,
+                ../assets/pic/case/finhealth/ideas-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/ideas-mobile@3x.png 3x
+              "
             />
             <source
-              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/ideas.svg"
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/ideas.png 1x,
+                ../assets/pic/case/finhealth/ideas@2x.png 2x
+              "
             />
             <!-- Fallback (very old browsers) -->
             <img
-              src="../assets/pic/case/finhealth/ideas.svg" loading="lazy" decoding="async"
+              src="../assets/pic/case/finhealth/ideas@2x.png" loading="lazy" decoding="async"
             />
           </picture>
+
 
         </div>
       </div>
@@ -330,14 +413,23 @@
 
           <picture>
             <source
-              media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/articles-mobile.svg"
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/articles-mobile.png 1x,
+                ../assets/pic/case/finhealth/articles-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/articles-mobile@3x.png 3x
+              "
             />
             <source
-              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/articles.svg"
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/articles.png 1x,
+                ../assets/pic/case/finhealth/articles@2x.png 2x
+              "
             />
             <!-- Fallback (very old browsers) -->
             <img
-              src="../assets/pic/case/finhealth/articles.svg" loading="lazy" decoding="async"
+              src="../assets/pic/case/finhealth/articles@2x.png" loading="lazy" decoding="async"
             />
           </picture>
 
@@ -355,14 +447,23 @@
 
           <picture>
             <source
-              media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/dark-theme-mobile.svg"
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/dark-theme-mobile.png 1x,
+                ../assets/pic/case/finhealth/dark-theme-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/dark-theme-mobile@3x.png 3x
+              "
             />
             <source
-              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/dark-theme.svg"
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/dark-theme.png 1x,
+                ../assets/pic/case/finhealth/dark-theme@2x.png 2x
+              "
             />
             <!-- Fallback (very old browsers) -->
             <img
-              src="../assets/pic/case/finhealth/dark-theme.svg" loading="lazy" decoding="async"
+              src="../assets/pic/case/finhealth/dark-theme@2x.png" loading="lazy" decoding="async"
             />
           </picture>
 
@@ -378,14 +479,23 @@
 
           <picture>
             <source
-              media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/design-specifications-mobile.svg"
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/design-specifications-mobile.png 1x,
+                ../assets/pic/case/finhealth/design-specifications-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/design-specifications-mobile@3x.png 3x
+              "
             />
             <source
-              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/design-specifications.svg"
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/design-specifications.png 1x,
+                ../assets/pic/case/finhealth/design-specifications@2x.png 2x
+              "
             />
             <!-- Fallback (very old browsers) -->
             <img
-              src="../assets/pic/case/finhealth/design-specifications.svg" loading="lazy" decoding="async"
+              src="../assets/pic/case/finhealth/design-specifications@2x.png" loading="lazy" decoding="async"
             />
           </picture>
 
@@ -403,10 +513,16 @@
 
         <picture>
           <source
-            media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/retention-mobile.png"
+            media="(max-width: 798px)" 
+            type="image/png"
+            srcset="
+              ../assets/pic/case/finhealth/retention-mobile.png 1x,
+              ../assets/pic/case/finhealth/retention-mobile@2x.png 2x,
+              ../assets/pic/case/finhealth/retention-mobile@3x.png 3x
+            "
           />
           <source
-            media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/retention.png"
+            media="(min-width: 799px)" type="image/svg+xml" srcset="../assets/pic/case/finhealth/retention.png"
           />
           <!-- Fallback (very old browsers) -->
           <img
@@ -431,7 +547,20 @@
       
       <div class="centered-wrap rounded rounded-l no-margins">
         <div class="centered">
-          <img src="../assets/pic/case/finhealth/all-screens.svg">
+
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/all-screens.png 1x,
+                ../assets/pic/case/finhealth/all-screens@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/all-screens@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>
       </div>
       
@@ -448,17 +577,23 @@
       </ul>
       <div class="centered-wrap rounded rounded-l no-margins">
         <div class="centered">
-         
+
           <picture>
             <source
-              media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/subscriptions-mobile.svg"
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/subscriptions-mobile.png 1x,
+                ../assets/pic/case/finhealth/subscriptions-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/subscriptions-mobile@3x.png 3x
+              "
             />
             <source
-              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/subscriptions.svg"
+              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/subscriptions.png 1x, 
+                                                ../assets/pic/case/finhealth/subscriptions@2x.png 2x"
             />
             <!-- Fallback (very old browsers) -->
             <img
-              src="../assets/pic/case/finhealth/subscriptions.svg" loading="lazy" decoding="async"
+              src="../assets/pic/case/finhealth/subscriptions@2x.png" loading="lazy" decoding="async"
             />
           </picture>
 
@@ -488,10 +623,16 @@
 
         <picture>
           <source
-            media="(max-width: 798px)" srcset="../assets/pic/case/finhealth/be-finhealthy-mobile.svg"
+            media="(max-width: 798px)" 
+            type="image/png"
+            srcset="
+              ../assets/pic/case/finhealth/be-finhealthy-mobile.png 1x,
+              ../assets/pic/case/finhealth/be-finhealthy-mobile@2x.png 2x,
+              ../assets/pic/case/finhealth/be-finhealthy-mobile@3x.png 3x
+            "
           />
           <source
-            media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/be-finhealthy.svg"
+            media="(min-width: 799px)" type="image/svg+xml" srcset="../assets/pic/case/finhealth/be-finhealthy.svg"
           />
           <!-- Fallback (very old browsers) -->
           <img
@@ -518,8 +659,8 @@
         <div class="process__preview image-wrap">
           <a href="../process/streamlined-interview.html">
               <img src="../assets/pic/process/thumbnail-interviews.png"
-              srcset="../assets/pic/process/thumbnail-interviews.png 1x, 
-              ../assets/pic/process/thumbnail-interviews@2x.png 2x"  
+                    srcset="../assets/pic/process/thumbnail-interviews.png 1x, 
+                    ../assets/pic/process/thumbnail-interviews@2x.png 2x"  
               >
           </a>
         </div>

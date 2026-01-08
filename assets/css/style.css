@@ -273,7 +273,8 @@ h4{
     overflow: hidden;     /* Crop overflow */
     border-radius: var(--border-radius-m);
 }
-.image-wrap img {
+.image-wrap img,
+.image-wrap picture {
     width: 100%;
     height: 100%;
     object-fit: cover;    /* Ensures image covers the block */
@@ -288,6 +289,9 @@ h4{
 }
 .bottom-margin{
     margin-bottom: calc(56px * var(--scale)) !important;
+}
+.nowrap{
+    white-space: nowrap;
 }
 
 
@@ -555,16 +559,18 @@ h4{
 .case__details{
     flex: 1 1 50%; 
 }
-.case__preview img{
+.case__preview img,
+.case__preview picture{
     max-width: 100%;
     transition: transform 0.42s cubic-bezier(.75,.2,.3,1);
     will-change: transform;
 }
-.case__preview:hover img{
+.case__preview:hover img,
+.case__preview:hover picture{
     transform: scale(1.035);
 }
 .case__title{
-    font-size: var(--font-h3);
+    font-size: calc(var(--font-h3)*1.15);
     font-weight: 500;
     line-height: 125%;
     color: var(--color-ondark-acent-orange);
@@ -607,7 +613,8 @@ h4{
     line-height: 1.3;
 }
 .case__achivements{
-    margin-top: calc(40px * var(--scale));
+    margin-top: calc(46px * var(--scale));
+    margin-bottom: calc(16px * var(--scale));
 }
 .case__achivements li{
     position: relative;
@@ -619,7 +626,7 @@ h4{
     content: '';
     position: absolute;
     left: -32px;
-    top: calc(1px * var(--scale));;
+    top: calc(0.5px * var(--scale));
     width: 24px;
     height: 24px;
     background-image: url(../icons/icon-achivements-check.svg);
@@ -1013,12 +1020,14 @@ ul.contact-me__links{
     margin-top: calc(48px * var(--scale));
 }
 
-.case-study__image-wrap img{
+.case-study__image-wrap img,
+.case-study__image-wrap picture{
     width: 100%;
     max-width: 2500px;
     border-radius: var(--border-radius-l);
 }
-.case-study__image-wrap img{
+.case-study__image-wrap img,
+.case-study__image-wrap picture{
     border: 0;
     border-radius: 0;
 }
@@ -1029,6 +1038,7 @@ ul.contact-me__links{
 }
 .case-study .stat-block{
     max-width: 33.333%;
+    padding-right: 8px;
 }
 .case-study .stat__number{
     font-size: var(--font-h1);
@@ -1097,13 +1107,16 @@ li .case-study__image-wrap{
 }
 .centered-wrap .centered,
 .centered-wrap img,
+.centered-wrap picture,
 .centered-wrap video,
 .centered-wrap iframe{
     max-width: 1620px;
     width: 100%;
 }
+
 .payment-forms .centered-wrap .centered,
 .payment-forms .centered-wrap img,
+.payment-forms .centered-wrap picture,
 .payment-forms .centered-wrap video,
 .payment-forms .centered-wrap iframe{
     max-width: 1420px;
@@ -1123,7 +1136,8 @@ li .case-study__image-wrap{
 .item-2-3{
     width: 66.66%;
 }
-.centered img{
+.centered img,
+.centered picture{
     width: 100%;
 }
 .img-block-title{
@@ -1147,18 +1161,21 @@ li .case-study__image-wrap{
 }
 
 .rounded img,
+.rounded picture,
 .rounded video,
 .rounded iframe{
     border-radius: calc(var(--border-radius-m) * var(--scale));    
 }
 
 .rounded-s img,
+.rounded-s picture,
 .rounded-s video,
 .rounded-s iframe{
     border-radius: calc(var(--border-radius-s) * var(--scale));    
 }
 
 .rounded-l img,
+.rounded-l picture,
 .rounded-l video,
 .rounded-l iframe{
     border-radius: calc(var(--border-radius-l) * var(--scale));    
@@ -1830,7 +1847,7 @@ a.btn:hover{
 @media (max-width: 980px) {
     .header-nav{
         height: 100px;
-        padding: 0 20px;
+        padding: 0 20px 8px;
     }
     .header-nav .me__avatar{
         margin-right: 16px;
@@ -1900,7 +1917,8 @@ a.btn:hover{
     li .case-study__image-wrap.w-60{
         text-align: center;
     }
-    li .case-study__image-wrap.w-60 img{
+    li .case-study__image-wrap.w-60 img,
+    li .case-study__image-wrap.w-60 picture{
         width: 60%;
     } 
 
@@ -2073,7 +2091,7 @@ a.btn:hover{
      }
      .finhealth-screens .item-1-4{
         width: 100%;
-        max-width: 320px;
+        max-width: 360px;
      }
      .finhealth-screens__wrap{
         border-radius: 24px 24px 0 0;
@@ -2084,7 +2102,8 @@ a.btn:hover{
      }
      .finhealth-charts .item{
         width: 100%;
-        max-width: 320px;
+        max-width: 360px;
+        margin: 0 auto;
      }
      .finhealth-charts img{
         border-radius: 24px 24px 0 0;   
@@ -2193,6 +2212,9 @@ a.btn:hover{
         padding-top: 0; 
         gap: 0
      }
+     .case-study__block.bigger-top-margin{
+        margin-top: 80px;
+     }
     
      .case-study .chart{
         flex-direction: column;
@@ -2202,6 +2224,26 @@ a.btn:hover{
         width: 100%;
         max-width: 260px;
         margin-left: 8px;
+     }
+
+     .centered-wrap{
+        padding: 0;
+     }
+     .centered-wrap .centered{
+        margin: 0;
+     }
+     .case-study .img-desktop{
+        display: none;
+    }
+    .case-study .img-mobile{
+        display: block;
+    }
+
+     #rd-customer-needs .item:first-child{
+        display: none;
+     }
+     #rd-customer-needs .item:last-child{
+        width: 100%
      }
 
 }

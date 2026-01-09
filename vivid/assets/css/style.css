@@ -801,7 +801,6 @@ a .contribution__img:hover {
 
 .about__slider {
     display: grid;
-    height: 400px; 
     position: relative;
     overflow: visible;
     padding: 0;
@@ -1990,10 +1989,10 @@ a.btn:hover{
         gap: 64px;
     }
     .processes, .contributions, .about, .contact-me{
-        margin-top: 64px;
+        margin-top: 72px;
     } 
-    .about{
-        margin-bottom: 120px;
+    .landing .about{
+        margin-bottom: 80px;
     }
     .contributions__wrap{
         padding-bottom: 48px;
@@ -2048,6 +2047,12 @@ a.btn:hover{
         width: 100%;
         max-width: 500px;
      }
+
+     .about__slider{
+        margin: 5%;
+        padding-bottom: 20%;
+     }
+
     .contact-me__links .icon-linkedin{
         width: 20px;
         height: 20px;    
@@ -2118,6 +2123,9 @@ a.btn:hover{
     }
     .landing .intro__about{
         font-size: 26px;
+    }
+    .landing .about{
+        margin-bottom: 48px;
     }
     ul.intro__links{
         gap: 4px

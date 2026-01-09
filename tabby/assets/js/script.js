@@ -95,8 +95,6 @@ if ($aboutSlider.length && $slides.length) {
     const animDuration = 1200;
     const restDelay = 1500;
 
-    setSliderHeight();
-
     // Initial setup
     $slides.each(function(i) {
         $(this).css('z-index', zStack - i);
@@ -137,7 +135,12 @@ if ($aboutSlider.length && $slides.length) {
 
     $aboutSlider.on('click', function(){
         ym(88891643,'reachGoal','clickOnAboutSlider');
-    })
+    });
+
+    $(window).on('load', function () {
+        setSliderHeight();
+        setTimeout(animateAndRestack, restDelay);
+    });
 }
   
 

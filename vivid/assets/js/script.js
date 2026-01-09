@@ -1,5 +1,6 @@
 $(function() {
 
+
     // --------- Mobile navigation --------- 
   $('#menu-mobile-switcher').on('click', function(){
     $('#header-nav').toggleClass('open');
@@ -94,8 +95,6 @@ if ($aboutSlider.length && $slides.length) {
     const animDuration = 1200;
     const restDelay = 1500;
 
-    setSliderHeight();
-
     // Initial setup
     $slides.each(function(i) {
         $(this).css('z-index', zStack - i);
@@ -136,7 +135,12 @@ if ($aboutSlider.length && $slides.length) {
 
     $aboutSlider.on('click', function(){
         ym(88891643,'reachGoal','clickOnAboutSlider');
-    })
+    });
+
+    $(window).on('load', function () {
+        setSliderHeight();
+        setTimeout(animateAndRestack, restDelay);
+    });
 }
   
 
@@ -650,19 +654,8 @@ if ($widgetVideo1.length && $widgetVideo2.length && $widgetVideo3.length) {
     widgetObserver.observe(widgetVideo1);
 }
 
-$('header-nav__home').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseHeaderBackHome');
-});
-$('#case-study-nav .home').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseNavigationBackHome');
-})
-$('#case-study-nav .nav-section').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseNavigation');
-});
-$('#other-cases a').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseOtherCases');
-});
-
+// --------- Update footer year --------- 
+$('#current_year').text(new Date().getFullYear());
  
 
 });

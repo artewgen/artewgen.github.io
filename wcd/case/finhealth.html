@@ -74,15 +74,41 @@
   
   <section>
     <div class="case-study__top">
-      <h1>Created a personal finance tool for mobile banking, achieving a 32% retention rate</h1>
+      <h1>Created a Personal Finance Tool for a Mobile Banking with 40M+ Customers, Achieving a 32% Retention Rate</h1>
       <div class="case-study__top__description">
         <p>I led the end-to-end design of an AI-driven personal finance tool for the Tinkoff Bank app (48M users) as sole designer. Analysed customer savings, conducted 65+ user tests, and iterated the main screen seven times to optimise the experience. Delivered actionable insights, achieving a 32% feature retention rate.</div>
     </div>
     <div class="centered-wrap main-image main-image-finhealth">
       <div class="centered">
-        <div class="item-1-3"><img src="../assets/pic/case/finhealth/main-left-frame.svg"></div>  
+        <div class="item-1-3">
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/main-left-frame.png 1x,
+                ../assets/pic/case/finhealth/main-left-frame@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/main-left-frame@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+        </div>  
         <div class="item-1-3"><div class="video-wrap"><video class="play-after-scrollto" src="../assets/pic/case/finhealth/main-flow.mp4"  muted playsinline loop poster="../assets/pic/case/finhealth/finhealth-flow-preview.svg"></video></div></div>  
-        <div class="item-1-3"><img src="../assets/pic/case/finhealth/main-right-frame.svg"></div>  
+        <div class="item-1-3">
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/main-right-frame.png 1x,
+                ../assets/pic/case/finhealth/main-right-frame@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/main-right-frame@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+        </div>  
       </div>
     </div>  
   </section>
@@ -93,7 +119,26 @@
       <h2>Tinkoff: Global Leader in Digital Banking</h2>
       <p><a href="https://tinkoff-group.com/" target="_blank">Tinkoff Bank</a> is a leading independent digital bank with over 48 million customers. Renowned for innovation, its mobile app is rated 4.9 on the App Store and ranks first in the finance category. Tinkoff is recognised as the Most Innovative Digital Bank in Central and Eastern Europe and has won multiple awards for its digital solutions.</p>
       <div class="case-study__image-wrap rounded">
-        <img src="../assets/pic/case/finhealth/tinkoff.svg">
+
+        <picture>
+          <source
+            media="(max-width: 798px)" 
+            srcset="
+              ../assets/pic/case/finhealth/tinkoff-mobile.png 1x,
+              ../assets/pic/case/finhealth/tinkoff-mobile@2x.png 2x,
+              ../assets/pic/case/finhealth/tinkoff-mobile@3x.png 3x
+            "
+          />
+          <source
+            media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/tinkoff.png 1x, 
+                                              ../assets/pic/case/finhealth/tinkoff@2x.png 2x"
+          />
+          <!-- Fallback (very old browsers) -->
+          <img
+            src="../assets/pic/case/finhealth/tinkoff@2x.png" loading="lazy" decoding="async"
+          />
+        </picture>
+
       </div>
     </div>
     <div id="intro-overview" class="case-study__block with-image-top">
@@ -143,10 +188,36 @@
       <p>Despite Tinkoff’s feature-rich app, users couldn’t see their full financial picture. Switching between balances and charts, they still struggled to answer, <i>“Am I really okay with money right now?”</i>. This led to stress and missed engagement opportunities.</p>
       <div class="centered no-paddings gap-mini">
         <div class="item rounded item-1-3">
-          <img src="../assets/pic/case/finhealth/user-1.png">
+
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/user-1.jpg 1x,
+                ../assets/pic/case/finhealth/user-1@2x.jpg 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/user-1@2x.jpg" loading="lazy" decoding="async"
+            />
+          </picture>
+        
         </div>  
         <div class="item rounded item-2-3">
-          <img src="../assets/pic/case/finhealth/user-2.png">
+
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/user-2.jpg 1x,
+                ../assets/pic/case/finhealth/user-2@2x.jpg 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/user-2@2x.jpg" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>  
       </div>
       <p>To address these challenges, I conducted 15 customer development sessions with the product manager focused on savings behaviours. It helped uncover and validate key user needs:</p>
@@ -171,26 +242,75 @@
     </div>
     <div id="rd-defining-success" class="case-study__block">
       <h2>Defining Success</h2>
-      <p>FinHealth aimed to become the go-to space where users could gain confidence and find clear next steps—a completely new experience for Tinkoff.</p>
-      <p><strong>For users,</strong> success was defined by understanding whether their financial situation was improving each month and identifying practical actions to make a positive impact.</p>
-      <p><strong>For the business,</strong> the goal was to accelerate feature adoption from a launch, increase retention, and foster deep engagement that would lead to long-term loyalty and new revenue opportunities.</p>
+      <p>FinHealth aimed to become the go-to space where users could gain confidence and find clear next steps, introducing a completely new experience at Tinkoff.</p>
+      <h4>For the business</h4>
+      <ul class="description-list">
+        <li>Unify core financial products into a single experience.</li>
+        <li>Unlock cross‑selling as a structured revenue stream.</li>
+        <li>Increase retention by building deep engagement.</li>
+      </ul>
+      <h4>For users</h4>
+      <ul class="description-list">
+        <li>Understand their overall financial health.</li>
+        <li>See if their finances are improving month to month.</li>
+        <li>Know which concrete steps will improve their situation.</li>
+      </ul>
     </div>
     <div id="rd-iterations" class="case-study__block">
       <h2>Dozen Design Iterations</h2>
       <p>I refined the design through 12 iterations, testing prototypes with 65+ users, ranging from first-time savers to experienced investors.</p>
       <div class="centered-wrap no-margins rounded rounded-l">
         <div class="centered">
-          <img src="../assets/pic/case/finhealth/design-iterations.svg">
+
+          <picture>
+            <source
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/design-iterations-mobile.png 1x,
+                ../assets/pic/case/finhealth/design-iterations-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/design-iterations-mobile@3x.png 3x
+              "
+            />
+            <source
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/design-iterations.png 1x,
+                ../assets/pic/case/finhealth/design-iterations@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/design-iterations@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>
       </div>
       <p>The initial concept was to introduce a sleek “health score,” but users found it both irrelevant and discouraging, as for most, the score would have been negative and changed very infrequently, making it appear static and ultimately unhelpful. 
       <p>Shifting focus from scoring and focusing on real-life questions—like <i>“Can I make it to payday?”</i> and <i>“What’s one thing I can do to improve?”</i>—significantly increased user understanding and emotional relief. This method became central to FinHealth’s unique value proposition.</p>
       <p>Regarding to interview tests, they were not standard practice at the company, so my manager and I established a new process that reduced testing time from weeks to days and made our development process evidence-based. <a href="../process/streamlined-interview.html">Read about this improvement.</a></p>
       <div class="case-study__image-wrap bigger-top-margin rounded">
-        <img src="../assets/pic/case/finhealth/interviews.png"
-        srcset="../assets/pic/case/finhealth/interviews.png 1x, 
-        ../assets/pic/case/finhealth/interviews@2x.png 2x"  
-        >
+       
+        <picture>
+            <source
+              media="(max-width: 798px)" 
+              type="image/png"
+              srcset="
+                ../assets/pic/case/finhealth/interviews-mobile.png 1x,
+                ../assets/pic/case/finhealth/interviews-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/interviews-mobile@3x.png 3x
+              "
+            />
+            <source
+              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/interviews.png 1x, 
+                                                ../assets/pic/case/finhealth/interviews@2x.png 2x"
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/interviews.png" loading="lazy" decoding="async"
+            />
+          </picture>
+          
       </div>
     </div>
     <div id="rd-financial-clarity" class="case-study__block">
@@ -257,17 +377,62 @@
       <h3>Personal Ideas: Financial Growth and Success</h3>
       <p>Personal ideas are a core feature designed to deliver clear, actionable steps for users to improve their financial well-being, immediately after benchmarking and analysing their individual financial situations. Each idea is tailored to be specific, practical, and instantly implementable, ensuring users have absolute clarity on their next steps.
       <p>In addition to enhancing the user experience, these ideas strategically support business objectives by driving cross-selling through personalised recommendations of relevant products and services.
-      <p>I worked closely with the marketing team to develop and validate over 40 unique ideas, ensuring each fully aligned with user needs and expectations.</p>
+      <p>I worked closely with the marketing team to develop and validate over 60 unique ideas, ensuring each fully aligned with user needs and expectations.</p>
       <div class="centered-wrap rounded rounded-l">
         <div class="centered">
-          <img src="../assets/pic/case/finhealth/ideas.svg">
+
+          <picture>
+            <source
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/ideas-mobile.png 1x,
+                ../assets/pic/case/finhealth/ideas-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/ideas-mobile@3x.png 3x
+              "
+            />
+            <source
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/ideas.png 1x,
+                ../assets/pic/case/finhealth/ideas@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/ideas@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
+
         </div>
       </div>
       <h3>Articles: Enhancing Financial Literacy</h3>
-      <p>Tinkoff’s Finance Journal reaches over 20 million readers each month. Integrating these articles into the metrics screen enhances client engagement and promotes financial literacy within the app.</p>
+      <p>Tinkoff’s Finance Journal reaches over 20 million readers each month via over 45 thousand posts. Integrating these articles into the metrics screen enhances client engagement and promotes financial literacy within the app.</p>
       <div class="centered-wrap">
         <div class="centered">
-          <img src="../assets/pic/case/finhealth/articles.svg">
+
+          <picture>
+            <source
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/articles-mobile.png 1x,
+                ../assets/pic/case/finhealth/articles-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/articles-mobile@3x.png 3x
+              "
+            />
+            <source
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/articles.png 1x,
+                ../assets/pic/case/finhealth/articles@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/articles@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>
       </div>
       <h3>Conclusions: Delivering Financial Clarity</h3>
@@ -279,7 +444,29 @@
       <p>Check out how stunning the dark theme looks 😎</p>
       <div class="centered-wrap no-margins rounded rounded-l">
         <div class="centered">
-          <img src="../assets/pic/case/finhealth/dark-theme.svg">
+
+          <picture>
+            <source
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/dark-theme-mobile.png 1x,
+                ../assets/pic/case/finhealth/dark-theme-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/dark-theme-mobile@3x.png 3x
+              "
+            />
+            <source
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/dark-theme.png 1x,
+                ../assets/pic/case/finhealth/dark-theme@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/dark-theme@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>
       </div>
     </div>
@@ -289,7 +476,29 @@
       <p>During my work, I carefully organised layouts, developed clear specifications for developers, and created design components.</p>
       <div class="centered-wrap rounded rounded-l no-margins">
         <div class="centered">
-          <img src="../assets/pic/case/finhealth/design-specifications.svg">
+
+          <picture>
+            <source
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/design-specifications-mobile.png 1x,
+                ../assets/pic/case/finhealth/design-specifications-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/design-specifications-mobile@3x.png 3x
+              "
+            />
+            <source
+              media="(min-width: 799px)"
+              srcset="
+                ../assets/pic/case/finhealth/design-specifications.png 1x,
+                ../assets/pic/case/finhealth/design-specifications@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/design-specifications@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>
       </div>
     </div>
@@ -301,7 +510,26 @@
       <p>Before launching the full version, we released an MVP (Minimum Viable Product) without ratings, credit scores, or articles to quickly test core metrics and gather feedback. This surfaced bugs, like miscategorised transfers, and usability issues such as the need for long-tap on charts—highlighting the value of thorough internal testing.</p>
       <p class="highlight"><span class="highlight__icon">🏆</span>The MVP achieved a notable 40% retention rate, an impressive result for a minimal version.</p>
       <div class="case-study__image-wrap bigger-top-margin rounded bordered">
-        <img src="../assets/pic/case/finhealth/retention.png">
+
+        <picture>
+          <source
+            media="(max-width: 798px)" 
+            type="image/png"
+            srcset="
+              ../assets/pic/case/finhealth/retention-mobile.png 1x,
+              ../assets/pic/case/finhealth/retention-mobile@2x.png 2x,
+              ../assets/pic/case/finhealth/retention-mobile@3x.png 3x
+            "
+          />
+          <source
+            media="(min-width: 799px)" type="image/svg+xml" srcset="../assets/pic/case/finhealth/retention.png"
+          />
+          <!-- Fallback (very old browsers) -->
+          <img
+            src="../assets/pic/case/finhealth/retention.png" loading="lazy" decoding="async"
+          />
+        </picture>
+
       </div>
     </div>
   
@@ -316,6 +544,26 @@
         <li><strong>Replicated success</strong>, inspiring a B2B Financial Health feature based on these results.</li>
       </ul>
       <p>These outcomes highlight FinHealth's role as a transformative feature within Tinkoff’s ecosystem, delivering measurable benefits to both users and the business.</p>
+      
+      <div class="centered-wrap rounded rounded-l no-margins">
+        <div class="centered">
+
+          <picture>
+            <source
+              srcset="
+                ../assets/pic/case/finhealth/all-screens.png 1x,
+                ../assets/pic/case/finhealth/all-screens@2x.png 2x
+              "
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/all-screens@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
+        </div>
+      </div>
+      
     </div>
   
   
@@ -329,7 +577,26 @@
       </ul>
       <div class="centered-wrap rounded rounded-l no-margins">
         <div class="centered">
-          <img src="../assets/pic/case/finhealth/subscriptions.svg">
+
+          <picture>
+            <source
+              media="(max-width: 798px)" 
+              srcset="
+                ../assets/pic/case/finhealth/subscriptions-mobile.png 1x,
+                ../assets/pic/case/finhealth/subscriptions-mobile@2x.png 2x,
+                ../assets/pic/case/finhealth/subscriptions-mobile@3x.png 3x
+              "
+            />
+            <source
+              media="(min-width: 799px)" srcset="../assets/pic/case/finhealth/subscriptions.png 1x, 
+                                                ../assets/pic/case/finhealth/subscriptions@2x.png 2x"
+            />
+            <!-- Fallback (very old browsers) -->
+            <img
+              src="../assets/pic/case/finhealth/subscriptions@2x.png" loading="lazy" decoding="async"
+            />
+          </picture>
+
         </div>
       </div>
     </div>
@@ -353,7 +620,26 @@
   <section class="case-study__block bigger-top-margin">
     <div class="centered-wrap rounded rounded-l">
       <div class="centered">
-        <img src="../assets/pic/case/finhealth/be-finhealthy.svg">
+
+        <picture>
+          <source
+            media="(max-width: 798px)" 
+            type="image/png"
+            srcset="
+              ../assets/pic/case/finhealth/be-finhealthy-mobile.png 1x,
+              ../assets/pic/case/finhealth/be-finhealthy-mobile@2x.png 2x,
+              ../assets/pic/case/finhealth/be-finhealthy-mobile@3x.png 3x
+            "
+          />
+          <source
+            media="(min-width: 799px)" type="image/svg+xml" srcset="../assets/pic/case/finhealth/be-finhealthy.svg"
+          />
+          <!-- Fallback (very old browsers) -->
+          <img
+            src="../assets/pic/case/finhealth/be-finhealthy.svg" loading="lazy" decoding="async"
+          />
+        </picture>
+
       </div>
     </div>
   </section>
@@ -367,18 +653,18 @@
               <img src="../assets/pic/case/thumbnail-payment-forms.svg">
             </a>
           </div>
-        <a href="../case/payment-forms.html" class="process__title">Redesigned Payment Solutions, Boosting Conversion by 12%</a>
+        <a href="../case/payment-forms.html" class="process__title">Redesigned Payment Solutions, Boosting Conversion by 17%</a>
       </div>
       <div class="processes__item process">
         <div class="process__preview image-wrap">
           <a href="../process/streamlined-interview.html">
               <img src="../assets/pic/process/thumbnail-interviews.png"
-              srcset="../assets/pic/process/thumbnail-interviews.png 1x, 
-              ../assets/pic/process/thumbnail-interviews@2x.png 2x"  
+                    srcset="../assets/pic/process/thumbnail-interviews.png 1x, 
+                    ../assets/pic/process/thumbnail-interviews@2x.png 2x"  
               >
           </a>
         </div>
-        <a href="../process/streamlined-interview.html" class="process__title">Streamlined the user interviews process, cutting testing time from weeks to days</a>
+        <a href="../process/streamlined-interview.html" class="process__title">Streamlined the User Interviews Process, Cutting Testing Time from Weeks to Days</a>
       </div>
     </div>
   </section>
@@ -416,7 +702,7 @@
 
  
   <section class="footer">
-    <h3 class="footer__title">© 2025 Handcrafted with pure HTML/CSS by Eugene Durov</h3>
+    <h3 class="footer__title">© <span id="current_year">2026</span> Handcrafted with pure HTML/CSS by Eugene Durov</h3>
   </section>
     
 </main>

@@ -684,7 +684,7 @@ const YM_INIT_OPTIONS = {
   trackLinks: true,
 };
 
-// ====== 1) СТАНДАРТНЫЙ СЧЁТЧИК МЕТРИКИ ======
+// ====== 1) Default Counter ======
 (function (m, e, t, r, i, k, a) {
   m[i] =
     m[i] ||
@@ -693,7 +693,6 @@ const YM_INIT_OPTIONS = {
     };
   m[i].l = 1 * new Date();
 
-  // Не вставлять tag.js повторно, если он уже есть
   for (var j = 0; j < document.scripts.length; j++) {
     if (document.scripts[j].src === r) return;
   }
@@ -705,16 +704,14 @@ const YM_INIT_OPTIONS = {
   a.parentNode.insertBefore(k, a);
 })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-// Инициализация
+//initialisation
 ym(YM_COUNTER_ID, "init", YM_INIT_OPTIONS); // ym(..., "init", ...) [web:310]
 
-// ====== 2) ФОЛБЭК ЧЕРЕЗ WORKER (Measurement Protocol) ======
+// ====== 2) Fallback via Worker (Measurement Protocol) ======
 function sendFallbackPageviewToWorker(clientID) {
-  // ClientID обязателен для создания визита в Measurement Protocol. [web:243]
+
   if (!clientID) return;
 
-  // Если ты забыл заменить URL, не будем слать никуда
-  if (!WORKER_TRACK_URL || WORKER_TRACK_URL.includes("YOUR-WORKER-DOMAIN")) return;
 
   fetch(WORKER_TRACK_URL, {
     method: "POST",
@@ -727,20 +724,18 @@ function sendFallbackPageviewToWorker(clientID) {
       title: document.title || "",       // -> dt  [web:243]
     }),
   }).catch(function () {
-    // Тихо игнорируем ошибки, чтобы не ломать страницу.
+    // ignore errors
   });
 }
 
 function trackFallbackOnLoad() {
-  // getClientID — метод Метрики, возвращает ClientID. [web:284][web:18]
   ym(YM_COUNTER_ID, "getClientID", function (clientID) {
     sendFallbackPageviewToWorker(clientID);
   });
 }
 
-// Запускаем после загрузки страницы
+// launch after page load
 window.addEventListener("load", trackFallbackOnLoad);
-
 
 
 });

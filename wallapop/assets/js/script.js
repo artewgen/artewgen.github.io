@@ -674,24 +674,73 @@ $('#other-cases a').on('click', function(){
 
 
 // ---------  Custom Yandex.Metric Service Side tracking with Cloudflare --------- 
-function getCookie(name) {
-    const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    return m ? decodeURIComponent(m[2]) : '';
+const YM_COUNTER_ID = 88891643;
+const WORKER_TRACK_URL = "https://metrics.eugenedurov.works/track";
+
+const YM_INIT_OPTIONS = {
+  webvisor: true,
+  clickmap: true,
+  accurateTrackBounce: true,
+  trackLinks: true,
+};
+
+// ====== 1) СТАНДАРТНЫЙ СЧЁТЧИК МЕТРИКИ ======
+(function (m, e, t, r, i, k, a) {
+  m[i] =
+    m[i] ||
+    function () {
+      (m[i].a = m[i].a || []).push(arguments);
+    };
+  m[i].l = 1 * new Date();
+
+  // Не вставлять tag.js повторно, если он уже есть
+  for (var j = 0; j < document.scripts.length; j++) {
+    if (document.scripts[j].src === r) return;
   }
 
-  window.addEventListener("load", () => {
-    fetch("https://metrics.eugenedurov.works/track", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      keepalive: true,
-      body: JSON.stringify({
-        page_url: location.href,
-        path: location.pathname,      // gives you /revolut or /meta explicitly
-        referrer: document.referrer || "",
-        ym_uid: getCookie("_ym_uid")
-      })
-    });
+  k = e.createElement(t);
+  a = e.getElementsByTagName(t)[0];
+  k.async = 1;
+  k.src = r;
+  a.parentNode.insertBefore(k, a);
+})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+// Инициализация
+ym(YM_COUNTER_ID, "init", YM_INIT_OPTIONS); // ym(..., "init", ...) [web:310]
+
+// ====== 2) ФОЛБЭК ЧЕРЕЗ WORKER (Measurement Protocol) ======
+function sendFallbackPageviewToWorker(clientID) {
+  // ClientID обязателен для создания визита в Measurement Protocol. [web:243]
+  if (!clientID) return;
+
+  // Если ты забыл заменить URL, не будем слать никуда
+  if (!WORKER_TRACK_URL || WORKER_TRACK_URL.includes("YOUR-WORKER-DOMAIN")) return;
+
+  fetch(WORKER_TRACK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    keepalive: true,
+    body: JSON.stringify({
+      client_id: clientID,               // -> cid [web:243]
+      page_url: location.href,           // -> dl  [web:243]
+      referrer: document.referrer || "", // -> dr  [web:243]
+      title: document.title || "",       // -> dt  [web:243]
+    }),
+  }).catch(function () {
+    // Тихо игнорируем ошибки, чтобы не ломать страницу.
   });
+}
+
+function trackFallbackOnLoad() {
+  // getClientID — метод Метрики, возвращает ClientID. [web:284][web:18]
+  ym(YM_COUNTER_ID, "getClientID", function (clientID) {
+    sendFallbackPageviewToWorker(clientID);
+  });
+}
+
+// Запускаем после загрузки страницы
+window.addEventListener("load", trackFallbackOnLoad);
+
 
 
 });

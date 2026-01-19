@@ -655,6 +655,7 @@ if ($widgetVideo1.length && $widgetVideo2.length && $widgetVideo3.length) {
     widgetObserver.observe(widgetVideo1);
 }
 
+// ---------  Yandex.Metric Goals --------- 
 $('header-nav__home').on('click', function(){
     ym(88891643,'reachGoal','clickOnCaseHeaderBackHome');
 });
@@ -667,6 +668,9 @@ $('#case-study-nav .nav-section').on('click', function(){
 $('#other-cases a').on('click', function(){
     ym(88891643,'reachGoal','clickOnCaseOtherCases');
 });
+
+
+
 
 
 });

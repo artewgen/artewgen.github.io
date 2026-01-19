@@ -671,36 +671,25 @@ $('#other-cases a').on('click', function(){
 });
 
 
-function getClientId() {
-    const KEY = 'clientId';
-    let id = localStorage.getItem(KEY);
-    if (!id) {
-      id = crypto.randomUUID();
-      localStorage.setItem(KEY, id);
-    }
-    return id;
+
+
+  function getCookie(name) {
+    const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return m ? decodeURIComponent(m[2]) : '';
   }
-  
-  async function trackPageView() {
-    const clientId = getClientId();
-  
-    try {
-      await fetch('http://localhost:4000/track/pageview', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          url: window.location.href,
-          title: document.title,
-          clientId,
-        }),
-      });
-    } catch (e) {
-      console.error('trackPageView error', e);
-    }
-  }
-  
-  window.addEventListener('load', trackPageView);
-  
+
+  window.addEventListener("load", () => {
+    fetch("https://black-violet-e9ad.art-ewgen-81a.workers.dev/track", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      keepalive: true,
+      body: JSON.stringify({
+        page_url: location.href,
+        referrer: document.referrer || "",
+        ym_uid: getCookie("_ym_uid")
+      })
+    });
+  });
 
 
 });

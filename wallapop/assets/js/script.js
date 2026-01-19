@@ -673,19 +673,20 @@ $('#other-cases a').on('click', function(){
 
 
 
-
-  function getCookie(name) {
+// ---------  Custom Yandex.Metric Service Side tracking with Cloudflare --------- 
+function getCookie(name) {
     const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
     return m ? decodeURIComponent(m[2]) : '';
   }
 
   window.addEventListener("load", () => {
-    fetch("https://black-violet-e9ad.art-ewgen-81a.workers.dev/track", {
+    fetch("https://metrics.eugenedurov.works/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       keepalive: true,
       body: JSON.stringify({
         page_url: location.href,
+        path: location.pathname,      // gives you /revolut or /meta explicitly
         referrer: document.referrer || "",
         ym_uid: getCookie("_ym_uid")
       })

@@ -84,14 +84,6 @@
     font-weight: bold;
     font-style: normal;
 }
-@font-face {
-    font-family: 'HanziPen';
-    src: local('HanziPen'), local('fonts/HanziPen_Bold'),
-        url('fonts/HanziPen_Bold.woff') format('woff'),
-        url('fonts/HanziPen_Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 :root {
     --scale: 1;

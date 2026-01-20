@@ -84,14 +84,6 @@
     font-weight: bold;
     font-style: normal;
 }
-@font-face {
-    font-family: 'HanziPen';
-    src: local('HanziPen'), local('fonts/HanziPen_Bold'),
-        url('fonts/HanziPen_Bold.woff') format('woff'),
-        url('fonts/HanziPen_Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 :root {
     --scale: 1;
@@ -295,7 +287,6 @@ h4{
 }
 
 
-
 .parallax{
     position: relative;
     z-index: 12;
@@ -315,7 +306,7 @@ h4{
     opacity: 0;
     right: -50%;
     transition: right 0.5s cubic-bezier(.7,.3,0,1);
-    top: calc(-55px * var(--scale));
+    top: calc(-60px * var(--scale));
 }
 .landing .intro__pet.show{
     opacity: 1;
@@ -479,41 +470,32 @@ h4{
     background-size: calc(24px * var(--scale)) calc(24px * var(--scale));
 }
 .intro__pet{
+    opacity: 0;
+    right: -50%;
     position: absolute;
-    display: flex;
-    right: calc(-40px * var(--scale));
-    bottom: calc(-85px * var(--scale));
-    transform: rotate(2.8deg);
-    gap: calc(12px * var(--scale));
+    display: inline-block;
+    top: calc(-68px * var(--scale));
+    transform: rotate(2.3deg);
+    width: calc(371px * var(--scale));
+    height: calc(85px * var(--scale));
+    background-image: url(../pic/pet-slider/pet-0@2x.png);
+    background-size: cover;
+    transition: right 0.5s cubic-bezier(.7,.3,0,1);
 }
-.intro__pet__text{
-    font-family: 'HanziPen', sans-serif;
-    font-size: calc(32px * var(--scale));
-    color: var(--color-text-accent-purple);;
+.intro__pet.show{
+    opacity: 1;
 }
-.intro__pet__image{
-    position: relative;
-    top: calc(4px * var(--scale));
-    width: calc(74px * var(--scale));
-    height: calc(74px * var(--scale));
-    border-radius: 100px;
-    background-image: url(../pic/pet-slider/pet-0.jpg);
-    background-size: calc(74px * var(--scale)) calc(74px * var(--scale));
+.pet-0.intro__pet{
+    background-image: url(../pic/pet-slider/pet-0@2x.png);
 }
-.intro__pet__image{
-    transition: all 0.15s ease;
+.pet-1.intro__pet{
+    background-image: url(../pic/pet-slider/pet-1@2x.png);
 }
-.pet-0 .intro__pet__image{
-    background-image: url(../pic/pet-slider/pet-0.jpg);
+.pet-2.intro__pet{
+    background-image: url(../pic/pet-slider/pet-2@2x.png);
 }
-.pet-1 .intro__pet__image{
-    background-image: url(../pic/pet-slider/pet-1.jpg);
-}
-.pet-2 .intro__pet__image{
-    background-image: url(../pic/pet-slider/pet-2.jpg);
-}
-.pet-3 .intro__pet__image{
-    background-image: url(../pic/pet-slider/pet-3.jpg);
+.pet-3.intro__pet{
+    background-image: url(../pic/pet-slider/pet-3@2x.png);
 }
 
 /*-----Cases---------------------------------------------------------*/

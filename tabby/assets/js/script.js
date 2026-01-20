@@ -11,32 +11,32 @@ $(function() {
 
 
 
- // --------- Main page pet slides --------- 
+// --------- Main page pet slides --------- 
 
 function petSlider(){
-    var $petSlider = $('.intro__pet');
+var $petSlider = $('.intro__pet');
 
-    if ($petSlider.length) {
+if ($petSlider.length) {
     
-        var current = 0;
+    var current = 0;
 
-        function nextSlide() {
-            setTimeout(function() {
-                $petSlider.removeClass('pet-' + current);
-                current = (current + 1) % 4;
-                $petSlider.addClass('pet-' + current);
-            }, 400);
-        }
+    function nextSlide() {
+        setTimeout(function() {
+            $petSlider.removeClass('pet-' + current);
+            current = (current + 1) % 4;
+            $petSlider.addClass('pet-' + current);
+        }, 400);
+    }
 
-        setInterval(nextSlide, 1500);
+    setInterval(nextSlide, 1500);
     }
 
     $petSlider.on('click', function(){
         ym(88891643,'reachGoal','clickOnPetSlider');
     });
 }
-    
-    
+
+
 // ----------- Pet Slider Parallax ----------
 var $intro = $('#intro');
 var $pet = $('#intro-pet');
@@ -659,12 +659,3 @@ $('#current_year').text(new Date().getFullYear());
  
 
 });
-
-
-
-
-
-
-
-
-

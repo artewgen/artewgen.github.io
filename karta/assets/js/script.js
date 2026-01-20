@@ -11,7 +11,7 @@ $(function() {
 
 
 
-  // --------- Main page pet slides --------- 
+// --------- Main page pet slides --------- 
 
 function petSlider(){
 var $petSlider = $('.intro__pet');
@@ -42,11 +42,11 @@ var $intro = $('#intro');
 var $pet = $('#intro-pet');
 
 if ($intro.length && $pet.length) {
-  var petWidth = $pet.outerWidth();
-  var petHeight = $pet.outerHeight();
-  var sliderAppear = false;
+    var petWidth = $pet.outerWidth();
+    var petHeight = $pet.outerHeight();
+    var sliderAppear = false;
 
-  $(window).on('scroll', function() {
+    $(window).on('scroll', function() {
     if (!sliderAppear){
         var introOffset = $intro.offset().top;
         var scrollTop = $(window).scrollTop();
@@ -64,11 +64,11 @@ if ($intro.length && $pet.length) {
         // Calculate progress for the animation
         var progress = 1;
         if (introTopInView < entryPoint && introTopInView > exitPoint) {
-          var total = entryPoint - exitPoint;
-          progress = (introTopInView - exitPoint) / total;
-          progress = Math.max(0, Math.min(1, progress));
+            var total = entryPoint - exitPoint;
+            progress = (introTopInView - exitPoint) / total;
+            progress = Math.max(0, Math.min(1, progress));
         } else if (introTopInView <= exitPoint) {
-          progress = 0;
+            progress = 0;
         }
         
         $pet.addClass("show");
@@ -79,8 +79,8 @@ if ($intro.length && $pet.length) {
         petSlider();
         sliderAppear = true;
     }
-   
-  });
+    
+    });
 }
 
 
@@ -656,15 +656,6 @@ if ($widgetVideo1.length && $widgetVideo2.length && $widgetVideo3.length) {
 
 // --------- Update footer year --------- 
 $('#current_year').text(new Date().getFullYear());
-
+ 
 
 });
-
-
-
-
-
-
-
-
-

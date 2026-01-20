@@ -84,64 +84,108 @@ if ($intro.length && $pet.length) {
 }
 
 
-// --------- About photo slider --------- 
+// --------- About photo slider (pause on hover, click slides once) ---------
 
 const $aboutSlider = $('#about-slider');
 const $slides = $('.about__slider > img');
 
 if ($aboutSlider.length && $slides.length) {
-    const angles = [-10, 2, 11, -3, 5]; // Rotation angle for each image
-    let zStack = $slides.length;
-    const animDuration = 1200;
-    const restDelay = 1500;
+  const angles = [-10, 2, 11, -3, 5]; // Rotation angle for each image
+  let zStack = $slides.length;
+  const animDuration = 650;
+  const restDelay = 1700;
 
-    // Initial setup
-    $slides.each(function(i) {
-        $(this).css('z-index', zStack - i);
-        $(this).data('angle', angles[i]);
-        $(this).css({
-            'transform': `translateX(0) rotate(${angles[i]}deg)`,
-            'transition': `transform ${animDuration}ms`
-        });
+  let isPaused = false;
+  let restTimer = null; // timer for the "rest" period
+  let animTimer = null; // timer for the "after slide out" restack
+
+  // Initial setup
+  $slides.each(function (i) {
+    $(this).css('z-index', zStack - i);
+    $(this).data('angle', angles[i]);
+    $(this).css({
+      transform: `translateX(0) rotate(${angles[i]}deg)`,
+      transition: `transform ${animDuration}ms`,
     });
+  });
 
-    function animateAndRestack() {
-        const $top = $slides.sort((a, b) =>
-            parseInt($(b).css('z-index')) - parseInt($(a).css('z-index'))
-        )[0];
-        const angle = $($top).data('angle');
-        // Pure horizontal shift, then rotate (animation appears horizontal)
-        $($top).css('transform', `translateX(110%) rotate(${angle}deg)`);
+  function setSliderHeight() {
+    $aboutSlider.height($slides.height());
+  }
 
-        setTimeout(() => {
-            $($top).css('z-index', 1);
-            $($top).css('transform', `translateX(0) rotate(${angle}deg)`);
-            $slides.not($top).each(function() {
-                $(this).css('z-index', parseInt($(this).css('z-index')) + 1);
-            });
-            setTimeout(animateAndRestack, restDelay);
-        }, animDuration);
-    }
+  function clearTimers() {
+    // Cancels timeouts created by setTimeout() [web:47]
+    clearTimeout(restTimer);
+    clearTimeout(animTimer);
+    restTimer = null;
+    animTimer = null;
+  }
 
-    function setSliderHeight(){
-        $aboutSlider.height($slides.height());
-    }
+  function scheduleNext() {
+    clearTimeout(restTimer); // keep only one pending timer [web:47]
+    if (isPaused) return;
 
-    setTimeout(animateAndRestack, restDelay);
+    restTimer = setTimeout(() => {
+      animateAndRestack(); // autoslide step
+    }, restDelay);
+  }
 
-    $(window).resize(function(){
-        setSliderHeight();
-    });
+  function animateAndRestack() {
+    // Important: DO NOT block this when paused.
+    // Pause only prevents *auto scheduling*, click can still call this.
 
-    $aboutSlider.on('click', function(){
-        ym(88891643,'reachGoal','clickOnAboutSlider');
-    });
+    clearTimers(); // avoid overlap/double steps [web:47]
 
-    $(window).on('load', function () {
-        setSliderHeight();
-        setTimeout(animateAndRestack, restDelay);
-    });
+    const $top = $slides.sort(
+      (a, b) => parseInt($(b).css('z-index')) - parseInt($(a).css('z-index'))
+    )[0];
+
+    const angle = $($top).data('angle');
+
+    // Slide the top image out
+    $($top).css('transform', `translateX(110%) rotate(${angle}deg)`);
+
+    animTimer = setTimeout(() => {
+      // Put it to the back and bring it in
+      $($top).css('z-index', 1);
+      $($top).css('transform', `translateX(0) rotate(${angle}deg)`);
+
+      // Increase z-index of all others
+      $slides.not($top).each(function () {
+        $(this).css('z-index', parseInt($(this).css('z-index')) + 1);
+      });
+
+      // Continue autoplay only if not paused
+      scheduleNext();
+    }, animDuration);
+  }
+
+  // Pause autoplay on hover
+  $aboutSlider.on('mouseenter', function () {
+    isPaused = true;
+    clearTimers(); // stop pending auto step immediately [web:47]
+  });
+
+  // Resume autoplay after hover
+  $aboutSlider.on('mouseleave', function () {
+    isPaused = false;
+    scheduleNext();
+  });
+
+  // Click: always slide once (even while hovered/paused)
+  $aboutSlider.on('click', function () {
+    ym(88891643, 'reachGoal', 'clickOnAboutSlider');
+    animateAndRestack();
+  });
+
+  $(window).on('resize', setSliderHeight);
+
+  $(window).on('load', function () {
+    setSliderHeight();
+    scheduleNext();
+  });
 }
+
   
 
 

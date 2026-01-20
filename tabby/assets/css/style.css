@@ -2302,12 +2302,15 @@ a.btn:hover{
     }
 
     .review {
-        grid-template-columns: 56px 1fr;
+        grid-template-columns: 40px 1fr;
       }
     
     .review__avatar {
-        width: 72px;
-        height: 72px;
+        width: 56px;
+        height: 56px;
+    }
+    .review__quote{
+        padding-top: 2px;
     }
 
     .processes.container{

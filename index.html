@@ -20,8 +20,23 @@
 
   <meta name="robots" content="noindex, nofollow">
 
+  <!--Redirect for root folders-->
+  <script>
+    (async()=>{if(!/^\/(?:index\.html)?$/.test(location.pathname))return;
+    let d;try{d=JSON.parse(localStorage.getItem("lastPersonalDir")||"")}catch(e){}
+    if(!d)return;let p=String(d.dir||"").trim().replace(/^\/+|\/+$/g,"");
+    if(!/^[\w-]{1,64}$/i.test(p)||!d.ts||Date.now()-d.ts>2592e6)return; // 30 days
+    let t="/"+p+"/";try{(await fetch(t,{method:"HEAD",cache:"no-store"})).ok&&location.replace(t)}catch(e){}})();
+  </script>
+
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/ya-metrica-core.js"></script>
+  <script type="text/javascript" src="assets/js/ya-metrica-goals.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+
 </head>
 
 <body>
@@ -399,11 +414,6 @@
   </section>
     
 </main>
-
-
-  <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="assets/js/script.js"></script>
-
 
 
 <!-- Yandex.Metrika fallback -->

@@ -140,6 +140,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Fix for sliders */
+html, body {
+    overflow-x: hidden;
+}
+
 .clearfix:after {
     content: "";
     display: table;

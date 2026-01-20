@@ -22,6 +22,16 @@
 
   <link rel="stylesheet" href="assets/css/normalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="preload" as="image" href="assets/pic/pet-slider/pet-0@2x.png" type="image/png">
+  <link rel="preload" as="image" href="assets/pic/pet-slider/pet-1@2x.png" type="image/png">
+  <link rel="preload" as="image" href="assets/pic/pet-slider/pet-2@2x.png" type="image/png">
+  <link rel="preload" as="image" href="assets/pic/pet-slider/pet-3@2x.png" type="image/png">
+
+  <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/ya-metrica-core.js"></script>
+  <script type="text/javascript" src="assets/js/ya-metrica-goals.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -48,6 +58,7 @@
   <section id="intro" class="intro">
     <p class="intro__about">
       Senior Product Designer (7+ years) leading <span class="nowrap">end-to-end</span> design for mobile FinTech products with 40M+ clients
+      <span id="intro-pet" class="intro__pet pet-0"></span>
     </p>
 
     <ul class="intro__links links horiz">
@@ -402,9 +413,6 @@
     
 </main>
 
-
-  <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="assets/js/script.js"></script>
 
   <script>
     (function() {

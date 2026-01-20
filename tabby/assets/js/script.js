@@ -11,42 +11,42 @@ $(function() {
 
 
 
-  // --------- Main page pet slides --------- 
+ // --------- Main page pet slides --------- 
 
 function petSlider(){
-var $petSlider = $('.intro__pet');
+    var $petSlider = $('.intro__pet');
 
-if ($petSlider.length) {
+    if ($petSlider.length) {
     
-    var current = 0;
+        var current = 0;
 
-    function nextSlide() {
-        setTimeout(function() {
-            $petSlider.removeClass('pet-' + current);
-            current = (current + 1) % 4;
-            $petSlider.addClass('pet-' + current);
-        }, 400);
-    }
+        function nextSlide() {
+            setTimeout(function() {
+                $petSlider.removeClass('pet-' + current);
+                current = (current + 1) % 4;
+                $petSlider.addClass('pet-' + current);
+            }, 400);
+        }
 
-    setInterval(nextSlide, 1500);
+        setInterval(nextSlide, 1500);
     }
 
     $petSlider.on('click', function(){
         ym(88891643,'reachGoal','clickOnPetSlider');
     });
 }
-
-
+    
+    
 // ----------- Pet Slider Parallax ----------
 var $intro = $('#intro');
 var $pet = $('#intro-pet');
 
 if ($intro.length && $pet.length) {
-  var petWidth = $pet.outerWidth();
-  var petHeight = $pet.outerHeight();
-  var sliderAppear = false;
+    var petWidth = $pet.outerWidth();
+    var petHeight = $pet.outerHeight();
+    var sliderAppear = false;
 
-  $(window).on('scroll', function() {
+    $(window).on('scroll', function() {
     if (!sliderAppear){
         var introOffset = $intro.offset().top;
         var scrollTop = $(window).scrollTop();
@@ -64,11 +64,11 @@ if ($intro.length && $pet.length) {
         // Calculate progress for the animation
         var progress = 1;
         if (introTopInView < entryPoint && introTopInView > exitPoint) {
-          var total = entryPoint - exitPoint;
-          progress = (introTopInView - exitPoint) / total;
-          progress = Math.max(0, Math.min(1, progress));
+            var total = entryPoint - exitPoint;
+            progress = (introTopInView - exitPoint) / total;
+            progress = Math.max(0, Math.min(1, progress));
         } else if (introTopInView <= exitPoint) {
-          progress = 0;
+            progress = 0;
         }
         
         $pet.addClass("show");
@@ -79,8 +79,8 @@ if ($intro.length && $pet.length) {
         petSlider();
         sliderAppear = true;
     }
-   
-  });
+    
+    });
 }
 
 
@@ -656,88 +656,6 @@ if ($widgetVideo1.length && $widgetVideo2.length && $widgetVideo3.length) {
 
 // --------- Update footer year --------- 
 $('#current_year').text(new Date().getFullYear());
-
-
-// ---------  Yandex.Metric Goals --------- 
-$('header-nav__home').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseHeaderBackHome');
-});
-$('#case-study-nav .home').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseNavigationBackHome');
-})
-$('#case-study-nav .nav-section').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseNavigation');
-});
-$('#other-cases a').on('click', function(){
-    ym(88891643,'reachGoal','clickOnCaseOtherCases');
-});
-
-
-
-// ---------  Custom Yandex.Metric Service Side tracking with Cloudflare --------- 
-const YM_COUNTER_ID = 88891643;
-const WORKER_TRACK_URL = "https://metrics.eugenedurov.works/track";
-
-const YM_INIT_OPTIONS = {
-  webvisor: true,
-  clickmap: true,
-  accurateTrackBounce: true,
-  trackLinks: true,
-};
-
-// ====== 1) Default Counter ======
-(function (m, e, t, r, i, k, a) {
-  m[i] =
-    m[i] ||
-    function () {
-      (m[i].a = m[i].a || []).push(arguments);
-    };
-  m[i].l = 1 * new Date();
-
-  for (var j = 0; j < document.scripts.length; j++) {
-    if (document.scripts[j].src === r) return;
-  }
-
-  k = e.createElement(t);
-  a = e.getElementsByTagName(t)[0];
-  k.async = 1;
-  k.src = r;
-  a.parentNode.insertBefore(k, a);
-})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-//initialisation
-ym(YM_COUNTER_ID, "init", YM_INIT_OPTIONS); // ym(..., "init", ...) [web:310]
-
-// ====== 2) Fallback via Worker (Measurement Protocol) ======
-function sendFallbackPageviewToWorker(clientID) {
-
-  if (!clientID) return;
-
-
-  fetch(WORKER_TRACK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    keepalive: true,
-    body: JSON.stringify({
-      client_id: clientID,               // -> cid [web:243]
-      page_url: location.href,           // -> dl  [web:243]
-      referrer: document.referrer || "", // -> dr  [web:243]
-      title: document.title || "",       // -> dt  [web:243]
-    }),
-  }).catch(function () {
-    // ignore errors
-  });
-}
-
-function trackFallbackOnLoad() {
-  ym(YM_COUNTER_ID, "getClientID", function (clientID) {
-    sendFallbackPageviewToWorker(clientID);
-  });
-}
-
-// launch after page load
-window.addEventListener("load", trackFallbackOnLoad);
-
  
 
 });

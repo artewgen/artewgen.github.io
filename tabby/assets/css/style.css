@@ -2114,6 +2114,9 @@ a.btn:hover{
     .processes, .contributions, .about, .contact-me{
         margin-top: 72px;
     } 
+    .processes{
+        margin-top: 90px;
+    }
     .landing .about{
         margin-bottom: 80px;
     }

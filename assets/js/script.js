@@ -739,7 +739,6 @@ function trackFallbackOnLoad() {
 // launch after page load
 window.addEventListener("load", trackFallbackOnLoad);
 
- 
 
 });
 

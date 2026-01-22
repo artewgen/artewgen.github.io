@@ -754,10 +754,17 @@ h4{
     font-size: var(--font-h3);
     font-weight: 450;
     line-height: 125%;
+    padding: 4px 8px; 
+}
+.landing .process__title{
     color: var(--color-ondark-text-primary);
 }
-.process__title:hover{
+
+.landing .process__title:hover{
     color: var(--color-ondark-acent-orange-hovered);
+}
+.case-study .process__title{
+    font-weight: 500;
 }
 .process__button{
     border-width: 2px;    
@@ -2290,6 +2297,9 @@ a.btn:hover{
     .processes__list{
         gap: 48px;
     }
+    .process__title{
+        padding: 0; 
+    }
     .process__button, .case__button{
        margin-top: 8px; 
     }
@@ -2318,6 +2328,9 @@ a.btn:hover{
 
     .processes.container{
         padding: 0;
+    }
+    .case-study .processes.container{
+        padding: 0 20px 40px;
     }
     .processes__wrap{
         padding-bottom: 48px;
@@ -2365,9 +2378,14 @@ a.btn:hover{
     }
 
     .case-study__top{
-        padding-top: 0; 
+        padding: 0 20px calc(64px * var(--scale));
         gap: 0
      }
+     .case-study__block{
+        padding-left: 20px;
+        padding-right: 20px;
+     }
+
      .case-study__block.bigger-top-margin{
         margin-top: 80px;
      }

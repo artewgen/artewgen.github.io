@@ -83,6 +83,8 @@ if ($intro.length && $pet.length) {
     });
 }
 
+//Show Pet Slider immediately
+$(window).scrollTop($(window).scrollTop()+1);
 
 // --------- About photo slider (pause on hover, click slides once) ---------
 

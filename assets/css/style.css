@@ -1886,6 +1886,24 @@ a.btn:hover{
     box-sizing: border-box;
 }
 
+.not-found-page .header-nav{
+    position: relative;
+}
+
+.not-found-page .header-nav .me{
+    margin: 0 auto;
+    
+}
+.not-found-page .header-nav .me__avatar{
+    width: 48px;
+    height: 48px;
+}
+
+.not-found-page .header-nav .me__name{
+    font-size: var(--font-body);
+}
+
+
 .not-found-page .centered-block{
     flex: 1;                      /* fills available space so footer can sit at bottom */
     display: flex;
@@ -1897,17 +1915,19 @@ a.btn:hover{
     max-width: 420px;
     min-width: 360px;
     margin: 0 auto;
+    padding-bottom: 24px;  
 }
 
-.not-found-page .not-found-cats{
-    border-radius: 12px;    
+.not-found-page .cats-trio-img{
+    max-width: 400px;
+    border-radius: 12px;  
 }
 
 .not-found-page h1.title{
     font-size: calc(44px * var(--scale));
     font-weight: 500;
     text-align: center;
-    margin: 40px 0 0px;
+    margin: calc(24px * var(--scale)) 0 0px;
 }
 
 .not-found-page .centered-block .description{
@@ -1915,15 +1935,8 @@ a.btn:hover{
 }
 
 .not-found-page .button{
-    margin-top: 16px;
-}
-
-.not-found-page .footer{
-    margin: 32px auto 12px;
-}
-
-.not-found-page .footer__title{
-    font-size: 16px;
+    margin-top: 12px;
+    cursor: pointer;
 }
 
 /* Default desktop (e.g., 1360px to 1440px) */
